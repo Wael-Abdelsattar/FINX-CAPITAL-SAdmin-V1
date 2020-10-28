@@ -1,0 +1,133 @@
+.program_container {
+    font-size: 14px;
+    .title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        &:after{
+            display: none;
+        }
+    }
+    form {
+        &.form-horizontal {
+            display: flex;
+            width: 100%;
+        }
+    }
+    .wrapper {
+        &.general_wrapper {
+            max-height: 615px;
+            min-height: 615px;
+            .wrapper_content {
+                max-height: 528px;
+                min-height: 528px;
+            }
+        }
+        &.program_tiers_wrapper {
+            min-height: 836px; 
+            max-height: 836px;
+            .input_div {
+                button {
+                    width: 150px;
+                }
+            }
+            .form-group {
+                padding: 3px 0 !important;
+            }
+            .tier_number_text {
+                color: #ffffff;
+                font-size: 21px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: center;
+                margin-right: 20px;
+            }
+            .tier_number_count{
+                color: #f04e31;
+                font-size: 21px;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: center;
+            }
+        }
+        padding: 0;
+        margin: 0 0 10px 0;
+        .wrapper_title {
+            height: 35px;
+            border-radius: 8px;
+            background: #000000;
+            padding: 5px 10px;
+        }
+        .wrapper_content {
+            padding: 10px 0;
+            .form-group {
+                float: left;
+                width: 100%;
+                padding: 8px 0;
+                .holder_label {
+                    padding-top: 10px;
+                }
+                .input_div {
+                    float: right;
+                    &.custom-radio{
+                        padding-right: 15px;
+                        padding-left: 15px;
+                    }
+                    &.datepicker-control{
+                        &:before{
+                            right: 20px;
+                            top: 45%;
+                        }
+                    }
+                    input {
+                        height: 25px;
+                        border-radius: 2px;
+                    }
+                    .holder {
+                        padding: 7px;
+                        height: 40px;
+                        border: solid 1px #979797;
+                        background: #d8d8d8;
+                    }
+                }
+            }
+        }
+        table {
+            td {
+                &.fee {
+                    padding: 10px 20px;
+                    input {
+                        height: 35px !important;
+                    }
+                }
+            }
+            th {
+                height: 25px;
+            }
+            input {
+                height: 27px;
+            }
+            .bg-blue {
+                background: #0057d5;
+                padding: 3px 20px;
+                color: #ffffff;
+            }
+            .bg-orange {
+                background: #f04e31;
+                padding: 3px 20px;
+                color: #ffffff;
+            }
+            .bg-lightblue {
+                background: #d6dcf6;
+                padding: 3px 20px;
+            }
+            .bg-lightorange {
+                background: #feeedf;
+                padding: 3px 20px;
+            }
+            .text-black {
+                color: #000000;
+            }
+        }
+    }
+}
