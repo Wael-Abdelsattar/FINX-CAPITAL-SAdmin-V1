@@ -1,0 +1,136 @@
+.overview-landing {
+  @media all and (max-width: 768px) {
+    .row.mt-4 {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+// Statistics
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  height: 100%;
+  > div {
+    display: flex;
+    flex-direction: column;
+    .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 7px;
+      h3 {
+        font-size: 18px;
+        color: $fadedBlue;
+      }
+      .icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $tableCellLightBg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        font-size: 20px;
+      }
+    }
+    h4 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .numbers {
+      span {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 10px;
+        i {
+          margin-right: 5px;
+          font-size: 12px;
+
+          &.up {
+            transform: scale(1, -1);
+          }
+        }
+      }
+    }
+    p:not(.numbers) {
+      margin-top: auto;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+}
+
+#pie-chart .highcharts-series {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: $wrapperDarkBg;
+  }
+}
+.highcharts-legend {
+  left: -10px !important;
+}
+.highcharts-legend-item {
+  &:first-of-type {
+    > span {
+      border-radius: 12px 12px 0 0;
+    }
+  }
+  &:last-of-type {
+    > span {
+      border-radius: 0 0 12px 12px;
+    }
+  }
+  > span {
+    display: flex;
+    padding: 15px;
+    background: #2b2b2b;
+    width: 270px;
+    font-weight: normal !important;
+    font-size: 16px !important;
+    margin-top: -1px !important;
+
+    &::before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      background: url(../images/checkbox.svg);
+      margin-right: 10px;
+      background-size: contain;
+    }
+  }
+  .space {
+    margin-left: 20px;
+    display: inline-block;
+  }
+
+  &.highcharts-legend-item-hidden {
+    > span:before {
+      background: url(../images/checkbox-unchecked.svg);
+    }
+  }
+}
+
+.user-info {
+  h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

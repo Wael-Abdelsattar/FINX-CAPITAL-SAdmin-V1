@@ -1,0 +1,167 @@
+.btn {
+  background: white;
+  border-color: #ddd;
+  color: #999999;
+  font-size: 14px;
+  padding: 5px 7px 3px;
+  min-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-radius: 4px;
+  // &:not(.btn-icon):hover {
+  //   background: #999;
+  //   color: white;
+  //   border-color: #999;
+  // }
+
+  &.big-btn {
+    font-size: 36px;
+    height: 60px;
+    width: 250px;
+  }
+
+  &.small {
+    font-size: 12px;
+    min-width: inherit;
+    font-weight: 400 !important;
+    height: 25px;
+    padding: 2px 6px 2px;
+  }
+  &.btn-icon {
+    border: 0;
+    height: 24px;
+    width: 24px;
+    min-width: 24px;
+    border-radius: 4px;
+    padding: 0;
+    color: white;
+    &.bg-danger {
+      border: 0 !important;
+      background: $lightRed !important;
+      @media (hover: hover) {
+        &:hover {
+          background: $lightRed !important;
+        }
+      }
+    }
+  }
+
+  &:focus {
+    background-image: none;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &.btn-primary {
+    color: $primaryBlue;
+    border-color: $primaryBlue;
+    font-weight: 700;
+    i {
+      color: $primaryBlue;
+    }
+    // @media (hover: hover) {
+      &:hover, &:focus {
+        color: white;
+        background: $primaryBlue;
+        i {
+          color: white;
+        }
+      }
+    // }
+  }
+
+  &.btn-green {
+    color: $darkGreen;
+    border-color: $darkGreen;
+    font-weight: 700;
+    i {
+      color: $darkGreen;
+    }
+    // @media (hover: hover) {
+      &:hover, &:focus {
+        color: white;
+        background: $darkGreen;
+        i {
+          color: white;
+        }
+      }
+    // }
+  }
+
+  &.btn-grey {
+    color: white;
+    background-color: $lightGreyColor;
+    border-color: $lightGreyColor;
+    font-weight: 700;
+    i {
+      color: $darkGreen;
+    }
+    // @media (hover: hover) {
+      &:hover, &:focus {
+        color: $lightGreyColor;
+        border-color: white;
+        background: white;
+        i {
+          color: $lightGreyColor;
+        }
+      }
+    // }
+  }
+
+  &.btn-cyan {
+    color: #68cdf0;
+    border-color: #68cdf0;
+    font-weight: 700;
+    i {
+      color: #68cdf0;
+    }
+    // @media (hover: hover) {
+      &:hover, &:focus {
+        color: white;
+        background: #68cdf0;
+        i {
+          color: white;
+        }
+      }
+    // }
+  }
+
+  &.btn-danger {
+    color: $lightRed;
+    border-color: $lightRed;
+    font-weight: 700;
+    i {
+      color: $lightRed;
+    }
+    // @media (hover: hover) {
+      &:hover, &:focus {
+        color: white;
+        background: $lightRed;
+        i {
+          color: white;
+        }
+      }
+    // }
+    &.filled {
+      color: white;
+      background: $lightRed;
+      i {
+        color: white;
+      }
+    }
+  }
+
+  &.has-icon {
+    padding-left: 10px;
+    padding-right: 20px;
+    i {
+      margin-right: auto;
+    }
+  }
+
+  &.big-shadow {
+    box-shadow: 0 24px 32px rgba($color: #000000, $alpha: 0.13);
+  }
+}

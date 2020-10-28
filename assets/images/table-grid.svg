@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <rect id="rect-1" width="24" height="24" x="0" y="0"/>
+    <path id="path-2" fill-rule="evenodd" d="M2 0h14c1.10383005 0 2 .89616995 2 2v1H0V2C0 .89616995.89616995 0 2 0z"/>
+    <rect id="rect-3" width="6" height="5" x="0" y="3" rx="0" ry="0"/>
+    <rect id="rect-4" width="6" height="5" x="0" y="8" rx="0" ry="0"/>
+    <rect id="rect-5" width="6" height="5" x="6" y="8" rx="0" ry="0"/>
+    <rect id="rect-6" width="6" height="5" x="6" y="13" rx="0" ry="0"/>
+    <path id="path-7" fill-rule="evenodd" d="M12 13h6v3c0 1.10383005-.89616995 2-2 2h-4v-5z"/>
+    <rect id="rect-8" width="6" height="5" x="12" y="8" rx="0" ry="0"/>
+    <path id="path-9" fill-rule="evenodd" d="M0 13h6v5H2c-1.10383005 0-2-.89616995-2-2v-3z"/>
+    <rect id="rect-10" width="6" height="5" x="6" y="3" rx="0" ry="0"/>
+    <rect id="rect-11" width="6" height="5" x="12" y="3" rx="0" ry="0"/>
+  </defs>
+  <g>
+    <g transform="translate(3 3)">
+      <g>
+        <use fill="rgb(43,80,237)" xlink:href="#path-2"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#path-2"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#rect-3"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#rect-3"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#rect-4"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#rect-4"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#rect-5"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#rect-5"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#rect-6"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#rect-6"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#path-7"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#path-7"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#rect-8"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#rect-8"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#path-9"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#path-9"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#rect-10"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#rect-10"/>
+      </g>
+      <g>
+        <use fill="rgb(255,255,255)" xlink:href="#rect-11"/>
+        <use fill-opacity="0" stroke="rgb(43,80,237)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2" xlink:href="#rect-11"/>
+      </g>
+    </g>
+    <path fill="none" d="M0 0h24v24H0V0z"/>
+  </g>
+</svg>

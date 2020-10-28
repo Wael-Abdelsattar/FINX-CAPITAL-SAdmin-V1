@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <g id="Grid_blue" data-name="Grid blue" transform="translate(1 1)">
+    <g id="Group">
+      <path id="Rectangle" d="M2,0H34a2,2,0,0,1,2,2V6a0,0,0,0,1,0,0H0A0,0,0,0,1,0,6V2A2,2,0,0,1,2,0Z" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <rect id="Rectangle-2" data-name="Rectangle" width="12" height="10" transform="translate(0 6)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <rect id="Rectangle_Copy_33" data-name="Rectangle Copy 33" width="12" height="10" transform="translate(0 16)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <rect id="Rectangle_Copy_35" data-name="Rectangle Copy 35" width="12" height="10" transform="translate(12 16)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <rect id="Rectangle_Copy_37" data-name="Rectangle Copy 37" width="12" height="10" transform="translate(12 26)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Rectangle_Copy_38" data-name="Rectangle Copy 38" d="M0,0H12a0,0,0,0,1,0,0V8a2,2,0,0,1-2,2H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(24 26)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <rect id="Rectangle_Copy_36" data-name="Rectangle Copy 36" width="12" height="10" transform="translate(24 16)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Rectangle_Copy_34" data-name="Rectangle Copy 34" d="M0,0H12a0,0,0,0,1,0,0V10a0,0,0,0,1,0,0H2A2,2,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(0 26)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <rect id="Rectangle_Copy_31" data-name="Rectangle Copy 31" width="12" height="10" transform="translate(12 6)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+      <rect id="Rectangle_Copy_32" data-name="Rectangle Copy 32" width="12" height="10" transform="translate(24 6)" stroke="#c7c7c7" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

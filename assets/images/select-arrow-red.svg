@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <rect id="rect-1" width="24" height="24" x="0" y="0"/>
+  </defs>
+  <g>
+    <path fill="rgb(240,78,49)" fill-rule="evenodd" d="M7 10l5 5 5-5H7z"/>
+    <path fill="none" d="M0 0h24v24H0V0z"/>
+  </g>
+</svg>

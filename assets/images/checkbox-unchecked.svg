@@ -1,0 +1,7 @@
+<svg id="check_box-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path" d="M0,0H24V24H0Z" fill="none"/>
+  <path id="Shape" d="M0,14V0H14V14Z" transform="translate(5 5)" fill="#ffffff"/>
+  <path id="Path-2" data-name="Path" d="M16,0H2A2.006,2.006,0,0,0,0,2V16a2.006,2.006,0,0,0,2,2H16a2.006,2.006,0,0,0,2-2V2A2.006,2.006,0,0,0,16,0Z" transform="translate(3 3)" fill="#f04e31"/>
+  <path id="Path-3" data-name="Path" d="M14,14H0V0H14Z" transform="translate(5 5)" fill="#343a40"/>
+<!--  <path id="Path-4" data-name="Path" d="M12,1.42,10.59,0,4,6.59,1.42,4.02,0,5.43,4,9.42Z" transform="translate(5.99 7.58)" fill="#fff"/>-->
+</svg>

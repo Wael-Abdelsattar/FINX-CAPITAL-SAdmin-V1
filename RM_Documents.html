@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1366, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>RM Documents</title>
+<meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-title" content="FINX">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="167x167" href="assets/favicons/apple-icon-167x167.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-icon-192x192.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link data-react-helmet="true" rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+  </head>
+  <body>
+    <div class="global-wrapper op-page">
+      <header>
+        <div class="container-fluid">
+          <a href="#" class="logo open-sidemenu">
+        <img src="assets/images/logo.svg" alt="FINX" />
+      </a>
+        </div>
+      </header>
+  <div class="sidemenu">
+    <img src="assets/images/logo.svg" alt="">
+    <button type="button" class="btn btn-icon close-menu">
+      <img src="assets/images/close-red.svg" alt="">
+    </button>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="active">Home</a>
+        </li>
+        <li>
+          <a href="./RM_Profile.html">Profile</a>
+        </li>
+        <li>
+          <a href="#" onClick="toggleFullScreen();">Full Screen</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+      <div class="meta-bar">
+        <div>
+          Date: August - 17 -2020
+        </div>
+        <div>
+          Deal Number: 123456AA
+        </div>
+        <div>
+          Customer: Matthew Romero
+        </div>
+        <div>
+          Credit Specialist: Ray Rieger
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="d-flex align-items-end">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="application-tab"
+                
+                href="./RM_Application-1_1.html"
+                role="tab"
+                aria-controls="application"
+                aria-selected="true"
+                >Application</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="vehicle-info-tab"
+                
+                href="./RM_Vehicle-Info.html"
+                role="tab"
+                aria-controls="vehicle-info"
+                aria-selected="false"
+                >Vehicle Info</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a 
+              class="nav-link" 
+              id="products-tab" 
+              href="RM_Products.html" 
+              role="tab" 
+              aria-controls="products" 
+              aria-selected="false"
+              >Products</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="worksheet-tab"
+                href="./RM_Products_Worksheet_tabs.html"
+                role="tab"
+                aria-controls="worksheet"
+                aria-selected="false"
+                >Worksheet</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="disclosure-tab"
+                href="RM_Disclosure.html"
+                role="tab"
+                aria-controls="disclosure"
+                aria-selected="false"
+                >Disclosure</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="decision-tab"
+                href="./RM_Decisions_Bank_User.html"
+                role="tab"
+                aria-controls="decision"
+                aria-selected="false"
+                >Decision</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="lenders-note-tab"
+                
+                href="./RM_Lenders_Note.html"
+                role="tab"
+                aria-controls="lenders-note"
+                aria-selected="false"
+                >Lenders Note</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="documents-tab"
+                href="./RM_Documents.html"
+                role="tab"
+                aria-controls="documents"
+                aria-selected="false"
+                >Documents</a
+              >
+            </li>
+          </ul>
+          <div class="spacer"></div>
+          <button type="button" class="btn btn-danger mb-1">Cancel</button>
+          <button type="button" class="btn btn-primary ml-1 mb-1">Save</button>
+        </div>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade"
+            id="application"
+            role="tabpanel"
+            aria-labelledby="application-tab"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="vehicle-info"
+            role="tabpanel"
+            aria-labelledby="vehicle-info-tab"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="products"
+            role="tabpanel"
+            aria-labelledby="products-tab"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="customer-display"
+            role="tabpanel"
+            aria-labelledby="customer-display-tab"
+          >
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="wrapper light-grey">
+                  <div class="row half-spacing">
+                    <div class="col-md-12 mb-3">
+                      <div class="wrapper">
+                        <div
+                          class="section-title d-flex align-items-center mb-4 center"
+                        >
+                          <h2 class="title">Vehicle Details</h2>
+                        </div>
+                        <div class="vehicle-details">
+                          <div>
+                            <h5>Year</h5>
+                            <h4>2017</h4>
+                          </div>
+                          <div>
+                            <h5>Make</h5>
+                            <h4>Honda</h4>
+                          </div>
+                          <div>
+                            <h5>Model</h5>
+                            <h4>Civic</h4>
+                          </div>
+                          <div>
+                            <h5>Odometer</h5>
+                            <h4>156,685 KM</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="wrapper px-0">
+                        <div
+                          class="section-title d-flex align-items-center mb-4 center"
+                        >
+                          <h2 class="title">Beacon Score</h2>
+                        </div>
+                        <div id="gauge-chart"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 loan-details">
+                      <div class="wrapper">
+                        <div
+                          class="section-title d-flex align-items-center mb-4 center"
+                        >
+                          <h2 class="title">Loan Details</h2>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-md-2">
+                            <div class="dropdown select-dropdown actions term-options">
+                              <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton">Term
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">0</a>
+                                <a class="dropdown-item" href="#">1</a>
+                                <a class="dropdown-item" href="#">2</a>
+                                <a class="dropdown-item" href="#">3</a>
+                              </div>
+                            </div>
+                            <p class="mt-2 mb-0 small-text text-nowrap term-value">0</p>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="dropdown select-dropdown actions amortization-options">
+                              <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton">Amortization
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">0</a>
+                                <a class="dropdown-item" href="#">1</a>
+                                <a class="dropdown-item" href="#">2</a>
+                                <a class="dropdown-item" href="#">3</a>
+                              </div>
+                            </div>
+                            <p class="mt-2 mb-0 small-text text-nowrap amortization-value">0</p>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="dropdown select-dropdown actions payment-options">
+                              <button
+                                class="btn btn-danger dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                id="dropdownMenuButton"
+                              >Payment Frequency
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-center"
+                                aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Weekly</a>
+                                <a class="dropdown-item" href="#">Bi-Weekly</a>
+                                <a class="dropdown-item" href="#">Monthly</a>
+                                <a class="dropdown-item" href="#">Bi-Monthly</a>
+                              </div>
+                            </div>
+                            <p class="mt-2 mb-0 small-text text-nowrap payment-value">
+                              Monthly
+                            </p>
+                          </div>
+                        </div>
+                        <dl>
+                          <div>
+                            <dt>Balloon:</dt>
+                            <dd>$0.00</dd>
+                          </div>
+                          <div>
+                            <dt>Cost of borrowing:</dt>
+                            <dd>$2,914.60</dd>
+                          </div>
+                          <div>
+                            <dt>Interest Saving:</dt>
+                            <dd class="green">$0.00</dd>
+                          </div>
+                          <div>
+                            <dt>Break Even Point:</dt>
+                            <dd>0 Months</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <div class="wrapper">
+                        <div
+                          class="section-title d-flex align-items-center mb-3 center"
+                        >
+                          <h2 class="title">Product Grids</h2>
+                        </div>
+                        <div class="products products-carousel carousel-red">
+                          <div class="products__product-item">
+                            <div>
+                              <h4>Tire & Rim</h4>
+                            </div>
+                          </div>
+                          <div class="products__product-item">
+                            <div>
+                              <h4>Warranty</h4>
+                            </div>
+                          </div>
+                          <div class="products__product-item">
+                            <div>
+                              <h4>KeyFob</h4>
+                            </div>
+                          </div>
+                          <div class="products__product-item">
+                            <div>
+                              <h4>Chemicals</h4>
+                            </div>
+                          </div>
+                          <div class="products__product-item">
+                            <div>
+                              <h4>Gap</h4>
+                            </div>
+                          </div>
+                          <div class="products__product-item">
+                            <div>
+                              <h4>Walkaway</h4>
+                            </div>
+                          </div>
+                          <div class="products__product-item">
+                            <div>
+                              <h4>Life Insurance</h4>
+                            </div>
+                          </div>
+                          <div class="products__product-item">
+                            <div>
+                              <h4>Life Insurance</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <ul class="nav nav-tabs dark" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="options-tab"
+                      data-toggle="tab"
+                      href="#options"
+                      role="tab"
+                      aria-controls="options"
+                      aria-selected="true"
+                      >Options</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="products-tab"
+                      href="RM_Products.html"
+                      role="tab"
+                      aria-controls="products"
+                      aria-selected="false"
+                      >Products</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="brochures-tab"
+                      data-toggle="tab"
+                      href="#brochures"
+                      role="tab"
+                      aria-controls="brochures"
+                      aria-selected="false"
+                      >Brochures</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content dark" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="options"
+                    role="tabpanel"
+                    aria-labelledby="options-tab"
+                  >
+                    <div class="grid-blocks gap-15 one">
+                      <div class="card red-card">
+                        <div class="card-header text-center">
+                          Option One
+                        </div>
+                        <div class="card-body">
+                          <div
+                            class="section-title d-flex align-items-center mb-4 center"
+                          >
+                            <h2 class="title">Finx Capital</h2>
+                          </div>
+                          <dl>
+                            <div>
+                              <dt>Term</dt>
+                              <dd>48</dd>
+                            </div>
+                            <div>
+                              <dt>Interest</dt>
+                              <dd>6.79%</dd>
+                            </div>
+                            <div>
+                              <dt>Payment</dt>
+                              <dd>$480.20</dd>
+                            </div>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="card red-card">
+                        <div class="card-header medium-text text-center">
+                          Included
+                        </div>
+                        <div class="card-body included"></div>
+                      </div>
+                      <div class="card red-card">
+                        <div class="card-header medium-text text-center">
+                          Lender Notes
+                        </div>
+                        <div class="card-body lender-notes"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="products"
+                    role="tabpanel"
+                    aria-labelledby="products-tab"
+                  >
+                    ...
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="brochures"
+                    role="tabpanel"
+                    aria-labelledby="brochures-tab"
+                  >
+                    ...
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="disclosure"
+            role="tabpanel"
+            aria-labelledby="disclosure-tab"
+          >
+            <button class="btn btn-danger floated">Print</button>
+            <div class="panel red-panel m-b-3">
+              <div class="panel-heading">Option One</div>
+              <div class="panel-body">
+                <div class="dl-blocks d-flex">
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Lender:</dt>
+                      <dd class="small-text">Ford Credit</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Selling Price:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Trade in:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Lien Amount:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">PPSA:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Rebate After Tax:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Cash Down Payment:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Misc. Fee:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Licence Fee:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Buy Down Points:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Country:</dt>
+                      <dd class="small-text">Canada</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Province:</dt>
+                      <dd class="small-text">BC</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">PST:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">GST / HST:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Term:</dt>
+                      <dd class="small-text">60 Months</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Amortization:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Balloon:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Payment Frequency:</dt>
+                      <dd class="small-text">Bi-Weekly</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Standard Rate:</dt>
+                      <dd class="small-text">8%</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">New Interest Rate:</dt>
+                      <dd class="small-text">15%</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Payment Amount:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Cost of Borrowing:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Amount to Finance:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Buy Down Cost:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Interest Savings:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Dealer Reserve:</dt>
+                      <dd class="small-text">$2,313.32</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Total Profit:</dt>
+                      <dd class="small-text">$2,313.32</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="panel dark-grey-panel m-b-3">
+              <div class="panel-heading">Quote</div>
+              <div class="panel-body">
+                <div class="dl-blocks d-flex">
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Lender:</dt>
+                      <dd class="small-text">Ford Credit</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Selling Price:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Trade in:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Lien Amount:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">PPSA:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Rebate After Tax:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Cash Down Payment:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Misc. Fee:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Licence Fee:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Buy Down Points:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Country:</dt>
+                      <dd class="small-text">Canada</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Province:</dt>
+                      <dd class="small-text">BC</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">PST:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">GST / HST:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Term:</dt>
+                      <dd class="small-text">60 Months</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Amortization:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Balloon:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Payment Frequency:</dt>
+                      <dd class="small-text">Bi-Weekly</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Standard Rate:</dt>
+                      <dd class="small-text">8%</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">New Interest Rate:</dt>
+                      <dd class="small-text">15%</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Payment Amount:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Cost of Borrowing:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Amount to Finance:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Buy Down Cost:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Interest Savings:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Dealer Reserve:</dt>
+                      <dd class="small-text">$2,313.32</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Total Profit:</dt>
+                      <dd class="small-text">$2,313.32</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="panel blue-panel m-b-3">
+              <div class="panel-heading">Option Two</div>
+              <div class="panel-body">
+                <div class="dl-blocks d-flex">
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Lender:</dt>
+                      <dd class="small-text">Ford Credit</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Selling Price:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Trade in:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Lien Amount:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">PPSA:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Rebate After Tax:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Cash Down Payment:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Misc. Fee:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Licence Fee:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Buy Down Points:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Product:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Country:</dt>
+                      <dd class="small-text">Canada</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Province:</dt>
+                      <dd class="small-text">BC</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">PST:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">GST / HST:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Term:</dt>
+                      <dd class="small-text">60 Months</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Amortization:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Balloon:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Payment Frequency:</dt>
+                      <dd class="small-text">Bi-Weekly</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Standard Rate:</dt>
+                      <dd class="small-text">8%</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">New Interest Rate:</dt>
+                      <dd class="small-text">15%</dd>
+                    </div>
+                  </dl>
+                  <dl class="no-border flex-grow-1">
+                    <div class="m-b-2">
+                      <dt class="small-text">Payment Amount:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Cost of Borrowing:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Amount to Finance:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Buy Down Cost:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Interest Savings:</dt>
+                      <dd class="small-text">$5,000</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Dealer Reserve:</dt>
+                      <dd class="small-text">$2,313.32</dd>
+                    </div>
+                    <div class="m-b-2">
+                      <dt class="small-text">Total Profit:</dt>
+                      <dd class="small-text">$2,313.32</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="decision"
+            role="tabpanel"
+            aria-labelledby="decision-tab"
+          >
+            <table class="table table-bordered normal m-t-1 dark-borders">
+              <thead class="blue-thead">
+                <th>Lender</th>
+                <th>Risk Management</th>
+                <th class="text-center">Decisions</th>
+                <th class="text-center">Last Update</th>
+                <th class="text-center">Conditions</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>FinX Capital</td>
+                  <td>Nathaniel Clark</td>
+                  <td class="text-center">
+                    <span class="dark-green">Approved</span>
+                  </td>
+                  <td class="text-center">Jan-27-2020, 13:00 PST</td>
+                  <td class="text-center">
+                    <div class="d-flex justify-content-evenly">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn btn-primary has-icon"
+                          data-toggle="modal"
+                          data-target="#decitions-modal"
+                        >
+                          <i class="icon-eye"></i>
+                          <span>View</span>
+                        </button>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-danger has-icon">
+                          <i class="icon-print"></i>
+                          <span>Print</span>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RBC</td>
+                  <td>Peter Douglas</td>
+                  <td class="text-center"><span class="red">Declined</span></td>
+                  <td class="text-center">Jan-27-2020, 13:00 PST</td>
+                  <td class="text-center">
+                    <div class="d-flex justify-content-evenly">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn btn-primary has-icon"
+                          data-toggle="modal"
+                          data-target="#decitions-modal"
+                        >
+                          <i class="icon-eye"></i>
+                          <span>View</span>
+                        </button>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-danger has-icon">
+                          <i class="icon-print"></i>
+                          <span>Print</span>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>BMO</td>
+                  <td>Justin Williams</td>
+                  <td class="text-center"><span class="red">Declined</span></td>
+                  <td class="text-center">Jan-27-2020, 13:00 PST</td>
+                  <td class="text-center">
+                    <div class="d-flex justify-content-evenly">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn btn-primary has-icon"
+                          data-toggle="modal"
+                          data-target="#decitions-modal"
+                        >
+                          <i class="icon-eye"></i>
+                          <span>View</span>
+                        </button>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-danger has-icon">
+                          <i class="icon-print"></i>
+                          <span>Print</span>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>TD</td>
+                  <td>Teresa Gibson</td>
+                  <td class="text-center"><span>Funded</span></td>
+                  <td class="text-center">Jan-27-2020, 13:00 PST</td>
+                  <td class="text-center">
+                    <div class="d-flex justify-content-evenly">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn btn-primary has-icon"
+                          data-toggle="modal"
+                          data-target="#decitions-modal"
+                        >
+                          <i class="icon-eye"></i>
+                          <span>View</span>
+                        </button>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-danger has-icon">
+                          <i class="icon-print"></i>
+                          <span>Print</span>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="lenders-note"
+            role="tabpanel"
+            aria-labelledby="lenders-note-tab"
+          >
+            <div class="grid-blocks gap-15 four m-t-1">
+              <div class="block curved grid-3">
+                <div class="block-header text-center big-text colored filled">
+                  Lenders Message
+                </div>
+                <div class="block-content">
+                  <table class="table table-bordered normal m-0 dark-borders table-hover">
+                    <thead class="blue-thead">
+                      <th class="text-center">#</th>
+                      <th class="text-center">Message</th>
+                      <th class="text-center">To / From</th>
+                      <th class="text-center">Date</th>
+                      <th class="text-center">Time</th>
+                      <th class="text-center">Action</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">1.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">2.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">3.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">4.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">5.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">6.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">7.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">8.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">9.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">10.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">11.</td>
+                        <td class="text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ullam vel architecto quaerat totam quisquam
+                          repellendus blanditiis voluptate amet? Ratione a illo
+                          et fugiat sint dolorum dignissimos corporis eligendi
+                          facere nemo?
+                        </td>
+                        <td class="text-center">Jon Mullins</td>
+                        <td class="text-center">Jul-05-2020</td>
+                        <td class="text-center">13:00</td>
+                        <td>
+                          <div class="dropdown select-dropdown actions">
+                            <button
+                              class="btn btn-secondary dropdown-toggle"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon-more"></i>
+                            </button>
+                            <div
+                              class="dropdown-menu dropdown-menu-center"
+                              aria-labelledby="dropdownMenuButton"
+                            >
+                              <a
+                                class="dropdown-item"
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#show-message-modal"
+                                >Show</a
+                              >
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="block curved full-height-block">
+                <div class="block-header text-center big-text colored filled">
+                  Enter a New Message
+                </div>
+                <div class="block-content d-flex flex-column">
+                  <div
+                    class="textarea colored d-flex flex-column flex-grow-1 align-items-start mb-3"
+                  >
+                    <textarea
+                      class="flex-grow-1 no-resize"
+                      placeholder="Enter your messages"
+                    ></textarea>
+                    <span class="chr-count"
+                      ><span class="typed">0</span>/4000</span
+                    >
+                  </div>
+                  <button type="button" class="btn btn-primary align-self-end">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade show active"
+            id="documents"
+            role="tabpanel"
+            aria-labelledby="documents-tab"
+          >
+            <div class="grid-blocks gap-15 four">
+              <div>
+                <div class="block curved">
+                  <div
+                    class="block-header colored filled big-text bold text-center"
+                  >
+                    Option
+                  </div>
+                  <div class="block-content no-padding">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="option1"
+                          />
+                          <label class="custom-control-label" for="option1"
+                            >Option 1</label
+                          >
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="quote"
+                          />
+                          <label class="custom-control-label" for="quote"
+                            >Quote</label
+                          >
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="option2"
+                          />
+                          <label class="custom-control-label" for="option2"
+                            >Option 2</label
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="block curved mt-3">
+                  <div
+                    class="block-header colored filled big-text bold text-center"
+                  >
+                    Language
+                  </div>
+                  <div class="block-content no-padding">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="english"
+                          />
+                          <label class="custom-control-label" for="english"
+                            >English</label
+                          >
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="french"
+                          />
+                          <label class="custom-control-label" for="french"
+                            >French</label
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- <button type="button" class="btn btn-danger btn-block m-t-6 big-shadow">Submit to Risk Management</button> -->
+              </div>
+              <div class="grid-3">
+                <div class="block curved">
+                  <div
+                    class="block-header colored filled big-text bold d-flex align-items-center"
+                  >
+                    List of Documents
+                    <div class="actions ml-auto">
+                      <!-- <button type="button" class="btn btn-danger">Electronic Signature</button> -->
+                      <button type="button" class="btn btn-danger has-icon ml-2">
+                        <i class="icon-print"></i>
+                        <span>Print</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="block-content">
+                    <div class="custom-scroll height-275 light-bg">
+                      <table
+                        class="table table-bordered normal m-0 dark-borders"
+                      >
+                        <thead class="blue-thead sticky">
+                          <th class="checkbox-column">
+                            <div
+                              class="custom-control custom-checkbox no-title"
+                            >
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                                id="select-all"
+                              />
+                              <label
+                                class="custom-control-label"
+                                for="select-all"
+                              ></label>
+                            </div>
+                          </th>
+                          <th>Forms / Documents</th>
+                          <th>Provider</th>
+                          <th class="text-center small">Action</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div
+                                class="custom-control custom-checkbox no-title"
+                              >
+                                <input
+                                  type="checkbox"
+                                  class="custom-control-input"
+                                  id="row-1"
+                                />
+                                <label
+                                  class="custom-control-label"
+                                  for="row-1"
+                                ></label>
+                              </div>
+                            </td>
+                            <td>Bill Smith Credit Report</td>
+                            <td>Equifax</td>
+                            <td class="text-center small">
+                              <button type="button" data-toggle="modal" data-target="#view-files-modal" class="btn btn-primary">
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="custom-control custom-checkbox no-title"
+                              >
+                                <input
+                                  type="checkbox"
+                                  class="custom-control-input"
+                                  id="row-2"
+                                />
+                                <label
+                                  class="custom-control-label"
+                                  for="row-2"
+                                ></label>
+                              </div>
+                            </td>
+                            <td>Tire & Rim Warranty</td>
+                            <td>Poketbook Protection Inc.</td>
+                            <td class="text-center small">
+                              <button type="button" data-toggle="modal" data-target="#view-files-modal" class="btn btn-primary">
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="custom-control custom-checkbox no-title"
+                              >
+                                <input
+                                  type="checkbox"
+                                  class="custom-control-input"
+                                  id="row-3"
+                                />
+                                <label
+                                  class="custom-control-label"
+                                  for="row-3"
+                                ></label>
+                              </div>
+                            </td>
+                            <td>Welcome Call Letter</td>
+                            <td>Customer Welcome Call Letter</td>
+                            <td class="text-center small">
+                              <button type="button" data-toggle="modal" data-target="#view-files-modal" class="btn btn-primary">
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="custom-control custom-checkbox no-title"
+                              >
+                                <input
+                                  type="checkbox"
+                                  class="custom-control-input"
+                                  id="row-4"
+                                />
+                                <label
+                                  class="custom-control-label"
+                                  for="row-4"
+                                ></label>
+                              </div>
+                            </td>
+                            <td>Trustee Authorization Form</td>
+                            <td>N/A</td>
+                            <td class="text-center small">
+                              <button type="button" data-toggle="modal" data-target="#view-files-modal" class="btn btn-primary">
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="custom-control custom-checkbox no-title"
+                              >
+                                <input
+                                  type="checkbox"
+                                  class="custom-control-input"
+                                  id="row-5"
+                                />
+                                <label
+                                  class="custom-control-label"
+                                  for="row-5"
+                                ></label>
+                              </div>
+                            </td>
+                            <td>Poketbook Certificate</td>
+                            <td>Customer Welcome Call Letter</td>
+                            <td class="text-center small">
+                              <button type="button" data-toggle="modal" data-target="#view-files-modal" class="btn btn-primary">
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div
+                                class="custom-control custom-checkbox no-title"
+                              >
+                                <input
+                                  type="checkbox"
+                                  class="custom-control-input"
+                                  id="row-6"
+                                />
+                                <label
+                                  class="custom-control-label"
+                                  for="row-6"
+                                ></label>
+                              </div>
+                            </td>
+                            <td>Welcome Call Letter</td>
+                            <td>Customer Welcome Call Letter</td>
+                            <td class="text-center small">
+                              <button type="button" data-toggle="modal" data-target="#view-files-modal" class="btn btn-primary">
+                                View
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="block curved mt-4">
+                  <div
+                    class="block-header colored filled big-text bold d-flex align-items-center"
+                  >
+                  Attach file. ie) Carfax, Driver license, Trade Registeration, ETC..
+                    <div class="actions ml-auto">
+                      <button type="button" class="btn btn-danger add-new-file">Add</button>
+                    </div>
+                  </div>
+                  <div class="block-content attach">
+                    <div class="files grid-blocks four gap-64 align-items-end">
+                      <div>
+                        <h4>Second ID</h4>
+                        <div class="file">
+                          <button type="button" class="btn btn-icon bg-danger remove-file">
+                            <i class="icon-delete"></i>
+                          </button>
+                          <span class="icon">
+                            <img src="assets/images/pdf.svg" alt="">
+                          </span>
+                          <h5>File Name</h5>
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Trade Registration</h4>
+                        <div class="file">
+                          <button type="button" class="btn btn-icon bg-danger remove-file">
+                            <i class="icon-delete"></i>
+                          </button>
+                          <span class="icon">
+                            <img src="assets/images/pdf.svg" alt="">
+                          </span>
+                          <h5>File Name</h5>
+                        </div>
+                      </div>
+                      <div>
+                        <h4>New registration</h4>
+                        <div class="file">
+                          <button type="button" class="btn btn-icon bg-danger remove-file">
+                            <i class="icon-delete"></i>
+                          </button>
+                          <span class="icon">
+                            <img src="assets/images/pdf.svg" alt="">
+                          </span>
+                          <h5>File Name</h5>
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Void Check</h4>
+                        <div class="file">
+                          <button type="button" class="btn btn-icon bg-danger remove-file">
+                            <i class="icon-delete"></i>
+                          </button>
+                          <span class="icon">
+                            <img src="assets/images/pdf.svg" alt="">
+                          </span>
+                          <h5>File Name</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="video-chat-modal"
+      data-backdrop="false"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="video-call">
+            <div class="users">
+              <figure>
+                <img src="assets/images/user.jpg" alt="" />
+              </figure>
+              <figure>
+                <img src="assets/images/other.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="controls">
+              <button type="button" class="btn dark-green">
+                <i class="icon-videocam"></i>
+              </button>
+              <button type="button" class="btn">
+                <i class="icon-mic"></i>
+              </button>
+              <button type="button" class="btn hang-up" data-dismiss="modal">
+                <i class="icon-call"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="decitions-modal"
+      data-backdrop="true"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog full-width" role="document">
+        <div class="modal-header no-title">
+          <button
+            type="button"
+            data-dismiss="modal"
+            class="close-modal"
+          ></button>
+        </div>
+        <div class="modal-content px-3 py-4 grey-bg">
+          <div class="d-flex align-items-center mb-3">
+            <h3 class="m-0">Decisions</h3>
+            <span class="badge badge-success ml-4">Approved</span>
+            <div class="ml-auto">
+              <button type="button" class="btn btn-danger has-icon">
+                <i class="icon-print"></i>
+                <span>Print</span>
+              </button>
+            </div>
+          </div>
+          <div class="grid-blocks gap-15 three">
+            <div class="block full-height-block">
+              <div class="block-header colored">
+                This Deal’s Status is
+              </div>
+              <div class="block-content">
+                <dl class="no-border">
+                  <div class="m-b-1">
+                    <dt>Deal #:</dt>
+                    <dd class="small-text">15567025</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Contract Type:</dt>
+                    <dd class="small-text">Loan</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Lender:</dt>
+                    <dd class="small-text">Ford Credit</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Lender Reference #:</dt>
+                    <dd class="small-text">3248621</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Dealer Name:</dt>
+                    <dd class="small-text">M. Auto Group Moose Jaw Ltd.</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Customer Name:</dt>
+                    <dd class="small-text">KEVIN STRAND</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Co-Applicant Name:</dt>
+                    <dd class="small-text">N/A</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Last Modified On:</dt>
+                    <dd class="small-text">17-Mar-2017 17:12:46</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="block full-height-block">
+              <div class="block-header colored">
+                Lender Terms
+              </div>
+              <div class="block-content">
+                <dl class="no-border">
+                  <div class="m-b-1">
+                    <dt>Amount Financed:</dt>
+                    <dd class="small-text">$55,056.93</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Annual Interest Rate:</dt>
+                    <dd class="small-text">0.99</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Payment Frequency:</dt>
+                    <dd class="small-text">N/A</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Residual Value:</dt>
+                    <dd class="small-text">$0.00</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Term of Borrowing:</dt>
+                    <dd class="small-text">N/A.</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Installment Payment:</dt>
+                    <dd class="small-text">$678.68</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Amortization:</dt>
+                    <dd class="small-text">84</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Lender Comments:</dt>
+                    <dd class="small-text">
+                      Please contact THE DEALER FINANCE CENTRE at (800) 268-0762
+                      if you wish to discuss this decision
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="block full-height-block">
+              <div class="block-header colored">
+                Vehicle Information
+              </div>
+              <div class="block-content">
+                <dl class="no-border">
+                  <div class="m-b-1">
+                    <dt>Condition:</dt>
+                    <dd class="small-text">New</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Make:</dt>
+                    <dd class="small-text">Chevrolet</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Model:</dt>
+                    <dd class="small-text">
+                      2017 Chevrolet Silverado 1500 LTZ Crew Cab SWB 4WD
+                    </dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>VIN #:</dt>
+                    <dd class="small-text">3GCUKSEC5HG314941</dd>
+                  </div>
+                  <div class="m-b-1">
+                    <dt>Odometer:</dt>
+                    <dd class="small-text">11</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="block full-height-block mt-4">
+            <div class="block-header colored">
+              Conditions
+            </div>
+            <div class="block-content">
+              <p class="light-red m-0 small-text bold">
+                Deal Specific Conditions
+              </p>
+              <ul class="mt-1">
+                <li>Standard Conditions</li>
+                <li>
+                  Signed BNS applicant’s statement including dates of birth for
+                  each borrower
+                </li>
+                <li>
+                  Full legal name, including middle name, required for each
+                  borrower
+                </li>
+                <li>
+                  Pre-authorized debit information authorized by all signers,
+                  along with personalized void cheque
+                </li>
+                <li>Require completed and signed ID Verification Form</li>
+                <li>
+                  Copy of bill of sale and all other applicable documents e.g.
+                  extended warranty, insurance, signed Dealer Agreement, etc.
+                </li>
+                <li>
+                  If the down payment is $10,000 and over or not in line with
+                  declared financial means,the source of the down payment may be
+                  required
+                </li>
+                <li>
+                  If Approved or Countered ( Conditional Approval), this credit
+                  approval
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade centered"
+      id="show-message-modal"
+      data-backdrop="true"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog has-shadow" role="document">
+        <div class="modal-header">
+          <h3 class="m-0 medium-text bold">Lenders Message</h3>
+          <button
+            type="button"
+            data-dismiss="modal"
+            class="close-modal"
+          ></button>
+        </div>
+        <div class="modal-content px-3 py-4 grey-bg">
+          <p class="m-0 tiny-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            dapibus pulvinar dolor et porta. Fusce metus metus, rutrum tristique
+            commodo eu, lobortis at ex. Etiam nisi dolor, rhoncus non commodo
+            in, dictum ut ante.
+          </p>
+          <div class="text-right m-t-4">
+            <button type="button" class="btn btn-danger has-icon">
+              <i class="icon-print"></i>
+              <span>Print</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="view-files-modal"
+      data-backdrop="true"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog full-width" role="document">
+        <div class="modal-header no-title">
+          <button
+            type="button"
+            data-dismiss="modal"
+            class="close-modal"
+          ></button>
+        </div>
+        <div class="modal-content px-3 py-4 grey-bg">
+          <div class="d-flex align-items-start">
+            <ul>
+              <li>file name 1</li>
+              <li>file name 2</li>
+              <li>file name 3</li>
+            </ul>
+            <div class="actions ml-auto">
+              <!-- <button type="button" class="btn btn-danger">
+                Download
+              </button> -->
+              <button type="button" class="btn btn-danger has-icon">
+                <i class="icon-print"></i>
+                <span>Print</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript Files -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $('#video-chat-modal').on('show.bs.modal', function (e) {
+        $('.video-chat').addClass('op-active');
+      });
+      $('#video-chat-modal').on('hide.bs.modal', function (e) {
+        $('.video-chat').removeClass('op-active');
+      });
+    </script>
+    <script src="assets/scripts/gauge-chart.js"></script>
+    <script src="assets/scripts/custom-functions.js"></script>
+  </body>
+</html>

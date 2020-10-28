@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?u5d8ns');
+  src: url('../fonts/icomoon.eot?u5d8ns#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?u5d8ns') format('truetype'),
+    url('../fonts/icomoon.woff?u5d8ns') format('woff'),
+    url('../fonts/icomoon.svg?u5d8ns#icomoon') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.woff2') format('woff2'),
+    url('../fonts/Helvetica.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
+    url('../fonts/Helvetica-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}

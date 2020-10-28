@@ -1,0 +1,178 @@
+            .vehicle-details {
+                display: -ms-grid;
+                display: -webkit-grid;
+                display: grid;
+                -ms-grid-columns: 20% 25% 25% 30%;
+                -webkit-grid-columns: 20% 25% 25% 30%;
+                grid-template-columns: 20% 25% 25% 30%;
+                margin: 0 -15px;
+                div {
+                    text-align: center;
+                    position: relative;
+                    h5 {
+                        font-size: 18px;
+                    }
+                    h4 {
+                        font-size: 21px;
+                        font-weight: bold;
+                        margin-bottom: 0;
+                    }
+                    &:after {
+                        content: '';
+                        width: 2px;
+                        height: 50%;
+                        background: #c7c7c7;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child:after {
+                        display: none;
+                    }
+                }
+            }
+            
+            .slick-slider .slick-track {
+                display: flex;
+            }
+            
+            .products {
+                .products__product-item {
+                    background: #2b2b2b;
+                    margin: 0 10px;
+                    border-radius: 16px;
+                    padding: 0 2px 10px;
+                    text-align: center;
+                    height: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    outline: 0;
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 100%;
+                        &:after {
+                            content: '';
+                            width: 36px;
+                            height: 36px;
+                            display: block;
+                            background-image: url('../images/grid.svg');
+                            background-size: contain;
+                        }
+                    }
+                    h4 {
+                        font-size: 12px;
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        margin: 6px 0;
+                    }
+                }
+            }
+            
+            .op-page {
+                @media all and (max-width: 1199px) and (min-width: 769px) {
+                    .col-xl-6 {
+                        margin-bottom: 1.5rem;
+                    }
+                    .nav-tabs .nav-links {
+                        width: auto;
+                        min-width: 105px;
+                    }
+                }
+                @media all and (max-width: 991px) {
+                    .col-lg-5 {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+            
+            // .payment-options:before {
+            //   content: "Payment Frequency";
+            //   font-size: 14px;
+            //   white-space: nowrap;
+            // }
+            .payment-options,
+            .amortization-options,
+            .term-options {
+                .btn {
+                    background: none;
+                    border: 0;
+                    color: white;
+                    outline: 0;
+                    padding: 0;
+                    min-width: auto;
+                    &:after {
+                        content: '\e903';
+                        font-family: $iconFont;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        margin: 0;
+                        border: 0;
+                        color: $red;
+                        font-size: 5px;
+                        margin-left: 5px;
+                        display: block;
+                    }
+                    &:hover,
+                    &:focus,
+                    &:active:hover,
+                    &.btn-danger:active {
+                        outline: 0 !important;
+                        background: none !important;
+                        border: 0 !important;
+                        box-shadow: none !important;
+                    }
+                }
+                &.actions {
+                    // height: 16px;
+                    line-height: 18px;
+                    text-align: left;
+                    >.btn {
+                        color: $white;
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-family: "Helvetica" !important;
+                        background-color: transparent;
+                        border-color: transparent;
+                        height: 20px;
+                        // line-height: 19px;
+                        &::after {
+                            display: block;
+                        }
+                    }
+                    .dropdown-menu-center {
+                        left: 39% !important;
+                        // transform: translate3d(-50%, 30px, 0px) !important;
+                    }
+                }
+            }
+            .payment-value,
+            .amortization-value,
+            .term-value {
+                margin-bottom: 9px !important;
+            }
+            
+            // svg {
+            //     g.highcharts-axis-labels.highcharts-yaxis-labels {
+            //         text {
+            //             &:nth-of-type(1) {
+            //                 fill: #E02020 !important;
+            //             }
+            //             &:nth-of-type(2) {
+            //                 fill: #FA6400 !important;
+            //             }
+            //             &:nth-of-type(3) {
+            //                 fill: #F7B500 !important;
+            //             }
+            //             &:nth-of-type(4) {
+            //                 fill: #9AFF2F !important;
+            //             }
+            //             &:nth-of-type(5) {
+            //                 fill: #478A00 !important;
+            //             }
+            //         }
+            //     }
+            // }
