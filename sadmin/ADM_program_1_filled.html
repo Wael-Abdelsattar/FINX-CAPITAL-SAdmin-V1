@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1366, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+    <!-- <link rel="stylesheet" href="../assets/scss/dist/style.css" /> -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/Vehicle-tab.css" />
+
+
+    <title>Overview Landing</title>
+    <meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-title" content="FINX">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="114x114"
+        href="../assets/favicons/apple-icon-114x114.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="120x120"
+        href="../assets/favicons/apple-icon-120x120.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="144x144"
+        href="../assets/favicons/apple-icon-144x144.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="152x152"
+        href="../assets/favicons/apple-icon-152x152.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="167x167"
+        href="../assets/favicons/apple-icon-167x167.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="180x180"
+        href="../assets/favicons/apple-icon-180x180.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="192x192"
+        href="../assets/favicons/android-icon-192x192.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="96x96"
+        href="../assets/favicons/favicon-96x96.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32"
+        href="../assets/favicons/favicon-32x32.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="16x16"
+        href="../assets/favicons/favicon-16x16.png">
+    <link data-react-helmet="true" rel="shortcut icon" href="../assets/favicons/favicon.ico">
+    <link rel="manifest" href="../assets/favicons/manifest.json">
+</head>
+
+<body>
+    <div class="global-wrapper overview-landing">
+        <!-- header -->
+        <header>
+            <div class="container-fluid">
+                <a href="#" class="logo open-sidemenu">
+                    <img src="../assets/images/logo.svg" />
+                </a>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- Side menu -->
+        <div class="sidemenu">
+            <img src="../assets/images/logo.svg" alt="">
+            <button type="button" class="btn btn-icon close-menu">
+                <img src="../assets/images/close-red.svg" alt="">
+            </button>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="./Overview.html">Overview</a>
+                    </li>
+                    <li>
+                        <a href="./CS_Profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="toggleFullScreen();">Full Screen</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /Side menu -->
+
+        <div class="container-fluid program_container">
+            <div class="section-title d-flex align-items-center mb-3 mt-2">
+                <svg class="go_back" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                <desc>Created with Lunacy</desc>
+                <g id="arrow_back-24px">
+                    <path d="M0 0L32 0L32 32L0 32L0 0Z" id="Path" fill="none" fill-rule="evenodd" stroke="none" />
+                    <path d="M21.3333 9.33333L5.10667 9.33333L12.56 1.88L10.6667 0L0 10.6667L10.6667 21.3333L12.5467 19.4533L5.10667 12L21.3333 12L21.3333 9.33333Z" transform="translate(5.333252 5.3339844)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+                </g>
+                </svg>
+                <h2 class="title">GBC Vintage Program 20</h2>
+                <div class="dropdown select-dropdown">
+                    <button
+                      class="btn active dropdown-toggle active_inactive_btn"
+                      type="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      id="dropdownMenuButton"
+                    >
+                        Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item active_inactive_btn_option" data-value="1" href="#">Active</a>
+                      <a class="dropdown-item active_inactive_btn_option" data-value="0" href="#">Inactive</a>
+                    </div>
+                </div>
+                <div class="spacer flex-fill"></div>
+                <div class="actions d-flex align-items-center">
+                    <button type="button" class="btn btn-danger mb-1">Cancel</button>
+                    <button type="button" class="btn btn-primary ml-1 mb-1">Save</button>
+                </div>
+            </div>
+            <div class="row">
+                <form class="form-horizontal">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 pr-0">
+
+                        <div class="wrapper general_wrapper">
+                            <div class="wrapper_title text-left"> General </div>
+
+                            <div class="wrapper_content">
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5">Program Name</label>
+                                    <div class="col-sm-7 input_div">
+                                        <span class="value"> GBC Vintage Program </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Subvented</label>
+                                    <div class="col-sm-6 input_div">
+                                        <span class="value"> No </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Starting Date</label>
+                                    <div class="col-sm-6 input_div ">
+                                        <span class="value"> May-08-2020 </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Expiring Date</label>
+                                    <div class="col-sm-6 input_div ">
+                                        <span class="value"> July-08-2021 </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Max. Delivery Date</label>
+                                    <div class="col-sm-6 input_div ">
+                                        <span class="value"> Sep-08-2021 </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-8">Max. LTV %</label>
+                                    <div class="col-sm-4 input_div">
+                                        <span class="value"> 12% </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-8">Residual Option (Days)</label>
+                                    <div class="col-sm-4 input_div">
+                                        <span class="value"> 35 </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-8">Grace Days</label>
+                                    <div class="col-sm-4 input_div">
+                                        <span class="value">  </span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Last modification</label>
+                                    <div class="col-sm-6 input_div ">
+                                        <span class="value"> Apr-08-2020 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" style="height: 210px;">
+                            <div class="wrapper_title text-left"> Beacon Score </div>
+
+                            <div class="wrapper_content">
+                                <div class="form-group">
+                                    <div class="col-sm-3 input_div custom-radio custom-control float-left">
+                                        <input type="radio" id="r21" name="r2" class="custom-control-input" checked />
+                                        <label class="custom-control-label" for="r21">Yes</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-12 input_div">
+                                        <table class="table-form">
+                                            <thead>
+                                                <tr>
+                                                    <th class="bg-blue text-center"> From </th>
+                                                    <th class="bg-orange text-center"> To </th>
+                                                </tr>
+                                            </thead>
+
+                                            <tr>
+                                                <td class="bg-lightblue text-center"> <span class="value">300</span> </td>
+                                                <td class="bg-lightblue text-center"> <span class="value">500</span> </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 pr-0">
+
+                        <!-- Deferral Period -->
+                        <div class="wrapper" style="height: 120px;">
+                            <div class="wrapper_title text-left"> Deferral Period (Days) </div>
+
+                            <div class="wrapper_content">
+                                <div class="form-group">
+                                    <div class="col-sm-12 input_div">
+                                        <table class="table-form">
+                                            <thead>
+                                                <tr>
+                                                    <th class="bg-blue text-center"> From </th>
+                                                    <th class="bg-orange text-center"> To </th>
+                                                </tr>
+                                            </thead>
+                                            <tr>
+                                                <td class="bg-lightblue text-center"> <span class="value">0</span> </td>
+                                                <td class="bg-lightblue text-center"> <span class="value">90</span> </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Deferral Period -->
+
+                        <!-- Vehicle Detail -->
+                        <div class="wrapper" style="height: 330px;">
+                            <div class="wrapper_title text-left"> Vehicle Detail </div>
+
+                            <div class="wrapper_content">
+                                <div class="form-group">
+                                    <div class="col-sm-3 input_div custom-radio custom-control float-left">
+                                        <input type="radio" id="r31" name="r3" class="custom-control-input" checked/>
+                                        <label class="custom-control-label" for="r31">Yes</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Make:</label>
+                                    <div class="col-sm-6 input_div">
+                                        <span class="value">Honda</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Model:</label>
+                                    <div class="col-sm-6 input_div">
+                                        <span class="value">Civic</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Series:</label>
+                                    <div class="col-sm-6 input_div">
+                                        <span class="value">Series</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-6">Body Style:</label>
+                                    <div class="col-sm-6 input_div">
+                                        <span class="value">Body Style</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Vehicle Detail -->
+
+                        <!-- Loyalty Program -->
+                        <div class="wrapper" style="height: 210px;">
+                            <div class="wrapper_title text-left"> Loyalty Program </div>
+
+                            <div class="wrapper_content">
+                                <div class="form-group mb-0">
+                                    <div class="col-sm-3 input_div custom-radio custom-control float-left">
+                                        <input type="radio" id="r41" name="r4" class="custom-control-input" checked/>
+                                        <label class="custom-control-label" for="r41">Yes</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-0">
+                                    <label class="control-label col-sm-8 holder_label">Special Rate Reduction</label>
+                                    <div class="col-sm-4 input_div">
+                                        <div>
+                                            <span class="value">12%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-0">
+                                    <label class="control-label col-sm-8 holder_label">Vehicle discount Program </label>
+                                    <div class="col-sm-4 input_div">
+                                        <div>
+                                            <span class="value">$500</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /Loyalty Program -->
+
+                        <!-- Admin Fee -->
+                        <div class="wrapper" style="height: 145px;">
+                            <div class="wrapper_title text-left"> Admin Fee </div>
+
+                            <div class="wrapper_content">
+                                <div class="form-group">
+                                    <div class="col-sm-12 input_div admin_fee_div">
+                                        <table class="table-form admin_fee">
+                                            <tr>
+                                                <td class="bg-lightblue text-center text-black fee"> Fee </td>
+                                                <td class="bg-lightorange text-center fee"> <span class="value">90</span> </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Admin Fee -->
+
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <!-- Program Tiers -->
+                        <div class="wrapper program_tiers_wrapper">
+                            <div class="wrapper_title text-left"> Program Tiers </div>
+
+                            <div class="wrapper_content">
+                                <div class="form-group">
+                                   <div class="col-md-12 input_div">
+                                        <span class="tier_number_text"> Tier Number </span> <span
+                                            class="tier_number_count"> #1 </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <div class="form-group mb-0">
+                                        <label class="control-label col-sm-6 mb-0">&nbsp;</label>
+                                        <div class="col-sm-6 input_div mb-0">
+                                            <div class="col-sm-6 input_div mb-0">
+                                                End
+                                            </div>
+                                            <div class="col-sm-6 input_div">
+                                                Start
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-6 pl-0 mb-0">Term Range</label>
+                                        <div class="col-sm-6 input_div">
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">36</span>
+                                            </div>
+
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">36</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-6 pl-0 mb-0">Amortization Range</label>
+                                        <div class="col-sm-6 input_div">
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">36</span>
+                                            </div>
+
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">36</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-6 pl-0 mb-0">Vehicle Year Range</label>
+                                        <div class="col-sm-6 input_div">
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">2007</span>
+                                            </div>
+
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">2007</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-6 pl-0 mb-0">Amount Range</label>
+                                        <div class="col-sm-6 input_div">
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">5,000</span>
+                                            </div>
+
+                                            <div class="col-sm-6 input_div">
+                                                <span class="value float-left">150,000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                        <label class="control-label col-sm-6 pl-0 mb-0">Max. Option Date</label>
+                                        <div class="col-sm-6 input_div">
+                                            <div class="col-sm-12 input_div ">
+                                                <span class="value float-left">Apr-08-2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-2">&nbsp;</div>
+                                <div class="col-sm-12 fee_rates_section block-content">
+                                    <div class="col-md-12"> Acquisition Fee & Rates </div>
+                                     <div class="acquisition_table_container custom-scroll">
+                                        <table class="acquisition_table table table-bordered normal m-0 dark-borders text-center table-responsive">
+                                            <thead class="sticky">
+                                                <tr>
+                                                    <th class="bg-blue"> From </th>
+                                                    <th class="bg-blue"> To </th>
+                                                    <th class="bg-orange"> Reserve $ </th>
+                                                    <th class="bg-orange"> Reserve % </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">0.53</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$400</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">2.10</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">0.53</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">2.10</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">90</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">0.53</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">7.99</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">90</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">0.53</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">2.10</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">90</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">90</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">6.99</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">7.99</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">0.53</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">6.99</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">6.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">6.99</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">0.53</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">90</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">0.53</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">90</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">6.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">90</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">6.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">0.53</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">0.53</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">0.53</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">0.53</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">0.53</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">6.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">6.99</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">90</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">2.10</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">0.53</span> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="bg-lightblue"> <span class="value">7.99</span> </td>
+                                                    <td class="bg-lightblue"> <span class="value">6.99</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">$0</span> </td>
+                                                    <td class="bg-lightorange"> <span class="value">7.99</span> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                     </div>
+                                    <div class="dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination float-right readonly">
+                                            <li class="paginate_button page-item previous disabled">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                                </li>
+                                            <li class="paginate_button page-item active">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                            </li>
+                                            <li class="paginate_button page-item">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                            </li>
+                                            <li class="paginate_button page-item">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">3</a>
+                                            </li>
+                                            <li class="paginate_button page-item">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">4</a>
+                                            </li>
+                                            <li class="paginate_button page-item">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">5</a>
+                                            </li>
+                                            <li class="paginate_button page-item">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">...</a>
+                                            </li>
+                                            <li class="paginate_button page-item">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">20</a>
+                                            </li>
+                                            <li class="paginate_button page-item next">
+                                                <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0" class="page-link">Next</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Program Tiers -->
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/scripts/custom-functions.js"></script>
+    <script src="../assets/scripts/bootstrap-select.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.add_row').click(function(){
+                $('.acquisition_table tbody').append('<tr><td class="bg-lightblue"> <span class="value">90</span> </td><td class="bg-lightblue"> <span class="value">90</span> </td><td class="bg-lightorange"> <span class="value">90</span> </td><td class="bg-lightorange"> <span class="value">90</span> </td></tr>')
+            });
+            $('.remove_row').click(function(){
+                $('.acquisition_table tbody tr:last').remove();
+            });
+
+            $('.active_inactive_btn_option').click(function(){
+                console.log($(this).closest('.active_inactive_btn'));
+                if ($(this).data('value') == 0) {
+                    console.log(0);
+                    $(this).parent().parent().find('.active_inactive_btn').text('Inactive').removeClass('active').addClass('inactive');
+                } else {
+                    console.log(1);
+                    $(this).parent().parent().find('.active_inactive_btn').text('Active').removeClass('inactive').addClass('active');
+                }
+            });
+        })
+    </script>
+
+</body>
+
+</html>

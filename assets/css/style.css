@@ -4075,6 +4075,30 @@ header .buttons {
 .program_container {
   font-size: 14px;
 }
+.program_container .go_back {
+  top: 4px;
+  position: relative;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.program_container button.active_inactive_btn {
+  display: inline-block;
+  top: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  text-decoration: underline;
+  margin-left: 7px;
+}
+.program_container button.active_inactive_btn.active {
+  color: #83ff00;
+}
+.program_container button.active_inactive_btn.inactive {
+  color: #e02020;
+}
+.program_container button.active_inactive_btn:after {
+  top: 12px;
+}
 .program_container .title {
   font-size: 24px;
   font-weight: 400;
@@ -4129,6 +4153,8 @@ header .buttons {
   border-radius: 8px;
   background: #000000;
   padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 400;
 }
 .program_container .wrapper .wrapper_content {
   padding: 10px 0;
@@ -4141,7 +4167,13 @@ header .buttons {
 .program_container .wrapper .wrapper_content .form-group .holder_label {
   padding-top: 10px;
 }
+.program_container .wrapper .wrapper_content .form-group .custom-control-label::before {
+  background-color: transparent;
+}
 .program_container .wrapper .wrapper_content .form-group .input_div {
+  float: right;
+}
+.program_container .wrapper .wrapper_content .form-group .input_div .value {
   float: right;
 }
 .program_container .wrapper .wrapper_content .form-group .input_div.custom-radio {
@@ -4152,6 +4184,9 @@ header .buttons {
   right: 20px;
   top: 45%;
 }
+.program_container .wrapper .wrapper_content .form-group .input_div.admin_fee_div {
+  padding: 0 60px;
+}
 .program_container .wrapper .wrapper_content .form-group .input_div input {
   height: 25px;
   border-radius: 2px;
@@ -4161,6 +4196,74 @@ header .buttons {
   height: 40px;
   border: solid 1px #979797;
   background: #d8d8d8;
+}
+.program_container .wrapper .acquisition_table_container {
+  height: 400px;
+}
+.program_container .wrapper .pagination {
+  position: relative;
+  bottom: -23px;
+}
+.program_container .wrapper .pagination.readonly {
+  bottom: -50px;
+}
+.program_container .wrapper .remove_row {
+  cursor: pointer;
+}
+.program_container .wrapper .add_row {
+  cursor: pointer;
+}
+.program_container .wrapper table {
+  border-radius: 4px;
+}
+.program_container .wrapper table.acquisition_table {
+  width: 100%;
+  overflow: hidden;
+  display: contents;
+}
+.program_container .wrapper table.acquisition_table td {
+  padding: 3px 15px !important;
+}
+.program_container .wrapper table.acquisition_table th {
+  padding: 3px 15px !important;
+  font-size: 12px;
+}
+.program_container .wrapper table.acquisition_table tfoot tr td:first-child {
+  border-radius: 0 0 0 4px !important;
+}
+.program_container .wrapper table.acquisition_table tfoot tr td:last-child {
+  border-radius: 0 0 4px 0 !important;
+}
+.program_container .wrapper table.admin_fee tr:first-child td:first-child {
+  border-radius: 4px 0 0 4px !important;
+}
+.program_container .wrapper table.admin_fee tr:first-child td:last-child {
+  border-radius: 0 4px 4px 0 !important;
+}
+.program_container .wrapper table .value {
+  color: #000000;
+  text-align: center;
+  float: unset !important;
+}
+.program_container .wrapper table thead tr:first-child th:first-child {
+  border-radius: 4px 0 0 0;
+}
+.program_container .wrapper table thead tr:first-child th:last-child {
+  border-radius: 0 4px 0 0;
+}
+.program_container .wrapper table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 4px;
+}
+.program_container .wrapper table tbody tr:last-child td:last-child {
+  border-radius: 0 0 4px 0;
+}
+.program_container .wrapper table tfoot.sticky {
+  display: contents;
+}
+.program_container .wrapper table tfoot.sticky td {
+  position: sticky;
+  bottom: -11px;
+  z-index: 2;
 }
 .program_container .wrapper table td.fee {
   padding: 10px 20px;

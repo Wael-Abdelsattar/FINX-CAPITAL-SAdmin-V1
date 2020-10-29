@@ -15,7 +15,7 @@
   <g id="Group-3" transform="translate(0.5 0.5)">
     <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" id="Oval" fill="#F04E31" fill-rule="evenodd" stroke="none" filter="url(#filter_1)" />
     <g id="add-24px" transform="translate(2.2856445 2.2851562)">
-      <path d="M6.85714 3.91837L3.91837 3.91837L3.91837 6.85714L2.93878 6.85714L2.93878 3.91837L0 3.91837L0 2.93878L2.93878 2.93878L2.93878 0L3.91837 0L3.91837 2.93878L6.85714 2.93878L6.85714 3.91837Z" transform="translate(2.2856445 2.2851562)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
+      <path d="M6.85714 3.91837L3.91837 3.91837L3.91837 6.85714L2.93878 6.85714L2.93878 3.91837L0 3.91837L0 2.93878L2.93878 2.93878L2.93878 0L3.91837 0L3.91837 2.93878L6.85714 2.93878L6.85714 3.91837Z" transform="translate(2.2857144 2.2857144)" id="Path" fill="#FFFFFF" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
       <path d="M0 0L11.4286 0L11.4286 11.4286L0 11.4286L0 0Z" id="Path" fill="none" fill-rule="evenodd" stroke="none" />
     </g>
   </g>
