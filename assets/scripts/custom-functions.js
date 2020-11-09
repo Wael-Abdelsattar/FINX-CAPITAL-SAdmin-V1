@@ -151,8 +151,11 @@ $(document).ready(function() {
         const uploadNewFile = `
     <div>
       <input type="text" class="form-control small-height mb-1">
-      <input type="file" id="new-file-${id}" onchange="console.log(${id})" hidden>
+      <input type="file" id="new-file-${id}" onchange="DocumentFileUploadChange(this)" hidden>
       <label class="file" for="new-file-${id}">
+<button type="button" class="btn btn-icon bg-danger remove-file">
+                            <i class="icon-delete"></i>
+                          </button>
         <span class="icon">
           <img src="assets/images/add-more.svg" alt="">
         </span>
@@ -161,6 +164,45 @@ $(document).ready(function() {
     </div>
   `;
         $('.files').append(uploadNewFile).clone(true);
+
+
+
+
+        $('.remove-file').off("click").on("click", function (e) {
+            //$(e.target).closest('.fileDivClass').remove();
+            debugger;
+            var fileDiv = $(e.target).closest('.file');
+
+            if (fileDiv.length > 0 && (fileDiv.parent().attr('class') == 'fileDivClass' || fileDiv.parent().attr('class') == 'fileParent')) {//ordiginal fixed row
+
+                if (fileDiv.find('h5').text() == 'Upload') {
+                    return;
+                }
+
+                var removeFileButton = fileDiv.find('button');//$(e.target).parent();
+                fileDiv.find('.icon').remove();
+                fileDiv.find('h5').remove();
+                fileDiv.append('<input type="file" id="new-file-' + (++filesNewCounter) + '" onchange="DocumentFileUploadChange(this)" hidden=""><label class="file" for="new-file-' + filesNewCounter + '"><span class="icon"><img src="assets/images/add-more.svg" alt=""></span><h5>Upload</h5></label >');
+                fileDiv.attr('class', 'fileParent');
+                fileDiv.find('.file').append(removeFileButton);
+            }
+            else {
+
+                var inputFileName = fileDiv.parent().find('input[type=text]');
+                //if (inputFileName.val().trim() == '') {
+                if (fileDiv.find('h5').text() == 'Upload') {
+                    fileDiv.parent().remove();
+                }
+                else {
+                    inputFileName.val('');
+                    fileDiv.find('h5').text('Upload');
+                }
+            }
+            //alert(111);
+        });
+
+
+
     });
 
     // $('#brochures .card .card-header').each(function () {
@@ -311,6 +353,70 @@ $(document).ready(function() {
                                     });
                             });
                     },
+                });
+            } else if ($(this).hasClass('dealership-list')) {
+                $(this).DataTable({
+                    searching: true,
+                    info: false,
+                    fixedHeader: true,
+                    pageLength: 14,
+                    scrollCollapse: true,
+                    order: [
+                        [0, 'desc'],
+                        [1, 'desc'],
+                        [2, 'desc'],                        
+                    ],
+                    columnDefs: [
+                        { orderable: false, targets: 3 },
+                        { orderable: false, targets: 4 },
+                        { orderable: false, targets: 5 },
+                        { orderable: false, targets: 6 },
+                        { orderable: false, targets: 7 },
+                    ],
+                    // bAutoWidth: false,
+                    aoColumns: [
+                        { sWidth: '15%' },
+                        { sWidth: '8%' },
+                        { sWidth: '13%' },
+                        { sWidth: '20%' },
+                        { sWidth: '10%' },
+                        { sWidth: '' },
+                        { sWidth: '8%' },
+                        { sWidth: '8%' },
+                    ],
+                });
+            } else if ($(this).hasClass('dealership-staff')) {
+                $(this).DataTable({
+                    paging: false,
+                    searching: false,
+                    info: false,
+                    fixedHeader: true,
+                    // scrollY: '288px',
+                    scrollCollapse: true,
+                    order: [
+                        [0, 'desc'],
+                        // [1, 'desc'],
+                        // [2, 'desc'],
+                        // [3, 'desc'],
+                        // [4, 'desc'],
+                        // [5, 'desc'],
+                    ],
+                    columnDefs: [
+                        { orderable: false, targets: 1 },
+                        { orderable: false, targets: 2 },
+                        { orderable: false, targets: 3 },
+                        { orderable: false, targets: 4 },
+                        { orderable: false, targets: 5 },
+                    ],
+                    // bAutoWidth: false,
+                    aoColumns: [
+                        { sWidth: '20%' },
+                        { sWidth: '20%' },
+                        { sWidth: '15%' },
+                        { sWidth: '25%' },
+                        { sWidth: '10%' },
+                        { sWidth: '10%' },
+                    ],
                 });
             } else {
                 $(this).DataTable({
@@ -617,6 +723,7 @@ $(document).ready(function() {
     //   }
     // });
 
+    // Loan Details
     $(".payment-options a.dropdown-item").click(function() {
         $("p.payment-value").empty();
         baudrate = $(this).text();

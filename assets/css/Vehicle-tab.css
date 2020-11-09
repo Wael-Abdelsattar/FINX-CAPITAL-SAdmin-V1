@@ -219,7 +219,7 @@ table {
 }
 
 .custom-control {
-  padding-left: 25px;
+  /* padding-left: 25px; */
   font-size: 14px;
 }
 
@@ -713,6 +713,11 @@ input.form-control[type=text][disabled] {
 .w-180 .bootstrap-select .btn {
   width: 180px !important;
 }
+.w-190,
+.w-190 .bootstrap-select,
+.w-190 .bootstrap-select .btn {
+  width: 190px !important;
+}
 
 .score input {
   height: 25px;
@@ -850,6 +855,10 @@ input.form-control[type=text][disabled] {
 select.one:required:invalid,
 .input-dollar-sign:before {
   color: #c7c7c7;
+}
+
+#vehicle-info .table-responsive {
+  overflow-x: initial;
 }
 
 #vehicle-info .table-responsive .row {

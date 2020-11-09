@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -132,66 +132,84 @@
                             <div class="row">
                                 <div class="col-md-12">
 
-                                    <div class="dropdown btn-green float-left">
-                                        <select id="ddlChangeTo" class="selectpicker text-black">
-                                            <option class="text-black" selected="true"> Primary Applicant</option>
-                                            <option>Inactive</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="dropdown btn-white float-left">
-                                        <select id="ddlChangeTo" class="selectpicker text-black">
-                                            <optgroup label="Change to:">
-                                                <option class="text-black" selected="true"> Joe - Co Ap...</option>
-                                                <option>Primary</option>
-                                                <option>Guarantor</option>
-                                                <option>Co Signer</option>
-                                                <option>Inactive </option>
-                                                <option>Delete</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-
-                                    <div class="dropdown btn-white float-left">
-                                        <select id="ddlChangeTo" class="selectpicker text-black">
-                                            <option class="text-black" selected="true"> Co Applicant</option>
-                                            <option>Inactive</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="dropdown btn-white float-left">
-                                        <select id="ddlChangeTo" class="selectpicker text-black">
-                                            <optgroup label="Change to:">
-                                                <option class="text-black" selected="true"> Co Applicant</option>
-                                                <option>Primary</option>
-                                                <option>Guarantor</option>
-                                                <option>Co Signer</option>
-                                                <option>Inactive </option>
-                                                <option>Delete</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-
-                                    <div class="float-right d-flex">
-                                        <div class="dropdown btn-red"> 
-                                        <select id="ddlChangeTo" class="selectpicker text-black">
-                                                <optgroup label="Add:">
-                                                    <option selected="true" class="hide">Add Applicant</option>
-                                                    <option>Co Applicant</option>
+                                        <div class="dropdown btn-green float-left ddlChangeToClass" id="ddlChangeTo_Default" onclick="ddlChangeTo_Click(this)">
+                                            <select id="ddlChangeTo" class="selectpicker text-black" onchange="ddlChangeTo_Change(this)">
+                                                <option class="text-black" selected="true"> Primary Applicant</option>
+                                                <option>Inactive</option>
+                                            </select>
+                                        </div>
+                                        <div class="dropdown btn-white float-left ddlChangeToClass" style="display: none;" id="ddlChangeTo_1" onclick="ddlChangeTo_Click(this)">
+                                            <select id="ddlChangeTo" class="selectpicker text-black" onchange="ddlChangeTo_Change(this)">
+                                                <optgroup label="Change to:">
+                                                    <option class="text-black" selected="true"> Co Applicant</option>
+                                                    <option>Primary</option>
                                                     <option>Guarantor</option>
                                                     <option>Co Signer</option>
-                                                    <option>Commercial Applicant </option>
+                                                    <option>Inactive </option>
+                                                    <option>Delete</option>
                                                 </optgroup>
                                             </select>
                                         </div>
 
-                                        
+                                        <div class="dropdown btn-white float-left ddlChangeToClass" style="display: none;" id="ddlChangeTo_2" onclick="ddlChangeTo_Click(this)">
+                                            <select id="ddlChangeTo" class="selectpicker text-black" onchange="ddlChangeTo_Change(this)">
+                                                <optgroup label="Change to:">
+                                                    <option class="text-black" selected="true"> Guarantor</option>
+                                                    <option>Primary</option>
+                                                    <option>Co Applicant</option>
+                                                    <option>Co Signer</option>
+                                                    <option>Inactive </option>
+                                                    <option>Delete</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+
+                                        <div class="dropdown btn-white float-left ddlChangeToClass" style="display: none;" id="ddlChangeTo_3" onclick="ddlChangeTo_Click(this)">
+                                            <select id="ddlChangeTo" class="selectpicker text-black" onchange="ddlChangeTo_Change(this)">
+                                                <optgroup label="Change to:">
+                                                    <option class="text-black" selected="true"> Co Signer</option>
+                                                    <option>Primary</option>
+                                                    <option>Guarantor</option>
+                                                    <option>Co Applicant</option>
+                                                    <option>Inactive </option>
+                                                    <option>Delete</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+
+                                        <div class="dropdown btn-white float-left ddlChangeToClass" style="display: none;" id="ddlChangeTo_4" onclick="ddlChangeTo_Click(this)">
+                                            <select id="ddlChangeTo" class="selectpicker text-black" onchange="ddlChangeTo_Change(this)">
+                                                <optgroup label="Change to:">
+                                                    <option class="text-black" selected="true"> Commercial Applicant</option>
+                                                    <option>Primary</option>
+                                                    <option>Guarantor</option>
+                                                    <option>Co Signer</option>
+                                                    <option>Inactive </option>
+                                                    <option>Delete</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+
+                                        <div class="float-right d-flex">
+                                            <div class="dropdown btn-red">
+                                                <select id="ddlChangeTo" class="selectpicker text-black" onchange="AddApplicantsDDL(this)">
+                                                    <optgroup label="Add:">
+                                                        <option selected="true" class="hide">Add Applicant</option>
+                                                        <option>Co Applicant</option>
+                                                        <option>Guarantor</option>
+                                                        <option>Co Signer</option>
+                                                        <option>Commercial Applicant </option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+
+
+                                        </div>
+
                                     </div>
-                                            
                                 </div>
-                            </div>
                         </div>
-                        <div class="row  tabs-bg">
+                        <div class="row  tabs-bg ApplicationPageRowClass ApplicationPageRowClassDefault">
 
                             <div class="col-12 ">
                                 <div class="heading ">
@@ -263,7 +281,7 @@
                                                             <span>First Name: </span>
                                                         </div>
                                                         <div class="col-6 pl-0">
-                                                            <input type="text" class="form-control" />
+                                                            <input type="text" class="form-control" id="firstNameInput" onchange="Modify_ddlChangeTo(this)" />
                                                         </div>
                                                     </div>
                                                 </td>
@@ -341,7 +359,7 @@
                                                             <span>Last Name:</span>
                                                         </div>
                                                         <div class="col-6 pl-0">
-                                                            <input type="text" class="form-control" />
+                                                            <input type="text" class="form-control" id="lastNameInput" onchange="Modify_ddlChangeTo(this)" />
                                                         </div>
                                                     </div>
                                                 </td>
@@ -949,6 +967,304 @@
 
     <script src="assets/scripts/custom-functions.js"></script>
     <script src="assets/scripts/bootstrap-select.min.js"></script>
+    <script type="text/javascript">  
+
+        function Modify_ddlChangeTo(sender) {
+
+            debugger;
+            var name = $(sender).closest('.ApplicationPageRowClass').find('#firstNameInput').val() + ' ' + $(sender).closest('.ApplicationPageRowClass').find('#lastNameInput').val();
+            var className = $(sender).closest('.ApplicationPageRowClass').attr('class');
+            var controlID = '';
+            if (className.indexOf('ApplicationPageRowClassDefault') > -1) {
+                controlID = 'ddlChangeTo_Default';
+            }
+            else if (className.indexOf('ApplicationPageRowClass_1') > -1) {
+                controlID = 'ddlChangeTo_1';
+            }
+            else if (className.indexOf('ApplicationPageRowClass_2') > -1) {
+                controlID = 'ddlChangeTo_2';
+            }
+            else if (className.indexOf('ApplicationPageRowClass_3') > -1) {
+                controlID = 'ddlChangeTo_3';
+            }
+            else if (className.indexOf('ApplicationPageRowClass_4') > -1) {
+                controlID = 'ddlChangeTo_4';
+            }
+
+
+            var oldValue = $($('#' + controlID).find('#ddlChangeTo option:selected')).text();
+            var newValue = oldValue;
+            if (oldValue.indexOf('-') > -1) {
+                newValue = oldValue.split('-')[1];
+            }
+
+            if (name && name.trim() != '') {
+                newValue = name + '-' + newValue;
+            }
+
+            $($('#' + controlID).find('#ddlChangeTo option:selected')).text(newValue);
+            //$('#ddlChangeTo_Default').find('#ddlChangeTo option')[0].selected = true;
+            $('#' + controlID+' .filter-option-inner-inner').text(newValue);
+                //$('#ddlChangeTo_Default').html($('#ddlChangeTo_Default').html().replaceAll(oldValue.trim(), name));
+
+        }
+
+        function ddlChangeTo_Change(sender) {
+            //alert($(sender).text());
+            var prevValue = $(sender).attr('previousValue');
+            if (!prevValue) {
+                prevValue = $($(sender).parentsUntil('.ddlChangeToClass').find('#ddlChangeTo option')[0]).val();//first option
+            }
+            //Switch
+            if (sender.value.trim().indexOf('Primary') > -1) {
+
+                if ($(sender).parentsUntil('.ddlChangeToClass').parent().attr('id') != 'ddlChangeTo_Default') {//to not add to same default control
+                    //$('#ddlChangeTo_Default').text(prevValue);
+                    
+                    if (prevValue.indexOf('-') > -1) {//get clean Value without added firstname and lastname
+                        prevValue = prevValue.split('-')[1];
+                    }
+                    //alert(prevValue);
+
+                    var selectedValue = $(sender).parentsUntil('.ddlChangeToClass').find('#ddlChangeTo').val();
+                    var selectedValue_Name = '';
+                    var selectedValue_OriginalValue = '';
+                    if (selectedValue.indexOf('-') > -1) {//get added firstname and lastname for selected selected if exist
+                        selectedValue_Name = selectedValue.split('-')[0];
+                        selectedValue_OriginalValue = selectedValue.split('-')[1];
+                        //prevValue = selectedValue + '-' + prevValue;
+                    }
+                    else {
+                        selectedValue_Name = '';
+                        selectedValue_OriginalValue = selectedValue;
+                    }
+                    selectedValue_Name = $('.ApplicationPageRowClass:visible').find('#firstNameInput').val() + ' ' + $('.ApplicationPageRowClass:visible').find('#lastNameInput').val();
+
+                    debugger;
+                    var defaultValue = $('#ddlChangeTo_Default #ddlChangeTo').val();
+                    var defaultValue_Name = '';
+                    var defaultValue_OriginalValue = '';
+                    if (defaultValue.indexOf('-') > -1) {//get added firstname and lastname for default selected if exist
+                        defaultValue_Name = defaultValue.split('-')[0];
+                        defaultValue_OriginalValue = defaultValue.split('-')[1];
+                        //prevValue = defaultValue + '-' + prevValue;
+                    }
+                    else {
+                        defaultValue_Name = '';
+                        defaultValue_OriginalValue = defaultValue;
+                    }
+
+                    var pimaryOption = $($(sender).parentsUntil('.ddlChangeToClass').find('#ddlChangeTo').find('option')[0]);
+                    pimaryOption.val(defaultValue_Name + '-' + prevValue);
+                    pimaryOption.html(defaultValue_Name + '-' + prevValue);
+                    $(sender).parentsUntil('.ddlChangeToClass').find('#ddlChangeTo').val(defaultValue_Name + '-' + prevValue);
+                    $(sender).parentsUntil('.ddlChangeToClass').find('#ddlChangeTo').selectpicker('refresh');
+                    $(sender).parentsUntil('.ddlChangeToClass').find('#ddlChangeTo').selectpicker('refresh');
+                    
+
+                    var pimaryOption = $($('#ddlChangeTo_Default #ddlChangeTo').find('option')[0]);
+                    pimaryOption.val(selectedValue_Name + '-' + defaultValue_OriginalValue);
+                    pimaryOption.html(selectedValue_Name + '-' + defaultValue_OriginalValue);
+                    $('#ddlChangeTo_Default #ddlChangeTo').val(selectedValue_Name + '-' + defaultValue_OriginalValue);
+                    $('#ddlChangeTo_Default #ddlChangeTo').selectpicker('refresh');
+                    $('#ddlChangeTo_Default #ddlChangeTo').selectpicker('refresh');
+
+                    var selectedControls = $('.ApplicationPageRowClass:visible').children();
+                    var defaultControls = $('.ApplicationPageRowClassDefault').children();
+                    defaultControls.appendTo($('.ApplicationPageRowClass:visible'));
+                    selectedControls.appendTo($('.ApplicationPageRowClassDefault'));
+
+                    /*
+                    $('#ddlChangeTo_Default #ddlChangeTo').append(
+                        $('<option selected="true"></option>').val(prevValue).html(prevValue)
+                    );
+                    $('#ddlChangeTo_Default #ddlChangeTo').val(prevValue);
+
+                    $('#ddlChangeTo_Default #ddlChangeTo').selectpicker('refresh');
+                    $('#ddlChangeTo_Default #ddlChangeTo').selectpicker('refresh');
+                    */
+
+                    $('#ddlChangeTo_Default').find('a span').css('font-weight', '400');
+                    /*
+                    //Modify_ddlChangeTo($('.ApplicationPageRowClass:visible').find('#firstNameInput'));
+                    //var name = $('.ApplicationPageRowClass:visible').find('#firstNameInput').val() + ' ' + $('.ApplicationPageRowClass:visible').find('#lastNameInput').val();
+                    //setTimeout(function () {
+                        //$('.ApplicationPageRowClass:visible').find('#firstNameInput').val('222');
+                        Modify_ddlChangeTo($('.ApplicationPageRowClass:visible').find('#firstNameInput'));
+                    //}, 500);
+
+                    //$(sender).parentsUntil('.ddlChangeToClass').selectpicker('refresh');
+                    //$(sender).parentsUntil('.ddlChangeToClass').selectpicker('refresh');
+                    */
+                }
+            }
+
+
+
+            debugger;
+            if (sender.value.trim() == 'Inactive') {
+                $(sender).parentsUntil('.ddlChangeToClass').removeClass('btn-white');
+                $(sender).parentsUntil('.ddlChangeToClass').removeClass('btn-green');
+                $(sender).parentsUntil('.ddlChangeToClass').removeClass('btn-gray');
+                $(sender).parentsUntil('.ddlChangeToClass').addClass('btn-gray');
+            }
+            else if (sender.value.trim() == 'Delete') {
+                debugger;
+                $(sender).parentsUntil('.ddlChangeToClass').parent().hide();
+                $(sender).parentsUntil('.ddlChangeToClass').find('#ddlChangeTo option')[0].selected = true;
+                
+                setTimeout(function () { $('#ddlChangeTo_Default').closest('.ddlChangeToClass').click();}, 500);
+
+            }
+            else {
+                $(sender).parentsUntil('.ddlChangeToClass').removeClass('btn-white');
+                $(sender).parentsUntil('.ddlChangeToClass').removeClass('btn-green');
+                $(sender).parentsUntil('.ddlChangeToClass').removeClass('btn-gray');
+                $(sender).parentsUntil('.ddlChangeToClass').addClass('btn-green');
+                $(sender).parentsUntil('.ddlChangeToClass').click();
+            }
+
+            $(sender).parentsUntil('.ddlChangeToClass').find('a span').css('font-weight', '400');
+
+            $(sender).attr('previousValue', sender.value);
+        }
+
+
+        var NewApplicationPageRowCleanTemplate = $(".ApplicationPageRowClassDefault").clone().removeClass('ApplicationPageRowClassDefault');
+        function AddApplicantsDDL(sender) {
+            //alert($(sender).text());
+            //alert(sender.value);
+            if (sender.value.trim() == 'Co Applicant') {
+                $('#ddlChangeTo_1').show();
+                $('.ApplicationPageRowClass').hide();
+                
+                if ($(".ApplicationPageRowClass_1").length > 0) {
+                    $('.ApplicationPageRowClass_1').show();
+                } else {
+                    var NewApplicationPageRow = NewApplicationPageRowCleanTemplate.clone().show().addClass('ApplicationPageRowClass_1');
+                    $(".ApplicationPageRowClassDefault").parent().append(NewApplicationPageRow);
+
+                }
+
+                $('#ddlChangeTo_1').click();
+            }
+            else if (sender.value.trim() == 'Guarantor') {
+                $('#ddlChangeTo_2').show();
+                $('.ApplicationPageRowClass').hide();
+
+                if ($(".ApplicationPageRowClass_2").length > 0) {
+                    $('.ApplicationPageRowClass_2').show();
+                } else {
+                    var NewApplicationPageRow = NewApplicationPageRowCleanTemplate.clone().show().addClass('ApplicationPageRowClass_2');
+                    $(".ApplicationPageRowClassDefault").parent().append(NewApplicationPageRow);
+
+                }
+
+                $('#ddlChangeTo_2').click();
+            }
+            else if (sender.value.trim() == 'Co Signer') {
+                $('#ddlChangeTo_3').show();
+                $('.ApplicationPageRowClass').hide();
+
+                if ($(".ApplicationPageRowClass_3").length > 0) {
+                    $('.ApplicationPageRowClass_3').show();
+                } else {
+                    var NewApplicationPageRow = NewApplicationPageRowCleanTemplate.clone().show().addClass('ApplicationPageRowClass_3');
+                    $(".ApplicationPageRowClassDefault").parent().append(NewApplicationPageRow);
+
+                }
+
+                $('#ddlChangeTo_3').click();
+            }
+            else if (sender.value.trim() == 'Commercial Applicant') {
+                $('#ddlChangeTo_4').show();
+                $('.ApplicationPageRowClass').hide();
+
+                if ($(".ApplicationPageRowClass_4").length > 0) {
+                    $('.ApplicationPageRowClass_4').show();
+                } else {
+                    var NewApplicationPageRow = NewApplicationPageRowCleanTemplate.clone().show().addClass('ApplicationPageRowClass_4');
+                    $(".ApplicationPageRowClassDefault").parent().append(NewApplicationPageRow);
+
+                }
+
+                $('#ddlChangeTo_4').click();
+            }
+            //else if (sender.value.trim() == 'Commercial Applicant') {//Default one
+            //    //$('#ddlChangeTo_3').show();
+            //    $('.ApplicationPageRowClass').hide();
+
+            //    $('.ApplicationPageRowClassDefault').show();
+
+            //    $('#ddlChangeTo_Default').click();
+
+            //}
+
+            $(".ddlChangeToClass999, .ddlChangeToClass .dropdown, .ddlChangeToClass .filter-option-inner-inner").off("click").on("click", function (e) {
+                //debugger;
+                var sss = $(e).parentsUntil('.ddlChangeToClass');
+                ddlChangeTo_Click($(e.target).closest('.ddlChangeToClass'));
+                //alert(111);
+            });
+
+            $('.ddlChangeToClass .filter-option').off("click").on("click", function (e) {
+                return false;
+            });
+
+
+            //$(sender).find('.filter-option-inner-inner').text('Add Applicant');
+            $(sender).val('Add Applicant');
+            return false;
+            //<option>Commercial Applicant </option>
+            //alert(sender.value);
+
+            //return false;
+        }
+        function ddlChangeTo_Click(sender) {
+            
+            $('.ddlChangeToClass').removeClass('btn-green');
+            $('.ddlChangeToClass').removeClass('btn-white');
+            $('.ddlChangeToClass').addClass('btn-white');
+
+            $(sender).removeClass('btn-white');
+            $(sender).addClass('btn-green');
+
+            //$('.dropdown-menu .show').hide();
+
+            //$('.dropdown-menu').removeClass('show');
+            //$(sender).find('.dropdown-menu').addClass('show');
+
+            $('.ApplicationPageRowClass').hide();
+            if ($(sender).attr('id') == 'ddlChangeTo_Default') {
+                $('.ApplicationPageRowClassDefault').show();
+            }
+            else if ($(sender).attr('id') == 'ddlChangeTo_1') {
+                $('.ApplicationPageRowClass_1').show();
+            }
+            else if ($(sender).attr('id') == 'ddlChangeTo_2') {
+                $('.ApplicationPageRowClass_2').show();
+            }
+            else if ($(sender).attr('id') == 'ddlChangeTo_3') {
+                $('.ApplicationPageRowClass_3').show();
+            }
+            else if ($(sender).attr('id') == 'ddlChangeTo_4') {
+                $('.ApplicationPageRowClass_4').show();
+            }
+        }
+
+        
+        $(document).ready(function () { // no quotes on document!
+            //$(".ddlChangeToClass, .ddlChangeToClass .dropdown, .filter-option-inner-inner").off("click").on("click", function (e) {
+            //    ddlChangeTo_Click($(e).parentsUntil('.ddlChangeToClass'));
+            //    //alert(111);
+            //});
+
+            $('.ddlChangeToClass .filter-option').off("click").on("click", function (e) {
+                return false;
+            });
+
+        });
+    </script>
 </body>
 
 </html>

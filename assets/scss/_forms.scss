@@ -161,7 +161,9 @@ select.form-control {
 .dropdown-item {
 
   i.icon-eye,
-  i.icon-eye-lined {
+  i.icon-eye-lined,
+  i.icon-call,
+  i.icon-videocam {
     position: absolute;
     left: 20px;
     margin-top: .25rem;
@@ -173,6 +175,14 @@ select.form-control {
   i.icon-eye-lined {
     font-size: 19px !important;
     color: $red;
+  }
+  i.icon-call {
+    font-size: 20px !important;
+    color: $darkGreen;
+  }
+  i.icon-videocam {
+    font-size: 15px !important;
+    color: $darkGreen;
   }
 }
 .select-dropdown {
@@ -202,6 +212,14 @@ select.form-control {
       background: none !important;
       border: 0 !important;
       box-shadow: none !important;
+    }
+  }
+
+  &.dealership-sup-a {
+    .btn {
+      &:after {
+        margin-left: 10px;
+      }
     }
   }
 

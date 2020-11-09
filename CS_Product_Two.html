@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +24,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css?v=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css?v=3.1" />
     <title>Product_Two</title>
 <meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
     <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
@@ -147,7 +147,7 @@
                 role="tab"
                 aria-controls="application"
                 aria-selected="true"
-                >Application</a
+                >Applicant</a
               >
             </li>
             <li class="nav-item" role="presentation">
@@ -785,6 +785,59 @@
       $('#video-chat-modal').on('hide.bs.modal', function (e) {
         $('.video-chat').removeClass('op-active');
       });
+
+
+        $(".bubbles-list li:not(.bubbles-list .not-clickable li)").off("click").on("click", function (e) {
+            debugger;
+            var itemToMove = $(".bubbles-list.not-clickable li.filled");
+            var NextItem;
+            if ($.isNumeric($(this).html())) {
+                NextItem = $(".bubbles-list.not-clickable li.filled");
+                var previousClickedPoints = $(this).parent().find('.active');
+                var steps = $(this).html() - previousClickedPoints.html();
+                var reverseBecauseNegativeSteps = false;
+                if (!steps) { steps = $(this).html(); }
+                if (steps < 0) { steps = -steps; reverseBecauseNegativeSteps = true; }
+
+                for (i = steps - 1; i >= 0; --i) {
+                    if ($(this).attr('class') == 'active' || reverseBecauseNegativeSteps == true) {
+                        NextItem = NextItem.prev();
+                        if (NextItem.length == 0) {
+                            NextItem = $(".bubbles-list.not-clickable li").last();
+                        }
+                    }
+                    else {
+                        NextItem = NextItem.next();
+                        if (NextItem.length == 0) {
+                            NextItem = $(".bubbles-list.not-clickable li").first();
+                        }
+                    }
+                }
+
+            }
+            else//string
+            {
+                if ($(this).attr('class') == 'active') {
+                    NextItem = $(".bubbles-list.not-clickable li.filled").prev();
+                    if (NextItem.length == 0) {
+                        NextItem = $(".bubbles-list.not-clickable li").last();
+                    }
+                }
+                else {
+                    NextItem = $(".bubbles-list.not-clickable li.filled").next();
+                    if (NextItem.length == 0) {
+                        NextItem = $(".bubbles-list.not-clickable li").first();
+                    }
+                }
+            }
+            NextItem.addClass('filled');
+            NextItem.html(itemToMove.html());
+            itemToMove.html('');
+            itemToMove.removeClass('filled');
+            //$(this).parent().parent().find('input').val($(this).html());
+        });
+
+
     </script>
     <script src="assets/scripts/gauge-chart.js"></script>
     <script src="assets/scripts/custom-functions.js?v=2.3"></script>

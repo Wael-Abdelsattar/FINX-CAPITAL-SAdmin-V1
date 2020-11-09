@@ -164,4 +164,8 @@
   &.big-shadow {
     box-shadow: 0 24px 32px rgba($color: #000000, $alpha: 0.13);
   }
+
+  &.back-arrow {
+    background-color: transparent;
+  }
 }

@@ -31,7 +31,7 @@
     <link rel="manifest" href="assets/favicons/manifest.json" />
     <link rel="stylesheet" href="assets/css/style.css?v=3.1" />
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/css/Vehicle-tab.css" />
+    <link rel="stylesheet" href="assets/css/Vehicle-tab.css?v=4.1" />
     <title>RM Vehicle Info</title>
 </head>
 
@@ -76,7 +76,7 @@
             <div class="d-flex align-items-end">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="application-tab" href="./RM_Application-1.html" role="tab" aria-controls="application" aria-selected="true">Application</a
+                        <a class="nav-link" id="application-tab" href="./RM_Application-1.html" role="tab" aria-controls="application" aria-selected="true">Applicant</a
             >
           </li>
           <li class="nav-item" role="presentation">
@@ -348,8 +348,8 @@
                     </div>
                     <div class="col-3 pl-0 pr-2">
                         <div class="dropdown select-dropdown actions">
-                            <input type="text" class="form-control dropdown-toggle" placeholder="Km/Mile" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                            <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton">
+                            <input type="text" class="form-control dropdown-toggle" readonly="readonly" placeholder="Km/Mile" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                            <div class="dropdown-menu dropdown-menu-center KM_Mile_Class" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#show-message-modal">KM</a>
                                 <a class="dropdown-item" href="#">Mile</a>
                             </div>
@@ -627,7 +627,13 @@
                                                     <input type="text" class="form-control" placeholder="Please Select" />
                                                 </div>
                                                 <div class="col-3 pl-0 pr-2">
-                                                    <input type="text" class="form-control" placeholder="Km/Mile" />
+												    <div class="dropdown select-dropdown actions">
+	                                                    <input type="text" class="form-control dropdown-toggle" readonly="readonly" placeholder="Km/Mile" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+    	                                                <div class="dropdown-menu dropdown-menu-center KM_Mile_Class" aria-labelledby="dropdownMenuButton">
+        	                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#show-message-modal">KM</a>
+            	                                            <a class="dropdown-item" href="#">Mile</a>
+	                                                    </div>
+													</div>
                                                 </div>
                                             </div>
                                         </td>
@@ -1099,22 +1105,47 @@
                 const targetEl = $(this)
                     .closest("#dvcontent1")
                     .find(".trade-container:first-child");
-                const clonedEl = targetEl.clone(true).insertAfter(targetEl);
+                const clonedEl = targetEl.clone().insertAfter(targetEl);
                 clonedEl.find(".form-control").val("");
                 $(".trade-container.hide:only-child").removeClass("hide");
-                $("#dvcontent1 .row .m-3 .trade-container:only-child").removeClass("hide");
-                // $(".trade-container.hide").not('div:first.trade-container.hide').addClass("show");
+                $("#dvcontent1 .row .m-3 .trade-container:only-child").removeClass(
+                    "hide"
+                );
                 $(".trade-container.hide:first-child").addClass("show");
                 numberTrades();
+
+                $(".KM_Mile_Class a").off("click").on("click", function (e) {
+                    $(this).parent().parent().find('input').val($(this).html());
+                });
+
+                $(".remove-file").off("click").on("click", function () {
+                    $("#dvcontent1 .row .m-3 .trade-container:only-child").addClass(
+                        "hide"
+                    );
+                    $(this)
+                        .closest(".trade-container")
+                        .not(".trade-container:only-child")
+                        .remove();
+                    numberTrades();
+                });
+
             });
-            // .not(".trade-container:only-child");
+
             $(".remove-file").on("click", function() {
-                $("#dvcontent1 .row .m-3 .trade-container:only-child").addClass("hide");
-                // $(this).closest(".trade-container").addClass("hide");
-                $(this).closest(".trade-container").not(".trade-container:only-child").remove();
-                // $(this).closest(".trade-container.show").removeClass("show");
+                $("#dvcontent1 .row .m-3 .trade-container:only-child").addClass(
+                    "hide"
+                );
+                $(this)
+                    .closest(".trade-container")
+                    .not(".trade-container:only-child")
+                    .remove();
                 numberTrades();
             });
+
+            $(".KM_Mile_Class a").off("click").on("click", function (e) {
+                $(this).parent().parent().find('input').val($(this).html());
+            });
+            
         });
     </script>
 </body>
