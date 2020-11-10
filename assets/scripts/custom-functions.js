@@ -157,7 +157,7 @@ $(document).ready(function() {
                             <i class="icon-delete"></i>
                           </button>
         <span class="icon">
-          <img src="assets/images/add-more.svg" alt="">
+          <img src="/assets/images/add-more.svg" alt="">
         </span>
         <h5>Upload</h5>
       </label>
@@ -182,7 +182,7 @@ $(document).ready(function() {
                 var removeFileButton = fileDiv.find('button');//$(e.target).parent();
                 fileDiv.find('.icon').remove();
                 fileDiv.find('h5').remove();
-                fileDiv.append('<input type="file" id="new-file-' + (++filesNewCounter) + '" onchange="DocumentFileUploadChange(this)" hidden=""><label class="file" for="new-file-' + filesNewCounter + '"><span class="icon"><img src="assets/images/add-more.svg" alt=""></span><h5>Upload</h5></label >');
+                fileDiv.append('<input type="file" id="new-file-' + (++filesNewCounter) + '" onchange="DocumentFileUploadChange(this)" hidden=""><label class="file" for="new-file-' + filesNewCounter + '"><span class="icon"><img src="/assets/images/add-more.svg" alt=""></span><h5>Upload</h5></label >');
                 fileDiv.attr('class', 'fileParent');
                 fileDiv.find('.file').append(removeFileButton);
             }
