@@ -157,7 +157,7 @@ $(document).ready(function() {
                             <i class="icon-delete"></i>
                           </button>
         <span class="icon">
-          <img src="/assets/images/add-more.svg" alt="">
+          <img src="../assets/images/add-more.svg" alt="">
         </span>
         <h5>Upload</h5>
       </label>

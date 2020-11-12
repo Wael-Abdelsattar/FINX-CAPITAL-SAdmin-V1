@@ -1142,6 +1142,39 @@ dl {
             margin: 0;
         }
     }
+    &.form-file {
+
+         .file {
+            width: 115px;
+            min-width: 115px;
+            padding: 0;
+            height: 100px;
+            max-height: 100px;
+            background: #FFF;
+
+            .icon {
+                border: 0;
+                margin: 0 auto;
+
+                img {
+
+                    &.add {
+                        width: 36px;
+                        height: 36px;
+                    }
+                    &.pdf {
+                        min-width: 60px;
+                    }
+                }
+            }
+        }
+
+        input[type=text] {
+            width: 115px;
+            margin-top: 4px;
+        }
+
+    }
 }
 
 .attach {

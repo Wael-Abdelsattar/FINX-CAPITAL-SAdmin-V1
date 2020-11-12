@@ -1650,6 +1650,34 @@ dl.no-border > div {
   margin: 0;
 }
 
+.files.form-file .file {
+  width: 115px;
+  min-width: 115px;
+  padding: 0;
+  height: 100px;
+  max-height: 100px;
+  background: #FFF;
+}
+
+.files.form-file .file .icon {
+  border: 0;
+  margin: 0 auto;
+}
+
+.files.form-file .file .icon img.add {
+  width: 36px;
+  height: 36px;
+}
+
+.files.form-file .file .icon img.pdf {
+  min-width: 60px;
+}
+
+.files.form-file input[type=text] {
+  width: 115px;
+  margin-top: 4px;
+}
+
 .attach {
   min-height: 282px;
 }
