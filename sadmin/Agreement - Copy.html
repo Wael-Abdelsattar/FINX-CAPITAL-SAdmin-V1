@@ -24,9 +24,10 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <link rel="stylesheet" href="../assets/css/bootstrap-multiselect.css" type="text/css"/>
     <link rel="stylesheet" href="../assets/css/style.css?v=1.0" />
-    <title>Dealership List</title>
-<meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
+    <title>Agreement</title>
+    <meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
     <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
     <meta data-react-helmet="true" name="apple-mobile-web-app-title" content="FINX">
     <link data-react-helmet="true" rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
@@ -117,19 +118,62 @@
   </div>
       <div class="container-fluid">
         <div class="section-title d-flex align-items-center mb-3 mt-2">
-          <h2 class="title">List of Dealerships</h2>
+          <h2 class="title">Agreement</h2>
           <div class="spacer flex-fill"></div>
           <div class="actions d-flex align-items-center">
-            <button type="button" class="btn btn-danger w-200">
-              Create New Application
+            <button type="button" class="btn btn-danger w-150">
+              Remittance
             </button>
           </div>
         </div>
         <div class="wrapper fill-window-height mb-3">
           
-          <div class="actions d-flex align-items-center">
+          <div class="actions d-flex align-items-left">
             <form class="form-inline">
-            <div class="search-field">
+              <div class="datepicker-control ">
+                <input type="text" placeholder="Select Provider" readonly class="form-control datepicker medium-height" />
+              </div>
+              <div class="ml-3">
+                <select id="multiselect-provider" multiple>
+                  <option value="0">Pocketbook Protection</option>
+                  <option value="1">First Canadian</option>
+                  <option value="2">Sal</option>
+                  <option value="3">Tricore</option>
+                  <option value="4">Intact Financial Co.</option>
+                  <option value="5">Aviva Canada</option>
+                  <option value="6">State Farm Mutual</option>
+                  <option value="7">Pocketbook Protection</option>
+                  <option value="8">First Canadian</option>
+                  <option value="9">Sal</option>
+                  <option value="10">Tricore</option>
+                  <option value="11">Intact Financial Co.</option>
+                  <option value="12">Aviva Canada</option>
+                  <option value="13">State Farm Mutual</option>
+                </select>
+              
+              </div>
+              <div class="ml-3">
+                <!-- <select class="form-control medium-height selectpicker w-200 p-0 pl-1">
+                  <option value="" required>Select Product</option>
+                </select> -->
+                <select id="multiselect-product" multiple>
+                  <option value="0">Product 1</option>
+                  <option value="1">Product 2</option>
+                  <option value="2">Product 3</option>
+                  <option value="3">Product 4</option>
+                  <option value="4">Product 5</option>
+                  <option value="5">Product 6</option>
+                  <option value="6">Product 7</option>
+                  <option value="7">Product 8</option>
+                  <option value="8">Product 9</option>
+                  <option value="9">Product 10</option>
+                  <option value="10">Product 11</option>
+                  <option value="11">Product 12</option>
+                  <option value="12">Product 13</option>
+                  <option value="13">Product 14</option>
+                </select>
+              </div>
+            <div class="search-field ml-3">
               <input
                 type="text"
                 placeholder="Type something"
@@ -137,16 +181,7 @@
               />
               <i class="icon-search"></i>
             </div>
-            <div class="form-group mx-sm-3 mb-0">
-              <label for="provinceList" class="small-text">Province</label>
-              <select id="provinceList" class="form-control no-border medium-height mx-sm-3 w-200">
-                <option value="0">Please Select</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-              </select>
-            </div>
+            
           </form>
           </div>
           <table
@@ -155,26 +190,22 @@
           >
             <thead class="black-thead">
               <tr>
-                <th class="medium-text ">Dealership Name</th>
-                <th class="medium-text ">Brand</th>
-                <th class="medium-text ">Principal</th>
-                <th class="medium-text ">Address</th>
-                <!-- <th class="medium-text filter-column">Status</th> -->
-                <th class="medium-text">Phone</th>
-                <th class="medium-text">Email</th>
+                <th class="medium-text">Application Date</th>
+                <th class="medium-text">Agreement #</th>
+                <th class="medium-text">Customer's Name</th>
+                <th class="medium-text">Provider</th>
+                <th class="medium-text">Credit Specialist</th>
                 <th class="medium-text">Status</th>
-                <!-- <th class="medium-text">Sales Agent</th> -->
                 <th class="text-center medium-text">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -200,19 +231,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle red" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -238,19 +267,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -276,19 +303,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -314,19 +339,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -352,19 +375,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -390,19 +411,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -428,19 +447,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -466,19 +483,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -504,19 +519,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -542,19 +555,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -580,19 +591,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -618,19 +627,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -656,19 +663,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -694,19 +699,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -732,19 +735,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -770,19 +771,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -808,19 +807,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -846,19 +843,17 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
-                <td>jennyfer.quigley@gmail.com</td>
+                <td>Jan-20-2019</td>
+                <td>1232</td>
+                <td>Micheal Scofield</td>
+                <td>Frist Canadian</td>
+                <td>Ray Ringer</td>
                 <td>
                   <div class="dropdown select-dropdown dealership-sup-a">
                     <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -884,8 +879,7 @@
                     <div class="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
-                      <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Void</a>
                     </div>
                   </div>
                 </td>
@@ -915,6 +909,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/scripts/bootstrap-multiselect.js"></script>
     <script src="../assets/scripts/custom-functions.js"></script>
     <!-- For Datepicker position -->
     <script type="text/javascript">
@@ -935,5 +930,29 @@
          });
       
     </script>
-  </body>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#multiselect-provider').multiselect({
+            buttonWidth: '200px',
+            includeSelectAllOption: true,
+            selectAllNumber: true,
+            maxHeight: 424,
+            nonSelectedText: 'Select Provider',
+            allSelectedText: 'All Selected ...',
+            selectAllText: 'All'
+        });
+        $('#multiselect-product').multiselect({
+            buttonWidth: '200px',
+            includeSelectAllOption: true,
+            selectAllNumber: true,
+            maxHeight: 424,
+            nonSelectedText: 'Select Product',
+            allSelectedText: 'All Selected ...',
+            selectAllText: 'All'
+        });
+      });
+    </script>
+
+</body>
 </html>

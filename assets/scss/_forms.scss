@@ -406,6 +406,87 @@ select.form-control {
   }
 }
 
+// .multiselect-native-select {
+
+.multiselect-container {
+  &>li>a>label>input[type=checkbox] {
+    display: none;
+    padding: 0;
+
+  }
+} 
+.multiselect-native-select {
+  .multiselect.btn {
+    justify-content: space-between;
+
+    .multiselect-selected-text {
+      font-size: 16px !important;
+      color: #ccc;
+    }
+  }
+
+  .multiselect-container {
+
+    width: 200px;
+    @extend .custom-scroll;
+
+    li {
+      margin: 10px 0;
+
+      a:focus {
+        outline: none;
+      }
+
+      label.checkbox {
+        padding: 3px 5px 3px 20px;
+        justify-content: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+
+        &::before,
+        &::after {
+          content: '';
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          min-height: 20px;
+          border: 2px solid $lightRed;
+          border-radius: 2px;
+          background-color: transparent;
+          margin-right: 10px;
+        }
+        &::after {
+          background-size: 13px;
+          z-index: 2;
+          border: 0;
+        }
+      }
+
+      &.active {
+        label {
+          &::before {
+            background-color: $lightRed;
+            background-image: url('../images/checkbox-check.svg') !important;
+            background-repeat: no-repeat;
+            background-position: 1px 1px;
+          }
+          // &::after {
+          //   background-image: url('../images/checkbox-check.svg') !important;
+          // }
+        }
+      }
+    }
+  } 
+}
+
+  
+
+
+
 .custom-radio {
   padding: 0;
   min-height: inherit;

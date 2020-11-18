@@ -25,7 +25,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link rel="stylesheet" href="../assets/css/style.css?v=1.0" />
-    <title>Dealership List</title>
+    <title>Bank List</title>
 <meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
     <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
     <meta data-react-helmet="true" name="apple-mobile-web-app-title" content="FINX">
@@ -117,11 +117,11 @@
   </div>
       <div class="container-fluid">
         <div class="section-title d-flex align-items-center mb-3 mt-2">
-          <h2 class="title">List of Dealerships</h2>
+          <h2 class="title">List of Bank</h2>
           <div class="spacer flex-fill"></div>
           <div class="actions d-flex align-items-center">
             <button type="button" class="btn btn-danger w-200">
-              Create New Application
+              Add New Bank
             </button>
           </div>
         </div>
@@ -133,59 +133,31 @@
               <input
                 type="text"
                 placeholder="Type something"
-                class="form-control medium-height w-350"
-              />
+                class="form-control medium-height w-350"/>
               <i class="icon-search"></i>
-            </div>
-            <div class="form-group mx-sm-3 mb-0">
-              <label for="provinceList" class="small-text">Province</label>
-              <select id="provinceList" class="form-control no-border medium-height mx-sm-3 w-200">
-                <option value="0">Please Select</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-              </select>
             </div>
           </form>
           </div>
           <table
-            class="datatable dealership-list table-dark table table-striped table-medium-text"
-            style="width: 100%;"
-          >
+            class="datatable bank-list table-dark table table-striped table-medium-text"
+            style="width: 100%;">
             <thead class="black-thead">
               <tr>
-                <th class="medium-text ">Dealership Name</th>
-                <th class="medium-text ">Brand</th>
-                <th class="medium-text ">Principal</th>
-                <th class="medium-text ">Address</th>
-                <!-- <th class="medium-text filter-column">Status</th> -->
+                <th class="medium-text ">Bank Name</th>
+                <th class="medium-text">Agent</th>
+                <th class="medium-text">Address</th>
                 <th class="medium-text">Phone</th>
                 <th class="medium-text">Email</th>
-                <th class="medium-text">Status</th>
-                <!-- <th class="medium-text">Sales Agent</th> -->
                 <th class="text-center medium-text">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -201,29 +173,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle red" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Inactive
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -239,29 +198,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -277,29 +223,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -315,29 +248,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -353,29 +273,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -391,29 +298,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -429,29 +323,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -467,29 +348,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -505,29 +373,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -543,29 +398,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -581,29 +423,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -619,29 +448,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -657,29 +473,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -695,29 +498,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -733,29 +523,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -771,29 +548,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -809,29 +573,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -847,29 +598,16 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr onclick="window.location.href='#'">
-                <td>King Honda</td>
-                <td>Honda</td>
-                <td>Isaac Lambert</td>
-                <td>686 Martin Circle Apt. 976</td>
-                <td>(604)-414-1234</td>
+                <td>Scotia Bank</td>
+                <td>Richard Reynolds</td>
+                <td>3255 McClure Centers Suite 367</td>
+                <td>(604) - 414 - 1234</td>
                 <td>jennyfer.quigley@gmail.com</td>
-                <td>
-                  <div class="dropdown select-dropdown dealership-sup-a">
-                    <button class="btn btn-secondary dropdown-toggle dark-green" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Active
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
-                      <a class="dropdown-item dark-green" href="#">Active</a>
-                      <a class="dropdown-item red" href="#">Inactive</a>
-                    </div>
-                  </div>
-                </td>
                 <td class="text-center">
                   <div class="dropdown select-dropdown actions">
                     <button
@@ -885,7 +623,6 @@
                       aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Edit</a>
                       <a class="dropdown-item" href="#">Delete</a>
-                      <a class="dropdown-item" href="#">Overview</a>
                     </div>
                   </div>
                 </td>

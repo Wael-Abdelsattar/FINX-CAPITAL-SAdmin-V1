@@ -723,6 +723,31 @@ button {
   }
 }
 
+.nav-tabs.dark-grey .nav-link {
+  background: #404046;
+  color: #979797;
+  border-width: 2px;
+  border-color: #1b1b1b;
+  width: 108px;
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.25), inset 4px 6px 7px rgba(0, 0, 0, 0.5);
+}
+
+.nav-tabs.dark-grey .nav-link.active {
+  color: #fff;
+  background: #1b1b1b;
+  border-color: #1b1b1b;
+  box-shadow: none;
+}
+
+@media (hover: hover) {
+  .nav-tabs.dark-grey .nav-link:hover {
+    color: #ffffff;
+    background: #1b1b1b;
+    border-color: #1b1b1b;
+    box-shadow: none;
+  }
+}
+
 .tab-content {
   position: relative;
 }
@@ -1405,59 +1430,59 @@ dl.no-border > div {
   background: none;
 }
 
-.custom-scroll, .tab-content > .full-height {
+.custom-scroll, .tab-content > .full-height, .multiselect-native-select .multiselect-container {
   scrollbar-color: #f04e31 #505050;
   scrollbar-width: thin;
   overflow: auto;
   padding-bottom: 10px;
 }
 
-.custom-scroll::-webkit-scrollbar, .tab-content > .full-height::-webkit-scrollbar {
+.custom-scroll::-webkit-scrollbar, .tab-content > .full-height::-webkit-scrollbar, .multiselect-native-select .multiselect-container::-webkit-scrollbar {
   width: 6px;
   height: 10px;
   background-color: #505050;
   border-radius: 10px;
 }
 
-.custom-scroll::-webkit-scrollbar-track, .tab-content > .full-height::-webkit-scrollbar-track {
+.custom-scroll::-webkit-scrollbar-track, .tab-content > .full-height::-webkit-scrollbar-track, .multiselect-native-select .multiselect-container::-webkit-scrollbar-track {
   background-color: #505050;
   border-radius: 10px;
 }
 
-.custom-scroll::-webkit-scrollbar-thumb, .tab-content > .full-height::-webkit-scrollbar-thumb {
+.custom-scroll::-webkit-scrollbar-thumb, .tab-content > .full-height::-webkit-scrollbar-thumb, .multiselect-native-select .multiselect-container::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #f04e31;
 }
 
-.custom-scroll.height-275, .tab-content > .height-275.full-height {
+.custom-scroll.height-275, .tab-content > .height-275.full-height, .multiselect-native-select .height-275.multiselect-container {
   max-height: 275px;
 }
 
-.custom-scroll.height-265, .tab-content > .height-265.full-height {
+.custom-scroll.height-265, .tab-content > .height-265.full-height, .multiselect-native-select .height-265.multiselect-container {
   max-height: 265px;
 }
 
-.custom-scroll.height-305, .tab-content > .height-305.full-height {
+.custom-scroll.height-305, .tab-content > .height-305.full-height, .multiselect-native-select .height-305.multiselect-container {
   max-height: 305px;
 }
 
-.custom-scroll.light-bg, .tab-content > .light-bg.full-height {
+.custom-scroll.light-bg, .tab-content > .light-bg.full-height, .multiselect-native-select .light-bg.multiselect-container {
   scrollbar-color: #f04e31 #979797;
 }
 
-.custom-scroll.light-bg::-webkit-scrollbar, .tab-content > .light-bg.full-height::-webkit-scrollbar {
+.custom-scroll.light-bg::-webkit-scrollbar, .tab-content > .light-bg.full-height::-webkit-scrollbar, .multiselect-native-select .light-bg.multiselect-container::-webkit-scrollbar {
   background-color: #979797;
 }
 
-.custom-scroll.light-bg::-webkit-scrollbar-track, .tab-content > .light-bg.full-height::-webkit-scrollbar-track {
+.custom-scroll.light-bg::-webkit-scrollbar-track, .tab-content > .light-bg.full-height::-webkit-scrollbar-track, .multiselect-native-select .light-bg.multiselect-container::-webkit-scrollbar-track {
   background-color: #979797;
 }
 
-.custom-scroll.light-bg::-webkit-scrollbar-thumb, .tab-content > .light-bg.full-height::-webkit-scrollbar-thumb {
+.custom-scroll.light-bg::-webkit-scrollbar-thumb, .tab-content > .light-bg.full-height::-webkit-scrollbar-thumb, .multiselect-native-select .light-bg.multiselect-container::-webkit-scrollbar-thumb {
   background-color: #f04e31;
 }
 
-.custom-scroll.fixed-scroll, .tab-content > .fixed-scroll.full-height {
+.custom-scroll.fixed-scroll, .tab-content > .fixed-scroll.full-height, .multiselect-native-select .fixed-scroll.multiselect-container {
   max-height: 73vh;
   min-height: -webkit-fill-available;
   overflow: auto;
@@ -1784,8 +1809,7 @@ dl.no-border > div {
 .sidemenu ul li.dropdown-submenu ul.dropdown-menu {
   border-radius: 8px;
   background: #2B2B2B;
-  left: 344px !important;
-  top: -88px !important;
+  left: 13px !important;
   width: 300px;
 }
 
@@ -2042,8 +2066,32 @@ dl.no-border > div {
   display: block;
 }
 
-.dealership-sup-a button {
-  color: #6dd400 !important;
+.tilde {
+  color: #fff;
+}
+
+.total {
+  border: 2px solid white;
+  text-align-last: justify;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.tfooter-fixed-ppsa {
+  position: sticky;
+  bottom: 0;
+  color: #000;
+  width: 100%;
+  background-color: #1b1b1b;
+}
+
+.tfooter-fixed-ppsa table {
+  background-color: #C7C7C7;
+  height: 50px;
+}
+
+.tfooter-fixed-ppsa .total {
+  height: 50px;
 }
 
 .form-control {
@@ -2453,6 +2501,68 @@ select.form-control.blue-arrow {
 
 .custom-checkbox.white .custom-control-input:checked ~ .custom-control-label::after {
   background-image: url("../images/checkbox-check.svg") !important;
+}
+
+.multiselect-container > li > a > label > input[type=checkbox] {
+  display: none;
+  padding: 0;
+}
+
+.multiselect-native-select .multiselect.btn {
+  justify-content: space-between;
+}
+
+.multiselect-native-select .multiselect.btn .multiselect-selected-text {
+  font-size: 16px !important;
+  color: #ccc;
+}
+
+.multiselect-native-select .multiselect-container {
+  width: 200px;
+}
+
+.multiselect-native-select .multiselect-container li {
+  margin: 10px 0;
+}
+
+.multiselect-native-select .multiselect-container li a:focus {
+  outline: none;
+}
+
+.multiselect-native-select .multiselect-container li label.checkbox {
+  padding: 3px 5px 3px 20px;
+  justify-content: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.multiselect-native-select .multiselect-container li label.checkbox::before, .multiselect-native-select .multiselect-container li label.checkbox::after {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid #f04e31;
+  border-radius: 2px;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.multiselect-native-select .multiselect-container li label.checkbox::after {
+  background-size: 13px;
+  z-index: 2;
+  border: 0;
+}
+
+.multiselect-native-select .multiselect-container li.active label::before {
+  background-color: #f04e31;
+  background-image: url("../images/checkbox-check.svg") !important;
+  background-repeat: no-repeat;
+  background-position: 1px 1px;
 }
 
 .custom-radio {
@@ -3491,6 +3601,14 @@ select.form-control.blue-arrow {
   width: 10% !important;
 }
 
+.w-11 {
+  width: 11% !important;
+}
+
+.w-12 {
+  width: 12% !important;
+}
+
 .w-15 {
   width: 15% !important;
 }
@@ -3546,6 +3664,22 @@ select.form-control.blue-arrow {
 
 .width-auto {
   width: auto !important;
+}
+
+.rounded-tl-0 {
+  border-top-left-radius: 0;
+}
+
+.rounded-tr-0 {
+  border-top-right-radius: 0;
+}
+
+.rounded-bl-0 {
+  border-bottom-left-radius: 0;
+}
+
+.rounded-br-0 {
+  border-bottom-right-radius: 0;
 }
 
 header {
