@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1366, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0" />
+    <title>Bank List</title>
+    <meta
+      data-react-helmet="true"
+      name="apple-mobile-web-app-capable"
+      content="yes"
+    />
+    <meta
+      data-react-helmet="true"
+      name="apple-mobile-web-app-status-bar-style"
+      content="#68CDF0"
+    />
+    <meta
+      data-react-helmet="true"
+      name="apple-mobile-web-app-title"
+      content="FINX"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../assets/favicons/apple-icon-57x57.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../assets/favicons/apple-icon-60x60.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../assets/favicons/apple-icon-72x72.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../assets/favicons/apple-icon-76x76.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../assets/favicons/apple-icon-114x114.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../assets/favicons/apple-icon-120x120.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../assets/favicons/apple-icon-144x144.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../assets/favicons/apple-icon-152x152.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="../assets/favicons/apple-icon-167x167.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicons/apple-icon-180x180.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../assets/favicons/android-icon-192x192.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../assets/favicons/favicon-96x96.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicons/favicon-32x32.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicons/favicon-16x16.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="shortcut icon"
+      href="../assets/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="../assets/favicons/manifest.json" />
+  </head>
+
+  <body>
+    <div class="global-wrapper">
+      <header>
+        <div class="container-fluid">
+          <a href="#" class="logo open-sidemenu">
+            <img src="../assets/images/logo.svg" alt="FINX" />
+          </a>
+        </div>
+      </header>
+      <div class="sidemenu">
+        <img src="../assets/images/logo.svg" alt="" />
+        <button type="button" class="btn btn-icon close-menu">
+          <img src="../assets/images/close-red.svg" alt="" />
+        </button>
+        <nav>
+          <ul class="nav navbar-nav" id="">
+            <li>
+              <a href="#" class="active">Home</a>
+            </li>
+            <li>
+              <a href="#">Deal Status</a>
+            </li>
+            <li class="dropdown-submenu dropright">
+              <a
+                href="#"
+                class="nav-link"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >User</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#">Dealership</a></li>
+                <li><a href="#">Credit Specialist</a></li>
+                <li><a href="#">Risk MAnagement</a></li>
+                <li><a href="#">Insurance Provider</a></li>
+                <li><a href="#">Lender</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Agreements</a>
+            </li>
+            <li>
+              <a href="#">Remittances</a>
+            </li>
+            <li>
+              <a href="#">Bank List</a>
+            </li>
+            <li>
+              <a href="#">Online Status</a>
+            </li>
+            <li class="dropdown-submenu dropright">
+              <a
+                href="#"
+                class="nav-link"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Report</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#">Profit Report</a></li>
+                <li><a href="#">Dealership Report</a></li>
+                <li><a href="#">CS Report</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu dropright">
+              <a
+                href="#"
+                class="nav-link"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Setting</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#">Tax</a></li>
+                <li><a href="#">Commission</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Finx Free</a></li>
+                <li><a href="#">White Labling</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" onClick="toggleFullScreen();">Full Screen</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container-fluid mt-4">
+        <ul class="nav nav-tabs dark-grey" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="programs-tab"
+              href="#"
+              role="tab"
+              aria-controls="programs"
+              aria-selected="true"
+              >Applicant</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="documents-tab"
+              href="#"
+              role="tab"
+              aria-controls="documents"
+              aria-selected="true"
+              >Documents</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link active"
+              id="ppsa-tab"
+              href="#"
+              role="tab"
+              aria-controls="ppsa"
+              aria-selected="true"
+              >PPSA</a
+            >
+          </li>
+        </ul>
+        <div class="wrapper fill-window-height just-header has-tabs mb-3">
+          <div class="d-flex align-items-center mb-3">
+            <div class="radio-tabs">
+              <label for="canada" class="radio-tab">
+                <input type="radio" name="country-tabs" id="canada" checked>
+                <span>Canada</span>
+              </label>
+              <label for="usa" class="radio-tab">
+                <input type="radio" name="country-tabs" id="usa">
+                <span>US</span>
+              </label>
+            </div>
+            <div class="ml-auto">
+              <a href="#" class="light-red bold tiny-text underline">Edit</a>
+            </div>
+          </div>
+
+          <div class="states">
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="states__state states__state--filled">
+              <h3 class="medium-text mb-1 bold">Alberta</h3>
+              <div class="states__box">
+                <div class="states__box__header">
+                  <h4>Start Term</h4>
+                  <h4>End Term</h4>
+                  <h4>Price</h4>
+                </div>
+                <div class="states__box__body">
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                  <div class="states__box__body__row">
+                    <div>1</div>
+                    <div>11</div>
+                    <div>42.58</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/scripts/custom-functions.js"></script>
+    
+    <script>
+      //  Add Row in States Box
+      $('.states__box .add-row').each(function(){
+        $(this).on('click', function(){
+          const parent = $(this).closest('.states__box')
+          const cloneDiv = parent.find('.states__box__body .states__box__body__row:last-child').clone(true);
+          cloneDiv.find('.form-control').val('');
+          parent.find('.states__box__body').append(cloneDiv);
+        });
+      });
+      $('.states__box .remove-row').each(function(){
+        $(this).on('click', function(){
+          const parent = $(this).closest('.states__box')
+          const target = parent.find('.states__box__body .states__box__body__row:last-child');
+          if(parent.find('.states__box__body .states__box__body__row').length === 1) return;
+          target.remove();
+        });
+      });
+    </script>
+
+    <!-- For Datepicker position -->
+    <!-- <script type="text/javascript">
+      var previousWindowWidth = $(window).width();
+      $(function () {
+        $(window).resize(function () {
+          if (
+            $.isNumeric($('#ui-datepicker-div').css('left').replace('px', ''))
+          ) {
+            var diff = previousWindowWidth - $(window).width();
+            var newLeft =
+              parseFloat(
+                $('#ui-datepicker-div').css('left').replace('px', '')
+              ) - diff;
+            //alert($( window ).width());
+            //alert ($( "#ui-datepicker-div" ).css("left").replace('px',''));
+            //alert (newLeft);
+            $('#ui-datepicker-div').css('left', newLeft + 'px');
+          }
+          previousWindowWidth = $(window).width();
+        });
+      });
+    </script> -->
+  </body>
+</html>

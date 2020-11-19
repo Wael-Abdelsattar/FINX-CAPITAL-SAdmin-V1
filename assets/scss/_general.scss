@@ -1627,6 +1627,9 @@ dl {
         background: $fadedBlue;
         border: 1px solid $lightGreyColor;
         border-bottom: 0;
+        .states__state--filled & {
+            border-radius: 0 0 4px 4px;
+        }
     }
 
     .states__box__body__row {
@@ -1636,10 +1639,16 @@ dl {
             padding: 4px;
             flex: 1;
             border-right: 1px solid $lightGreyColor;
+            color: black;
+            font-size: 12px;
+            text-align: center;
 
             &:last-child {
                 border-right: 0;
                 background: $fadedLightRed;
+                .states__state--filled & {
+                    border-bottom-right-radius: 4px;
+                }
             }
             .form-control {
                 border: 1px solid $lightGreyColor;
@@ -1649,6 +1658,10 @@ dl {
         }
         &:last-child {
             border-bottom: 0;
+            .states__state--filled & {
+                border-bottom: 1px solid $lightGreyColor;
+                border-radius: 0 0 4px 4px;
+            }
         }
     }
 
@@ -1671,4 +1684,5 @@ dl {
             }
         }
     }
+
 }

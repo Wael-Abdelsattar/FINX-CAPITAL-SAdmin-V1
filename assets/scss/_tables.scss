@@ -246,7 +246,8 @@
       }
     }
     &.small-padding {
-      td, th {
+      td,
+      th {
         padding: 8px !important;
       }
     }
@@ -354,7 +355,7 @@
         display: inline-block;
         height: 22px;
         padding-right: 20px;
-        >.btn {
+        > .btn {
           font-size: 0;
         }
       }
@@ -422,7 +423,8 @@
     tbody td {
       padding: 9px 5px 9px 5px;
     }
-    td:first-child, th:first-child {
+    td:first-child,
+    th:first-child {
       padding-left: 15px;
     }
   }
@@ -430,50 +432,51 @@
 
 .dataTables_paginate {
   margin: -6px 0 0 !important;
-  .pagination {
-    border: 0 !important;
-    margin: 0 !important;
-    display: flex;
-    li {
-      &.previous,
-      &.next {
-        a {
-          font-size: 0;
-          &:before {
-            content: '\e909';
-            font-family: 'icomoon' !important;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-size: 14px;
-          }
+}
+
+.pagination {
+  border: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  li.page-item {
+    &.previous,
+    &.next {
+      a {
+        font-size: 0;
+        &:before {
+          content: '\e909';
+          font-family: 'icomoon' !important;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 14px;
         }
       }
-      &.next a:before {
-        transform: scale(-1, 1);
-      }
-      &.active a {
-        background: #f04e31;
-        border-color: #f04e31;
-      }
-      &.disabled a {
-        background: #363636;
-        border: 1px solid #2b2b2b;
-      }
     }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      color: white;
+    &.next a:before {
+      transform: scale(-1, 1);
+    }
+    &.active a {
+      background: #f04e31;
+      border-color: #f04e31;
+    }
+    &.disabled a {
       background: #363636;
       border: 1px solid #2b2b2b;
-      border-radius: 0;
-      &:focus {
-        box-shadow: none !important;
-      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background: #363636;
+    border: 1px solid #2b2b2b;
+    border-radius: 0;
+    &:focus {
+      box-shadow: none !important;
     }
   }
 }
@@ -484,7 +487,7 @@
 }
 
 .reset-filter::before {
-  content: "Show All";
+  content: 'Show All';
 }
 
 .messageIcon {
