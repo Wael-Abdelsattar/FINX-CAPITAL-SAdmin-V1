@@ -10,6 +10,10 @@
   color: white;
   height: 100%;
 
+  &.has-tabs {
+    border-top-left-radius: 0;
+  }
+
   &.light-grey {
     background: $bodyBg;
     border-radius: 18px;

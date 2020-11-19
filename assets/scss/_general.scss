@@ -1206,7 +1206,12 @@ dl {
 }
 
 .fill-window-height {
-    min-height: calc(100vh - 180px);
+    @extend .custom-scroll;
+    max-height: calc(100vh - 180px);
+    
+    &.just-header {
+        max-height: calc(100vh - 150px);
+    }
 }
 
 .editable {
@@ -1588,3 +1593,82 @@ dl {
 //     }
 // }
 
+.states {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 50px;
+}
+.states__box {
+    .states__box__header {
+        display: flex;
+        h4 {
+            padding: 5px 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0;
+            color: white;
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid $lightGreyColor;
+            background: $primaryBlue;
+
+            &:last-child {
+                border-right: 0;
+                border-top-right-radius: 4px;
+                background: $lightRed;
+            }
+            &:first-child {
+                border-top-left-radius: 4px;
+            }
+        }
+    }
+    .states__box__body {
+        background: $fadedBlue;
+        border: 1px solid $lightGreyColor;
+        border-bottom: 0;
+    }
+
+    .states__box__body__row {
+        display: flex;
+        border-bottom: 1px solid $lightGreyColor;
+        >div {
+            padding: 4px;
+            flex: 1;
+            border-right: 1px solid $lightGreyColor;
+
+            &:last-child {
+                border-right: 0;
+                background: $fadedLightRed;
+            }
+            .form-control {
+                border: 1px solid $lightGreyColor;
+                height: 20px;
+                border-radius: 0;
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .states__box__actions {
+        background: $primaryBlue;
+        border-radius: 0 0 4px 4px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+
+        .btn {
+            background: none;
+            min-width: 16px;
+            width: 16px;
+            height: 16px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

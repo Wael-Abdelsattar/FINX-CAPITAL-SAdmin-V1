@@ -483,10 +483,6 @@ select.form-control {
   } 
 }
 
-  
-
-
-
 .custom-radio {
   padding: 0;
   min-height: inherit;
@@ -592,5 +588,28 @@ select.form-control {
       border: 0 !important;
       box-shadow: none !important;
     }
+  }
+}
+
+.radio-tabs {
+  background: $darkGreyColor;
+  border-radius: 8px;
+}
+.radio-tab {
+  margin: 0;
+  cursor: pointer;
+  input {
+    display: none;
+    &:checked ~ span {
+      background: $lightRed;
+    }
+  }
+
+  span {
+    width: 100px;
+    padding: 7px;
+    text-align: center;
+    display: block;
+    border-radius: 8px;
   }
 }
