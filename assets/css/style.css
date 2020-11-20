@@ -4067,6 +4067,14 @@ select.form-control.blue-arrow {
   background: #f04e31;
 }
 
+.stick-left {
+  left: 0;
+}
+
+.stick-top {
+  top: 0;
+}
+
 header {
   background: #010101;
 }
