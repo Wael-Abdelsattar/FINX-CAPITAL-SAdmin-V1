@@ -2343,6 +2343,25 @@ dl.no-border > div {
   max-width: 100%;
 }
 
+.wrapper-title {
+  border-radius: 8px 8px 0 0;
+}
+
+.inactive-section {
+  position: relative;
+}
+
+.inactive-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(80, 80, 80, 0.5);
+  z-index: 2;
+}
+
 .form-control {
   height: 40px;
   border-color: #979797;
@@ -2879,6 +2898,10 @@ select.form-control.blue-arrow {
 .custom-radio .custom-control-label::before, .custom-radio .custom-control-label::after {
   top: 0;
   left: 0;
+}
+
+.custom-radio .custom-control-label.no-bg::before {
+  background: none;
 }
 
 .search-field {
@@ -3466,6 +3489,10 @@ select.form-control.blue-arrow {
   table-layout: fixed;
 }
 
+.table-modal .table.no-fixed {
+  table-layout: inherit;
+}
+
 .table-modal .table td {
   font-size: 14px;
   text-align: center;
@@ -3743,6 +3770,10 @@ select.form-control.blue-arrow {
   color: #f04e31 !important;
 }
 
+.light-grey-color {
+  color: #979797 !important;
+}
+
 .blue {
   color: #0091ff !important;
 }
@@ -3757,6 +3788,10 @@ select.form-control.blue-arrow {
 
 .yellow {
   color: #F7B500 !important;
+}
+
+.black {
+  color: black !important;
 }
 
 .white {
@@ -3992,6 +4027,10 @@ select.form-control.blue-arrow {
   width: auto !important;
 }
 
+.no-radius {
+  border-radius: 0 !important;
+}
+
 .rounded-tl-0 {
   border-top-left-radius: 0;
 }
@@ -4006,6 +4045,26 @@ select.form-control.blue-arrow {
 
 .rounded-br-0 {
   border-bottom-right-radius: 0;
+}
+
+.bg-purple {
+  background: #7C1299;
+}
+
+.bg-blue {
+  background: #2b50ed;
+}
+
+.bg-faded-blue {
+  background: #d6dcf6;
+}
+
+.bg-faded-red {
+  background: #FEEEDF;
+}
+
+.bg-light-red {
+  background: #f04e31;
 }
 
 header {
@@ -5029,6 +5088,21 @@ header .buttons {
 .colored-modal.table-modal .modal-header .close-modal {
   top: 7px;
   right: 7px;
+}
+
+.colored-modal.table-modal .modal-header.small-header {
+  height: 25px;
+}
+
+.colored-modal.table-modal .modal-header.small-header .modal-title {
+  font-size: 16px;
+}
+
+.colored-modal.table-modal .modal-header.small-header .close-modal {
+  height: 24px;
+  width: 24px;
+  background-size: 24px;
+  top: 1px;
 }
 
 .colored-modal.table-modal .modal-content {

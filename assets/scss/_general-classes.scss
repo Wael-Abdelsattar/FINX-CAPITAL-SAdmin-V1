@@ -44,6 +44,10 @@
   color: $lightRed !important;
 }
 
+.light-grey-color {
+  color: $lightGreyColor !important;
+}
+
 .blue {
   color: $blue !important;
 }
@@ -60,6 +64,9 @@
   color: $yellow !important;
 }
 
+.black {
+  color: black !important;
+}
 .white {
   color: white !important;
 }
@@ -250,6 +257,10 @@
   width: auto !important;
 }
 
+.no-radius {
+  border-radius: 0 !important;
+}
+
 .rounded-tl-0 {
   border-top-left-radius: 0;
 }
@@ -261,4 +272,24 @@
 }
 .rounded-br-0 {
   border-bottom-right-radius: 0;
+}
+
+.bg-purple {
+  background: $purple;
+}
+
+.bg-blue {
+  background: $primaryBlue;
+}
+
+.bg-faded-blue {
+  background: $fadedBlue;
+}
+
+.bg-faded-red {
+  background: $fadedLightRed;
+}
+
+.bg-light-red {
+  background: $lightRed;
 }

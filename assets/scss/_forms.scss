@@ -520,6 +520,12 @@ select.form-control {
       top: 0;
       left: 0;
     }
+
+    &.no-bg {
+      &::before {
+        background: none;
+      }
+    }
   }
 }
 
