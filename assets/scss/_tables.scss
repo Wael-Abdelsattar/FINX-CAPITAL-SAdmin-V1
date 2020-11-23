@@ -460,8 +460,8 @@
       transform: scale(-1, 1);
     }
     &.active a {
-      background: #f04e31;
-      border-color: #f04e31;
+      background: $lightRed;
+      border-color: $lightRed;
     }
     &.disabled a {
       background: #363636;
@@ -481,6 +481,11 @@
     border-radius: 0;
     &:focus {
       box-shadow: none !important;
+    }
+    &:hover {
+      background: $lightRed;
+      color: white;
+      border-color: transparent;
     }
   }
 }
@@ -505,7 +510,7 @@
   }
   .notificationCircle {
     position: absolute;
-    background-color: #f04e31;
+    background-color: $lightRed;
     border-radius: 50%;
     width: 10px;
     height: 10px;
