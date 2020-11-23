@@ -1704,3 +1704,31 @@ dl {
      z-index: 2;
  }
 }
+
+.select-grid {
+    >div {
+        &:first-child {
+            border-bottom-left-radius: 12px;
+            border-right: 1px solid $lightGreyColor;
+        }
+        &:last-child {
+            border-bottom-right-radius: 12px;
+        }
+    }
+    .grid {
+        border: 1px solid $lightGreyColor;
+        border-radius: 4px;
+        >div {
+            background: #eeeeee;
+            text-align: center;
+            border-bottom: 1px solid $lightGreyColor;
+            &:first-child {
+                border-radius: 4px 4px 0 0;
+            }
+            &:last-child {
+                border-bottom: 0;
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+}

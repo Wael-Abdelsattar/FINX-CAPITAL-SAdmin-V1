@@ -493,6 +493,7 @@ select.form-control {
         background: none;
         border-color: $lightRed;
       }
+
       &:after {
         background: $lightRed;
         transform: scale(.5);
@@ -519,6 +520,15 @@ select.form-control {
     &::before, &::after {
       top: 0;
       left: 0;
+    }
+
+    &.centered {
+      padding-left: 0;
+      padding-bottom: 28px;
+      &:before, &:after {
+        left: 50%;
+        margin-left: -10px;
+      }
     }
 
     &.no-bg {

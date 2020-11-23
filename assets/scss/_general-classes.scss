@@ -265,42 +265,46 @@
 }
 
 .rounded-tl-0 {
-  border-top-left-radius: 0;
+  border-top-left-radius: 0 !important;
 }
 .rounded-tr-0 {
-  border-top-right-radius: 0;
+  border-top-right-radius: 0 !important;
 }
 .rounded-bl-0 {
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0 !important;
 }
 .rounded-br-0 {
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0 !important;
 }
 
 .bg-purple {
-  background: $purple;
+  background: $purple !important;
 }
 
 .bg-blue {
-  background: $primaryBlue;
+  background: $primaryBlue !important;
 }
 
 .bg-faded-blue {
-  background: $fadedBlue;
+  background: $fadedBlue !important;
 }
 
 .bg-faded-red {
-  background: $fadedLightRed;
+  background: $fadedLightRed !important;
+}
+
+.bg-white {
+  background: white !important;
 }
 
 .bg-light-red {
-  background: $lightRed;
+  background: $lightRed !important;
 }
 
 .stick-left {
-  left: 0;
+  left: 0 !important;
 }
 
 .stick-top {
-  top: 0;
+  top: 0 !important;
 }
