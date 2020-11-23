@@ -788,8 +788,7 @@ $(document).ready(function() {
                         [9, 'desc'],                      
                         [10, 'desc'],                      
                         [11, 'desc'],                      
-                        [12, 'desc'],                      
-                        // [13, 'desc'],                      
+                        [12, 'desc'],
                     ],
 
                     columnDefs: [
@@ -829,7 +828,6 @@ $(document).ready(function() {
                         [4, 'desc'],
                         [5, 'desc'],
                     ],
-                    // bAutoWidth: false,
                     aoColumns: [
                         { sWidth: '10%' },
                         { sWidth: '28%' },
@@ -842,6 +840,7 @@ $(document).ready(function() {
             }
         });
     }
+    
 
     // Custom Select
     $('.select-dropdown:not(.actions) .dropdown-item').on('click', function(e) {
@@ -1223,3 +1222,91 @@ var elem = document.documentElement;
   }
 }
 
+// Datatable of Online_Status.html page with Select/Select All checkboxes
+// Reference: https://jsfiddle.net/annoyingmouse/yxLrLr8o/ 
+$(document).ready(function (){
+    var table = $('#onlineStatus').DataTable({
+    paging: false,
+    searching: false,
+    info: false,
+    fixedHeader: true,
+    scrollCollapse: true,
+
+    'columnDefs': [{
+        'targets': 0,
+        'searchable': false,
+        'orderable': false,
+        'className': 'dt-body-center',
+        'render': function (data, type, full, meta){
+            return '<input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '">';
+        }
+    }],
+
+    order: [
+        [0, ''],
+        [1, 'desc'],
+        [2, 'desc'],
+        [3, 'desc'],
+        [4, 'desc'],
+        [5, 'desc'],
+    ],
+    select: {
+        style: "os",
+        selector: "td:first-child",
+      },
+    aoColumns: [
+        { sWidth: '5%' },
+        { sWidth: '20%' },
+        { sWidth: '20%' },
+        { sWidth: '20%' },
+        { sWidth: '20%' },
+        { sWidth: '15%' },
+    ],
+
+    });
+ 
+    // Handle click on "Select all" control
+    $('#onlineStatus-select-all').on('click', function(){
+       // Get all rows with search applied
+       var rows = table.rows({ 'search': 'applied' }).nodes();
+       // Check/uncheck checkboxes for all rows in the table
+       $('input[type="checkbox"]', rows).prop('checked', this.checked);
+    });
+ 
+    // Handle click on checkbox to set state of "Select all" control
+    $('#onlineStatus tbody').on('change', 'input[type="checkbox"]', function(){
+       // If checkbox is not checked
+       if(!this.checked){
+          var el = $('#onlineStatus-select-all').get(0);
+          // If "Select all" control is checked and has 'indeterminate' property
+          if(el && el.checked && ('indeterminate' in el)){
+             // Set visual state of "Select all" control
+             // as 'indeterminate'
+             el.indeterminate = true;
+          }
+       }
+    });
+ 
+    // Handle form submission event
+    $('#frm-onlineStatus').on('submit', function(e){
+       var form = this;
+ 
+       // Iterate over all checkboxes in the table
+       table.$('input[type="checkbox"]').each(function(){
+          // If checkbox doesn't exist in DOM
+          if(!$.contains(document, this)){
+             // If checkbox is checked
+             if(this.checked){
+                // Create a hidden element
+                $(form).append(
+                   $('<input>')
+                      .attr('type', 'hidden')
+                      .attr('name', this.name)
+                      .val(this.value)
+                );
+             }
+          }
+       });
+    });
+ 
+ });
