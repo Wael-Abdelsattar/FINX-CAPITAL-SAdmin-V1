@@ -475,7 +475,7 @@
                   <a
                     href="#"
                     data-toggle="modal"
-                    data-target="#undercoating-modal"
+                    data-target="#add-new-product-modal"
                   >
                     <img src="../assets/images/grid-red-selected.svg" alt="" />
                   </a>
@@ -538,65 +538,50 @@
     <!-- KeyFob Popup -->
     <div
       class="modal fade"
-      id="undercoating-modal"
+      id="add-new-product-modal"
       tabindex="-1"
       role="dialog"
       aria-hidden="true"
     >
       <div
-        class="modal-dialog colored-modal table-modal blue-modal modal-lg"
+        class="modal-dialog colored-modal blue-modal modal-lg"
         role="document"
       >
-        <div class="modal-header small-header">
-          <h3 class="modal-title">Undercoating</h3>
-          <button
+        <div class="modal-header medium-header">
+          <h3 class="modal-title">Select Grid</h3>
+          <!-- <button
             type="button"
             data-dismiss="modal"
             class="close-modal"
-          ></button>
+          ></button> -->
         </div>
-        <div class="modal-content">
-          <table class="table table-bordered rounded-bottom m-0 no-fixed">
-            <tbody>
-              <tr>
-                <td class="py-1 grey-cell tiny-text">Term</td>
-                <td class="py-1 grey-cell tiny-text regular">12</td>
-                <td class="py-1 grey-cell tiny-text regular">24</td>
-                <td class="py-1 grey-cell tiny-text regular">36</td>
-                <td class="py-1 grey-cell tiny-text regular">48</td>
-                <td class="py-1 grey-cell tiny-text regular">60</td>
-                <td class="py-1 grey-cell tiny-text regular">72</td>
-                <td class="py-1 grey-cell tiny-text regular">84</td>
-                <td class="py-1 grey-cell tiny-text regular">96</td>
-              </tr>
-              <tr>
-                <td class="py-1 bg-faded-blue tiny-text blue bold">
-                  Suggested Retail Price
-                </td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$300</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$200</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$400</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$600</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$700</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$800</td>
-              </tr>
-              <tr>
-                <td class="py-1 bg-faded-red tiny-text light-red bold">
-                  True Dealer Cost
-                </td>
-                <td class="py-1 bg-faded-red tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$300</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$200</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$400</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$600</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$700</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$800</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="modal-content bg-white border-0 p-0">
+          <div class="select-grid d-flex">
+            <div class="custom-control custom-radio flex-grow-1 p-3">
+                <input type="radio" class="custom-control-input" id="grid-1" name="select-grid">
+                <label class="custom-control-label d-flex flex-column centered align-items-center" for="grid-1">
+                </label>
+                <label for="grid-1" class="m-0 d-block">
+                  <div class="grid mt-3">
+                    <div class="small-text bold">No Term</div>
+                    <div class="bg-faded-blue blue small-text bold">Retail Price</div>
+                    <div class="bg-faded-red red small-text bold">Dealer Cost</div>
+                  </div>
+                </label>
+            </div>
+            <div class="custom-control custom-radio flex-grow-1 p-3 bg-faded-blue">
+                <input type="radio" class="custom-control-input" id="grid-2" name="select-grid">
+                <label class="custom-control-label d-flex flex-column centered align-items-center" for="grid-2">
+                </label>
+                <label for="grid-2" class="m-0 d-block">
+                    <div class="grid mt-3">
+                      <div class="small-text bold">No Term</div>
+                      <div class="bg-faded-blue blue small-text bold">Retail Price</div>
+                      <div class="bg-faded-red red small-text bold">Dealer Cost</div>
+                    </div>
+                </label>
+            </div>
+          </div>
         </div>
       </div>
     </div>

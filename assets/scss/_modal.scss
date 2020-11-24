@@ -245,6 +245,30 @@
         transform: translateX(-50%);
       }
     }
+    &.small-header {
+      height: 25px;
+      .modal-title {
+        font-size: 16px;
+      }
+      .close-modal {
+        height: 24px;
+        width: 24px;
+        background-size: 24px;
+        top: 1px;
+      }
+    }
+    &.medium-header {
+      height: 35px;
+      .modal-title {
+        font-size: 21px;
+      }
+      // .close-modal {
+      //   height: 24px;
+      //   width: 24px;
+      //   background-size: 24px;
+      //   top: 1px;
+      // }
+    }
   }
 
   .modal-content {
@@ -331,18 +355,6 @@
       .close-modal {
         top: 7px;
         right: 7px;
-      }
-      &.small-header {
-        height: 25px;
-        .modal-title {
-          font-size: 16px;
-        }
-        .close-modal {
-          height: 24px;
-          width: 24px;
-          background-size: 24px;
-          top: 1px;
-        }
       }
     }
     .modal-content {

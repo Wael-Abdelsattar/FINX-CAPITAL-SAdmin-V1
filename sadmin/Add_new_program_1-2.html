@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1366, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <!-- <link rel="stylesheet" href="../assets/scss/dist/style.css" /> -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/Vehicle-tab.css" />
+
+    <title>Overview Landing</title>
+    <meta
+      data-react-helmet="true"
+      name="apple-mobile-web-app-capable"
+      content="yes"
+    />
+    <meta
+      data-react-helmet="true"
+      name="apple-mobile-web-app-status-bar-style"
+      content="#68CDF0"
+    />
+    <meta
+      data-react-helmet="true"
+      name="apple-mobile-web-app-title"
+      content="FINX"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../assets/favicons/apple-icon-57x57.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../assets/favicons/apple-icon-60x60.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../assets/favicons/apple-icon-72x72.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../assets/favicons/apple-icon-76x76.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../assets/favicons/apple-icon-114x114.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../assets/favicons/apple-icon-120x120.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../assets/favicons/apple-icon-144x144.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../assets/favicons/apple-icon-152x152.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="../assets/favicons/apple-icon-167x167.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicons/apple-icon-180x180.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../assets/favicons/android-icon-192x192.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../assets/favicons/favicon-96x96.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicons/favicon-32x32.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicons/favicon-16x16.png"
+    />
+    <link
+      data-react-helmet="true"
+      rel="shortcut icon"
+      href="../assets/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="../assets/favicons/manifest.json" />
+  </head>
+
+  <body>
+    <div class="global-wrapper overview-landing">
+      <!-- header -->
+      <header>
+        <div class="container-fluid">
+          <a href="#" class="logo open-sidemenu">
+            <img src="../assets/images/logo.svg" />
+          </a>
+        </div>
+      </header>
+      <!-- /header -->
+
+      <!-- Side menu -->
+      <div class="sidemenu">
+        <img src="../assets/images/logo.svg" alt="" />
+        <button type="button" class="btn btn-icon close-menu">
+          <img src="../assets/images/close-red.svg" alt="" />
+        </button>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="active">Home</a>
+            </li>
+            <li>
+              <a href="./Overview.html">Overview</a>
+            </li>
+            <li>
+              <a href="./CS_Profile.html">Profile</a>
+            </li>
+            <li>
+              <a href="#" onClick="toggleFullScreen();">Full Screen</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /Side menu -->
+
+      <div class="container-fluid program_container">
+        <div class="section-title d-flex align-items-center mb-3 mt-2">
+          <h2 class="title">Add New Program</h2>
+          <div class="spacer flex-fill"></div>
+          <div class="actions d-flex align-items-center">
+            <button type="button" class="btn btn-danger mb-1">Cancel</button>
+            <button type="button" class="btn btn-primary ml-1 mb-1">
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <form class="form-horizontal">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 pr-0">
+              <div class="wrapper general_wrapper d-flex flex-column">
+                <div class="wrapper_title big-text bold">General</div>
+
+                <div
+                  class="wrapper_content d-flex flex-column justify-content-between p-3 max-height-100 flex-grow-1"
+                >
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Program Name</label>
+                    <div class="input_div w-180 ml-auto">
+                      <input class="form-control" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Subvented</label>
+                    <div
+                      class="input_div w-180 ml-auto d-flex justify-content-end"
+                    >
+                      <div class="custom-radio custom-control mr-3">
+                        <input
+                          type="radio"
+                          id="r11"
+                          name="r1"
+                          class="custom-control-input"
+                        />
+                        <label class="custom-control-label no-bg" for="r11"
+                          >Yes</label
+                        >
+                      </div>
+                      <div class="custom-radio custom-control">
+                        <input
+                          type="radio"
+                          id="r12"
+                          name="r1"
+                          class="custom-control-input"
+                        />
+                        <label class="custom-control-label no-bg" for="r12"
+                          >No</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Starting Date</label>
+                    <div class="input_div w-180 ml-auto datepicker-control">
+                      <input
+                        type="text"
+                        placeholder="MM/DD/YYYY"
+                        readonly
+                        class="form-control datepicker"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Expiring Date</label>
+                    <div class="input_div w-180 ml-auto datepicker-control">
+                      <input
+                        type="text"
+                        placeholder="MM/DD/YYYY"
+                        readonly
+                        class="form-control datepicker"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Max. Delivery Date</label>
+                    <div class="input_div w-180 ml-auto datepicker-control">
+                      <input
+                        type="text"
+                        placeholder="MM/DD/YYYY"
+                        readonly
+                        class="form-control datepicker"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Max. LTV %</label>
+                    <div class="input_div ml-auto w-100px">
+                      <input class="form-control" placeholder="25" />
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Residual Option (Days)</label>
+                    <div class="input_div ml-auto w-100px">
+                      <input class="form-control" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Grace Days</label>
+                    <div class="input_div ml-auto w-100px">
+                      <input class="form-control" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 p-0 d-flex">
+                    <label class="control-label">Last modification</label>
+                    <div class="input_div w-180 ml-auto datepicker-control">
+                      <input
+                        type="text"
+                        placeholder="MM/DD/YYYY"
+                        readonly
+                        class="form-control datepicker"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="wrapper" style="height: 210px">
+                <div class="wrapper_title big-text bold">Beacon Score</div>
+
+                <div class="wrapper_content">
+                  <div class="d-flex col-sm-12 mb-3">
+                    <div class="custom-radio custom-control mr-3">
+                      <input
+                        type="radio"
+                        id="r21"
+                        name="r2"
+                        class="custom-control-input"
+                      />
+                      <label class="custom-control-label no-bg" for="r21"
+                        >Yes</label
+                      >
+                    </div>
+                    <div class="custom-radio custom-control">
+                      <input
+                        type="radio"
+                        id="r22"
+                        name="r2"
+                        class="custom-control-input"
+                      />
+                      <label class="custom-control-label no-bg" for="r22"
+                        >No</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-12 input_div">
+                      <div class="br-4 border">
+                        <div class="header">
+                          <div class="d-flex">
+                            <div
+                              class="tiny-text bold bg-blue p-1 text-center flex-1 br-tl-4 border-r"
+                            >
+                              From
+                            </div>
+                            <div
+                              class="tiny-text bold bg-blue p-1 text-center flex-1 br-tr-4"
+                            >
+                              To
+                            </div>
+                          </div>
+                        </div>
+                        <div class="body">
+                          <div class="d-flex">
+                            <div
+                              class="bg-faded-blue p-1 text-center flex-1 border-r"
+                            >
+                              <input
+                                type="text"
+                                class="form-control tiny-height w-75 m-auto"
+                              />
+                            </div>
+                            <div class="bg-faded-blue p-1 text-center flex-1">
+                              <input
+                                type="text"
+                                class="form-control tiny-height w-75 m-auto"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 pr-0">
+              <!-- Deferral Period -->
+              <div class="wrapper" style="height: 120px">
+                <div class="wrapper_title big-text bold">
+                  Deferral Period (Days)
+                </div>
+
+                <div class="wrapper_content p-3">
+                  <div class="br-4 border">
+                    <div class="header">
+                      <div class="d-flex">
+                        <div
+                          class="tiny-text bold bg-blue p-1 text-center flex-1 br-tl-4 border-r"
+                        >
+                          From
+                        </div>
+                        <div
+                          class="tiny-text bold bg-light-red p-1 text-center flex-1 br-tr-4"
+                        >
+                          To
+                        </div>
+                      </div>
+                    </div>
+                    <div class="body">
+                      <div class="d-flex">
+                        <div
+                          class="bg-faded-blue p-1 text-center flex-1 border-r"
+                        >
+                          <input
+                            type="text"
+                            class="form-control tiny-height w-75 m-auto"
+                          />
+                        </div>
+                        <div class="bg-faded-blue p-1 text-center flex-1">
+                          <input
+                            type="text"
+                            class="form-control tiny-height w-75 m-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Deferral Period -->
+
+              <!-- Vehicle Detail -->
+              <div class="wrapper" style="height: 330px">
+                <div class="wrapper_title big-text bold">Vehicle Detail</div>
+
+                <div class="wrapper_content p-3">
+                  <div class="form-group d-flex">
+                    <div class="custom-radio custom-control mr-3">
+                      <input
+                        type="radio"
+                        id="r31"
+                        name="r3"
+                        class="custom-control-input"
+                      />
+                      <label class="custom-control-label no-bg" for="r31"
+                        >Yes</label
+                      >
+                    </div>
+                    <div class="col-sm-10 custom-radio custom-control">
+                      <input
+                        type="radio"
+                        id="r32"
+                        name="r3"
+                        class="custom-control-input"
+                      />
+                      <label class="custom-control-label no-bg" for="r32"
+                        >No</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label">Make:</label>
+                    <div class="input_div">
+                      <input class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label">Model:</label>
+                    <div class="input_div">
+                      <input class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label">Series:</label>
+                    <div class="input_div">
+                      <input class="form-control" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label">Body Style:</label>
+                    <div class="input_div">
+                      <input class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Vehicle Detail -->
+
+              <!-- Loyalty Program -->
+              <div class="wrapper" style="height: 210px">
+                <div class="wrapper_title big-text bold">Loyalty Program</div>
+
+                <div class="wrapper_content p-3">
+                  <div class="form-group d-flex">
+                    <div class="custom-radio custom-control mr-3">
+                      <input
+                        type="radio"
+                        id="r41"
+                        name="r4"
+                        class="custom-control-input"
+                      />
+                      <label class="custom-control-label no-bg" for="r41"
+                        >Yes</label
+                      >
+                    </div>
+                    <div class="custom-radio custom-control">
+                      <input
+                        type="radio"
+                        id="r42"
+                        name="r4"
+                        class="custom-control-input"
+                      />
+                      <label class="custom-control-label no-bg" for="r42"
+                        >No</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3 d-flex">
+                    <label class="control-label holder_label"
+                      >Special Rate Reduction</label
+                    >
+                    <div class="input_div w-100px ml-auto">
+                      <div class="holder">
+                        <input class="form-control" placeholder="%" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group m-0 d-flex">
+                    <label class="control-label holder_label"
+                      >Vehicle discount Program
+                    </label>
+                    <div class="input_div w-100px ml-auto">
+                      <div class="holder">
+                        <input class="form-control" placeholder="$" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Loyalty Program -->
+
+              <!-- Admin Fee -->
+              <div class="wrapper" style="height: 145px">
+                <div class="wrapper_title big-text bold">Admin Fee</div>
+
+                <div class="wrapper_content p-3">
+                  <div class="form-group">
+                    <div class="col-sm-12 input_div">
+                      <div class="d-flex br-4 border">
+                        <div
+                          class="bg-faded-blue py-2 px-3 medium-text bold br-tl-4 br-bl-4 flex-1 border-r black"
+                        >
+                          Fee
+                        </div>
+                        <div
+                          class="bg-faded-red py-2 px-3 flex-1 br-tr-4 br-br-4"
+                        >
+                          <input
+                            type="text"
+                            class="form-control small-height"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Admin Fee -->
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6">
+              <!-- Program Tiers -->
+              <div class="wrapper program_tiers_wrapper">
+                <div class="wrapper_title big-text bold">Program Tiers</div>
+
+                <div class="wrapper_content p-3">
+                  <div class="form-group d-flex">
+                    <div class="">
+                      <span class="tier_number_text"> Tier Number </span>
+                      <span class="tier_number_count"> #1 </span>
+                    </div>
+                    <div class="ml-auto">
+                      <button
+                        type="button"
+                        class="btn btn-primary ml-1 mb-1 w-160 float-right"
+                      >
+                        Add New Tier
+                      </button>
+                      <!-- <button
+                        type="button"
+                        class="btn btn-danger mb-1 w-120 float-right"
+                      >
+                        Delete
+                      </button> -->
+                    </div>
+                  </div>
+
+                  <div class="d-flex">
+                    <label class="control-label w-200 m-0">&nbsp;</label>
+                    <div class="d-flex w-180 justify-content-start mr-auto">
+                      <div class="flex-1">End</div>
+                      <div class="flex-1 ml-3">Start</div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex mb-3">
+                    <label class="control-label w-200">Term Range</label>
+                    <div class="d-flex w-180 justify-content-start mr-auto">
+                      <input class="form-control small-height" />
+                      <input class="form-control small-height ml-3" />
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <label class="control-label w-200"
+                      >Amortization Range</label
+                    >
+                    <div class="d-flex w-180 justify-content-start mr-auto">
+                      <input class="form-control small-height" />
+                      <input class="form-control small-height ml-3" />
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <label class="control-label w-200"
+                      >Vehicle Year Range</label
+                    >
+                    <div class="d-flex w-180 justify-content-start mr-auto">
+                      <input class="form-control small-height" />
+                      <input class="form-control small-height ml-3" />
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <label class="control-label w-200">Amount Range</label>
+                    <div class="d-flex w-180 justify-content-start mr-auto">
+                      <input class="form-control small-height" />
+                      <input class="form-control small-height ml-3" />
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <label class="control-label w-200">Max. Option Date</label>
+                    <div
+                      class="d-flex w-180 justify-content-start mr-auto datepicker-control"
+                    >
+                      <input
+                        type="text"
+                        placeholder="MM/DD/YYYY"
+                        readonly
+                        class="form-control datepicker small-height"
+                      />
+                    </div>
+                  </div>
+                  <div class="fee_rates_section m-t-3">
+                    <div class="small-text bold mb-1">
+                      Acquisition Fee & Rates
+                    </div>
+                    <div class="states__box">
+                      <div class="states__box__header">
+                        <h4>From</h4>
+                        <h4>To</h4>
+                        <h4 class="bg-light-red">Reserve $</h4>
+                        <h4 class="bg-light-red">Reserve %</h4>
+                      </div>
+                      <div class="states__box__body">
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                        <div class="states__box__body__row">
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div>
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                          <div class="bg-faded-red">
+                            <input
+                              type="text"
+                              class="form-control w-50 m-auto"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="states__box__actions">
+                        <button type="button" class="btn btn-icon remove-row">
+                          <img src="../assets/images/minus-circle.svg" alt="" />
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-icon add-row ml-auto"
+                        >
+                          <img src="../assets/images/plus-circle.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="states-pagination mt-1 d-flex justify-content-end"
+                    >
+                      <ul class="pagination">
+                        <li class="paginate_button page-item previous disabled">
+                          <a href="#" class="page-link">Previous</a>
+                        </li>
+                        <li class="paginate_button page-item active">
+                          <a href="#" class="page-link">1</a>
+                        </li>
+                        <li class="paginate_button page-item">
+                          <a href="#" class="page-link">2</a>
+                        </li>
+                        <li class="paginate_button page-item next">
+                          <a href="#" class="page-link">Next</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Program Tiers -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript Files -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/scripts/custom-functions.js"></script>
+    <script src="../assets/scripts/bootstrap-select.min.js"></script>
+    <script>
+      //  Add Row in States Box
+      $('.states__box .add-row').each(function () {
+        $(this).on('click', function () {
+          const parent = $(this).closest('.states__box');
+          const cloneDiv = parent
+            .find('.states__box__body .states__box__body__row:last-child')
+            .clone(true);
+          cloneDiv.find('.form-control').val('');
+          parent.find('.states__box__body').append(cloneDiv);
+        });
+      });
+      $('.states__box .remove-row').each(function () {
+        $(this).on('click', function () {
+          const parent = $(this).closest('.states__box');
+          const target = parent.find(
+            '.states__box__body .states__box__body__row:last-child'
+          );
+          if (
+            parent.find('.states__box__body .states__box__body__row').length ===
+            1
+          )
+            return;
+          target.remove();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('.acquisition_table').DataTable({
+          paging: true,
+          searching: false,
+          info: false,
+          fixedHeader: true,
+          scrollCollapse: true,
+          ordering: false,
+        });
+      });
+    </script>
+  </body>
+</html>
