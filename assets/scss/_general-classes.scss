@@ -188,8 +188,11 @@
   justify-content: space-evenly;
 }
 
+.no-decoration {
+  text-decoration: none !important;
+}
 .underline {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 .w-5 {
   width: 5% !important;
@@ -217,6 +220,9 @@
   width: 100px !important;
   max-width: 100px !important;
 }
+.w-70 {
+  width: 70px !important;
+}
 .w-150 {
   width: 150px !important;
 }
@@ -234,6 +240,9 @@
 }
 .w-200 {
   width: 200px !important;
+}
+.w-250 {
+  width: 250px !important;
 }
 .w-350 {
   width: 350px !important;
@@ -268,6 +277,10 @@
 
 .width-auto {
   width: auto !important;
+}
+
+.height-auto {
+  height: auto !important;
 }
 
 .no-radius {
@@ -325,27 +338,39 @@
 }
 
 .bg-purple {
-  background: $purple !important;
+  background-color: $purple !important;
+}
+
+.bg-grey {
+  background-color: #F1EFEE !important;
 }
 
 .bg-blue {
-  background: $primaryBlue !important;
+  background-color: $primaryBlue !important;
 }
 
 .bg-faded-blue {
-  background: $fadedBlue !important;
+  background-color: $fadedBlue !important;
 }
 
 .bg-faded-red {
-  background: $fadedLightRed !important;
+  background-color: $fadedLightRed !important;
 }
 
 .bg-white {
-  background: white !important;
+  background-color: white !important;
 }
 
 .bg-light-red {
-  background: $lightRed !important;
+  background-color: $lightRed !important;
+}
+
+.bg-dark-grey {
+  background-color: #D8D8D8 !important;
+}
+
+.bg-darker-grey {
+  background-color: #C7C7C7 !important;
 }
 
 .stick-left {
@@ -354,6 +379,10 @@
 
 .stick-top {
   top: 0 !important;
+}
+
+.flex-inherit {
+  flex: inherit !important;
 }
 
 .flex-1 {

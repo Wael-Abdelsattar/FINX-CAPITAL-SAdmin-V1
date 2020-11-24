@@ -149,27 +149,6 @@
     }
   }
 
-  .crossed {
-    position: relative;
-    min-width: 40px;
-    background-image: linear-gradient(
-      to bottom left,
-      transparent calc(50% - 1px),
-      $lightGreyColor,
-      transparent calc(50% + 1px)
-    );
-    span:first-child {
-      position: absolute;
-      right: 10px;
-      top: 3px;
-    }
-    span:last-child {
-      position: absolute;
-      left: 10px;
-      bottom: 3px;
-    }
-  }
-
   .grey-cell {
     background-color: #c7c7c7 !important;
     font-weight: 700;
@@ -516,5 +495,26 @@
     height: 10px;
     top: -5px;
     right: -6px;
+  }
+}
+
+.crossed {
+  position: relative;
+  min-width: 40px;
+  background-image: linear-gradient(
+    to bottom left,
+    transparent calc(50% - 1px),
+    $lightGreyColor,
+    transparent calc(50% + 1px)
+  );
+  span:first-child {
+    position: absolute;
+    right: 10px;
+    top: 3px;
+  }
+  span:last-child {
+    position: absolute;
+    left: 10px;
+    bottom: 3px;
   }
 }

@@ -475,7 +475,7 @@
                   <a
                     href="#"
                     data-toggle="modal"
-                    data-target="#undercoating-modal"
+                    data-target="#create-grid-insurance-modal"
                   >
                     <img src="../assets/images/grid-red-selected.svg" alt="" />
                   </a>
@@ -500,7 +500,10 @@
                         </span>
                       </label>
                     </div>
-                    <input type="text" class="form-control medium-height mt-1">
+                    <input
+                      type="text"
+                      class="form-control medium-height mt-1"
+                    />
                   </div>
                   <div class="field w-113 ml-3">
                     <label class="bold medium-text">Brochure</label>
@@ -521,7 +524,10 @@
                         </span>
                       </label>
                     </div>
-                    <input type="text" class="form-control medium-height mt-1">
+                    <input
+                      type="text"
+                      class="form-control medium-height mt-1"
+                    />
                   </div>
                 </div>
               </div>
@@ -538,65 +544,83 @@
     <!-- KeyFob Popup -->
     <div
       class="modal fade"
-      id="undercoating-modal"
+      id="create-grid-insurance-modal"
       tabindex="-1"
       role="dialog"
       aria-hidden="true"
     >
       <div
-        class="modal-dialog colored-modal table-modal blue-modal modal-lg"
+        class="modal-dialog colored-modal blue-modal modal-lg"
         role="document"
       >
-        <div class="modal-header small-header">
-          <h3 class="modal-title">Undercoating</h3>
-          <button
-            type="button"
-            data-dismiss="modal"
-            class="close-modal"
-          ></button>
+        <div class="modal-header medium-header pl-3 justify-content-start">
+          <h3 class="modal-title">Create Grid</h3>
         </div>
-        <div class="modal-content">
-          <table class="table table-bordered rounded-bottom m-0 no-fixed">
-            <tbody>
-              <tr>
-                <td class="py-1 grey-cell tiny-text">Term</td>
-                <td class="py-1 grey-cell tiny-text regular">12</td>
-                <td class="py-1 grey-cell tiny-text regular">24</td>
-                <td class="py-1 grey-cell tiny-text regular">36</td>
-                <td class="py-1 grey-cell tiny-text regular">48</td>
-                <td class="py-1 grey-cell tiny-text regular">60</td>
-                <td class="py-1 grey-cell tiny-text regular">72</td>
-                <td class="py-1 grey-cell tiny-text regular">84</td>
-                <td class="py-1 grey-cell tiny-text regular">96</td>
-              </tr>
-              <tr>
-                <td class="py-1 bg-faded-blue tiny-text blue bold">
-                  Suggested Retail Price
-                </td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$300</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$200</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$400</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$600</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$700</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$800</td>
-              </tr>
-              <tr>
-                <td class="py-1 bg-faded-red tiny-text light-red bold">
-                  True Dealer Cost
-                </td>
-                <td class="py-1 bg-faded-red tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$300</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$200</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$400</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$600</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$700</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$800</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="modal-content bg-dark-grey border-0 py-4 px-3">
+          <div class="d-flex align-items-start">
+            <div class="states__box">
+              <div class="states__box__header">
+                <h4 class="small-text">Term Start</h4>
+                <h4 class="small-text">Term End</h4>
+                <h4 class="small-text bg-light-red">Single</h4>
+                <h4 class="small-text bg-light-red">Joint</h4>
+              </div>
+              <div class="states__box__body">
+                <div class="states__box__body__row">
+                  <div><input type="text" class="form-control" /></div>
+                  <div><input type="text" class="form-control" /></div>
+                  <div class="bg-faded-red">
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="bg-faded-red">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="states__box__body__row">
+                  <div><input type="text" class="form-control" /></div>
+                  <div><input type="text" class="form-control" /></div>
+                  <div class="bg-faded-red">
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="bg-faded-red">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="states__box__body__row">
+                  <div><input type="text" class="form-control" /></div>
+                  <div><input type="text" class="form-control" /></div>
+                  <div class="bg-faded-red">
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="bg-faded-red">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="states__box__actions">
+                <button type="button" class="btn btn-icon remove-row">
+                  <img src="../assets/images/minus-circle.svg" alt="" />
+                </button>
+                <button type="button" class="btn btn-icon add-row ml-auto">
+                  <img src="../assets/images/plus-circle.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <div class="border m-l-4">
+              <div
+                class="bg-blue small-text bold text-center p-2 border-b white"
+              >
+                Profile Setting
+              </div>
+              <div class="bg-faded-blue small-text bold text-center p-2">
+                <input type="text" class="form-control tiny-height no-radius" />
+              </div>
+            </div>
+          </div>
+          <div class="m-t-8 d-flex justify-content-end">
+            <button class="btn btn-danger">Cancel</button>
+            <button class="btn btn-primary ml-2">Save</button>
+          </div>
         </div>
       </div>
     </div>
