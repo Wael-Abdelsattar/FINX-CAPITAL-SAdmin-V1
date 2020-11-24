@@ -24,8 +24,8 @@
             }
         }
         &.program_tiers_wrapper {
-            min-height: 836px; 
-            max-height: 836px;
+            min-height: 825px; 
+            max-height: 825px;
             .input_div {
                 button {
                     width: 150px;
@@ -54,7 +54,7 @@
         margin: 0 0 10px 0;
         .wrapper_title {
             // height: 35px;
-            border-radius: 8px;
+            border-radius: 8px 8px 0 0;
             background: #000000;
             padding: 5px 10px;
         }
@@ -74,10 +74,10 @@
                         padding-left: 15px;
                     }
                     &.datepicker-control{
-                        // &:before{
-                        //     right: 20px;
-                        //     top: 45%;
-                        // }
+                        &:before{
+                            // right: 20px;
+                            top: 11px;
+                        }
                     }
                     input {
                         height: 25px;

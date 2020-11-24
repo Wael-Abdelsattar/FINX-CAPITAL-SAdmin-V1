@@ -788,7 +788,8 @@ $(document).ready(function() {
                         [9, 'desc'],                      
                         [10, 'desc'],                      
                         [11, 'desc'],                      
-                        [12, 'desc'],
+                        [12, 'desc'],                      
+                        // [13, 'desc'],                      
                     ],
 
                     columnDefs: [
@@ -812,7 +813,46 @@ $(document).ready(function() {
                     ],
                 });
 
-            } else {
+            } 
+            // else if ($(this).hasClass('online-status')) {
+            //     $("#onlineStatus").DataTable({
+            //         paging: false,
+            //         searching: false,
+            //         info: false,
+            //         fixedHeader: true,
+            //         // scrollY: '288px',
+            //         scrollCollapse: true,
+            //         order: [
+            //             [0, ''],
+            //             [1, 'desc'],
+            //             [2, 'desc'],
+            //             [3, 'desc'],
+            //             [4, 'desc'],
+            //             [5, 'desc'],
+            //         ],
+            //         columnDefs: [
+            //             { 
+            //                 orderable: false, 
+            //                 targets: 0,
+            //                 className: "select-checkbox",
+            //             },
+            //         ],
+            //         select: {
+            //             style: "os",
+            //             selector: "td:first-child",
+            //           },
+            //         // bAutoWidth: false,
+            //         aoColumns: [
+            //             { sWidth: '5%' },
+            //             { sWidth: '20%' },
+            //             { sWidth: '20%' },
+            //             { sWidth: '20%' },
+            //             { sWidth: '20%' },
+            //             { sWidth: '15%' },
+            //         ],
+            //     });
+            // } 
+            else {
                 $(this).DataTable({
                     paging: false,
                     searching: false,
@@ -828,6 +868,7 @@ $(document).ready(function() {
                         [4, 'desc'],
                         [5, 'desc'],
                     ],
+                    // bAutoWidth: false,
                     aoColumns: [
                         { sWidth: '10%' },
                         { sWidth: '28%' },
@@ -1222,14 +1263,13 @@ var elem = document.documentElement;
   }
 }
 
-// Datatable of Online_Status.html page with Select/Select All checkboxes
-// Reference: https://jsfiddle.net/annoyingmouse/yxLrLr8o/ 
 $(document).ready(function (){
     var table = $('#onlineStatus').DataTable({
     paging: false,
     searching: false,
     info: false,
     fixedHeader: true,
+    // scrollY: '288px',
     scrollCollapse: true,
 
     'columnDefs': [{
@@ -1241,6 +1281,7 @@ $(document).ready(function (){
             return '<input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '">';
         }
     }],
+    // 'order': [[1, 'asc']],
 
     order: [
         [0, ''],
@@ -1250,10 +1291,18 @@ $(document).ready(function (){
         [4, 'desc'],
         [5, 'desc'],
     ],
+    // columnDefs: [
+    //     { 
+    //         orderable: false, 
+    //         targets: 0,
+    //         className: "select-checkbox",
+    //     },
+    // ],
     select: {
         style: "os",
         selector: "td:first-child",
       },
+    // bAutoWidth: false,
     aoColumns: [
         { sWidth: '5%' },
         { sWidth: '20%' },
