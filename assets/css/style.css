@@ -215,7 +215,7 @@ input[type='checkbox']:checked .checkmark {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   right: 6px;
-  top: 47%;
+  top: 12px;
   -webkit-transform: translateY(-44%);
   transform: translateY(-44%);
   font-size: 18px;
@@ -5879,8 +5879,8 @@ header .buttons {
 }
 
 .program_container .wrapper.program_tiers_wrapper {
-  min-height: 836px;
-  max-height: 836px;
+  min-height: 825px;
+  max-height: 825px;
 }
 
 .program_container .wrapper.program_tiers_wrapper .input_div button {
@@ -5909,7 +5909,7 @@ header .buttons {
 }
 
 .program_container .wrapper .wrapper_title {
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   background: #000000;
   padding: 5px 10px;
 }
@@ -5929,6 +5929,10 @@ header .buttons {
 .program_container .wrapper .wrapper_content .form-group .input_div.custom-radio {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.program_container .wrapper .wrapper_content .form-group .input_div.datepicker-control:before {
+  top: 11px;
 }
 
 .program_container .wrapper .wrapper_content .form-group .input_div input {
@@ -5984,3 +5988,4 @@ header .buttons {
 .program_container .wrapper table .text-black {
   color: #000000;
 }
+/*# sourceMappingURL=style.css.map */

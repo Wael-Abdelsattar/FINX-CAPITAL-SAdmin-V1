@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
     <link rel="stylesheet" href="../assets/css/Vehicle-tab.css" />
 
-    <title>Add new program 1-2</title>
+    <title>New program_1_filled</title>
     <meta
       data-react-helmet="true"
       name="apple-mobile-web-app-capable"
@@ -175,7 +175,19 @@
 
       <div class="container-fluid program_container">
         <div class="section-title d-flex align-items-center mb-3 mt-2">
+          <button type="button" class="btn btn-icon back-arrow mr-4">
+            <img src="../assets/images/back-arrow.svg" alt="">
+          </button>
           <h2 class="title">Add New Program</h2>
+          <div class="dropdown select-dropdown dealership-sup-a ml-3">
+            <button class="btn btn-secondary dropdown-toggle dark-green float-right pt-3" type="button" id="dropdownActiveInactive" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Active
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownActiveInactive">
+              <a class="dropdown-item dark-green" href="#">Active</a>
+              <a class="dropdown-item red" href="#">Inactive</a>
+            </div>
+          </div>
           <div class="spacer flex-fill"></div>
           <div class="actions d-flex align-items-center">
             <button type="button" class="btn btn-danger">Cancel</button>
@@ -196,7 +208,7 @@
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Program Name</label>
                     <div class="input_div ml-auto">
-                      <input class="form-control w-180" placeholder="" />
+                      GBC Vintage Program 20
                     </div>
                   </div>
 
@@ -205,97 +217,52 @@
                     <div
                       class="input_div w-180 ml-auto d-flex justify-content-end"
                     >
-                      <div class="custom-radio custom-control mr-3">
-                        <input
-                          type="radio"
-                          id="r11"
-                          name="r1"
-                          class="custom-control-input"
-                        />
-                        <label class="custom-control-label no-bg" for="r11"
-                          >Yes</label
-                        >
-                      </div>
                       <div class="custom-radio custom-control">
-                        <input
-                          type="radio"
-                          id="r12"
-                          name="r1"
-                          class="custom-control-input"
-                        />
-                        <label class="custom-control-label no-bg" for="r12"
-                          >No</label
-                        >
+                        No
                       </div>
                     </div>
                   </div>
 
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Starting Date</label>
-                    <div class="input_div ml-auto datepicker-control">
-                      <input
-                        type="text"
-                        placeholder="MM/DD/YYYY"
-                        readonly
-                        class="form-control w-180 datepicker"
-                      />
+                    <div class="input_div ml-auto">
+                      May-08-2020
                     </div>
                   </div>
 
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Expiring Date</label>
-                    <div class="input_div ml-auto datepicker-control">
-                      <input
-                        type="text"
-                        placeholder="MM/DD/YYYY"
-                        readonly
-                        class="form-control w-180 datepicker"
-                      />
+                    <div class="input_div ml-auto">
+                      July-08-2021
                     </div>
                   </div>
 
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Max. Delivery Date</label>
-                    <div class="input_div ml-auto datepicker-control">
-                      <input
-                        type="text"
-                        placeholder="MM/DD/YYYY"
-                        readonly
-                        class="form-control w-180 datepicker"
-                      />
+                    <div class="input_div ml-auto">
+                      Sep-08-2021
                     </div>
                   </div>
 
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Max. LTV %</label>
-                    <div class="input_div ml-auto">
-                      <input class="form-control w-100px" placeholder="" value="35"/>
-                    </div>
+                    12%
                   </div>
 
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Residual Option (Days)</label>
-                    <div class="input_div ml-auto">
-                      <input class="form-control w-100px" placeholder="" />
-                    </div>
+                    35
                   </div>
 
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Grace Days</label>
-                    <div class="input_div ml-auto">
-                      <input class="form-control w-100px" placeholder="" />
-                    </div>
+                    
                   </div>
 
                   <div class="form-group m-0 p-0 d-flex">
                     <label class="control-label">Last modification</label>
-                    <div class="input_div ml-auto datepicker-control">
-                      <input
-                        type="text"
-                        placeholder="MM/DD/YYYY"
-                        readonly
-                        class="form-control w-180 datepicker"
-                      />
+                    <div class="input_div ml-auto">
+                      Apr-08-2020
                     </div>
                   </div>
                 </div>
@@ -312,12 +279,13 @@
                         id="r21"
                         name="r2"
                         class="custom-control-input"
+                        checked
                       />
                       <label class="custom-control-label no-bg" for="r21"
                         >Yes</label
                       >
                     </div>
-                    <div class="custom-radio custom-control">
+                    <!-- <div class="custom-radio custom-control">
                       <input
                         type="radio"
                         id="r22"
@@ -327,11 +295,11 @@
                       <label class="custom-control-label no-bg" for="r22"
                         >No</label
                       >
-                    </div>
+                    </div> -->
                   </div>
 
                   <div class="form-group">
-                    <div class="input_div">
+                    <div class="w-100 input_div">
                       <div class="br-4 border">
                         <div class="header">
                           <div class="d-flex">
@@ -351,17 +319,11 @@
                           <div class="d-flex">
                             <div
                               class="bg-faded-blue p-1 flex-1 medium-text bold black text-center border-r"
-                            >
-                              <input
-                                type="text"
-                                class="form-control tiny-height w-75 m-auto"
-                              />
+                              >
+                              300
                             </div>
                             <div class="bg-faded-blue p-1 flex-1 medium-text bold black text-center">
-                              <input
-                                type="text"
-                                class="form-control tiny-height w-75 m-auto"
-                              />
+                              500
                             </div>
                           </div>
                         </div>
@@ -399,17 +361,11 @@
                       <div class="d-flex">
                         <div
                           class="bg-faded-blue p-1 flex-1 medium-text bold black text-center border-r"
-                        >
-                          <input
-                            type="text"
-                            class="form-control tiny-height w-75 m-auto"
-                          />
+                          >
+                          0
                         </div>
                         <div class="bg-faded-blue p-1 flex-1 medium-text bold black text-center">
-                          <input
-                            type="text"
-                            class="form-control tiny-height w-75 m-auto"
-                          />
+                          90
                         </div>
                       </div>
                     </div>
@@ -430,20 +386,10 @@
                         id="r31"
                         name="r3"
                         class="custom-control-input"
+                        checked
                       />
                       <label class="custom-control-label no-bg" for="r31"
                         >Yes</label
-                      >
-                    </div>
-                    <div class="col-sm-10 custom-radio custom-control">
-                      <input
-                        type="radio"
-                        id="r32"
-                        name="r3"
-                        class="custom-control-input"
-                      />
-                      <label class="custom-control-label no-bg" for="r32"
-                        >No</label
                       >
                     </div>
                   </div>
@@ -451,29 +397,29 @@
                   <div class="form-group">
                     <label class="control-label">Make:</label>
                     <div class="input_div">
-                      <input class="form-control w-180" />
+                      Honda
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label">Model:</label>
                     <div class="input_div">
-                      <input class="form-control w-180" />
+                      Civic
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label">Series:</label>
-                    <div class="input_div">
+                    <!-- <div class="input_div">
                       <input class="form-control w-180" />
-                    </div>
+                    </div> -->
                   </div>
 
                   <div class="form-group">
                     <label class="control-label">Body Style:</label>
-                    <div class="input_div">
+                    <!-- <div class="input_div">
                       <input class="form-control w-180" />
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -491,12 +437,13 @@
                         id="r41"
                         name="r4"
                         class="custom-control-input"
+                        checked
                       />
                       <label class="custom-control-label no-bg" for="r41"
                         >Yes</label
                       >
                     </div>
-                    <div class="custom-radio custom-control">
+                    <!-- <div class="custom-radio custom-control">
                       <input
                         type="radio"
                         id="r42"
@@ -506,28 +453,28 @@
                       <label class="custom-control-label no-bg" for="r42"
                         >No</label
                       >
+                    </div> -->
+                  </div>
+
+                  <div class="form-group d-flex">
+                    <label class="control-label"
+                      >Special Rate Reduction
+                    </label>
+                    <div class="input_div ml-auto">
+                      
+                        12%
+                      
                     </div>
                   </div>
 
-                  <div class="form-group mb-3 d-flex">
-                    <label class="control-label holder_label"
-                      >Special Rate Reduction</label
-                    >
-                    <div class="input_div w-100px ml-auto">
-                      <div class="holder">
-                        <input class="form-control" placeholder="%" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group m-0 d-flex">
-                    <label class="control-label holder_label"
+                  <div class="form-group d-flex">
+                    <label class="control-label"
                       >Vehicle discount Program
                     </label>
-                    <div class="input_div w-100px ml-auto">
-                      <div class="holder">
-                        <input class="form-control" placeholder="$" />
-                      </div>
+                    <div class="input_div ml-auto">
+                      
+                        $500
+                      
                     </div>
                   </div>
                 </div>
@@ -550,10 +497,7 @@
                         <div
                           class="bg-faded-red py-2 px-3 flex-1 medium-text bold black text-center br-tr-4 br-br-4"
                         >
-                          <input
-                            type="text"
-                            class="form-control small-height"
-                          />
+                          90
                         </div>
                       </div>
                     </div>
@@ -574,20 +518,14 @@
                       <span class="tier_number_text"> Tier Number </span>
                       <span class="tier_number_count"> #1 </span>
                     </div>
-                    <div class="ml-auto">
+                    <!-- <div class="ml-auto">
                       <button
                         type="button"
                         class="btn btn-primary ml-1 mb-1 w-160 float-right"
                       >
                         Add New Tier
                       </button>
-                      <button
-                        type="button"
-                        class="btn btn-danger mb-1 w-120 float-right"
-                      >
-                        Delete
-                      </button>
-                    </div>
+                    </div> -->
                   </div>
 
                   <div class="d-flex form-group mb-0 py-0">
@@ -601,8 +539,8 @@
                   <div class="d-flex form-group mb-1">
                     <label class="control-label w-200">Term Range</label>
                     <div class="d-flex input_div w-180 justify-content-start mr-auto">
-                      <input class="form-control small-height" />
-                      <input class="form-control small-height ml-3" />
+                      <div class="flex-1">36</div>
+                      <div class="flex-1 ml-3">3</div>
                     </div>
                   </div>
                   <div class="d-flex form-group mb-1">
@@ -610,8 +548,8 @@
                       >Amortization Range</label
                     >
                     <div class="d-flex input_div w-180 justify-content-start mr-auto">
-                      <input class="form-control small-height" />
-                      <input class="form-control small-height ml-3" />
+                      <div class="flex-1">36</div>
+                      <div class="flex-1 ml-3">36</div>
                     </div>
                   </div>
                   <div class="d-flex form-group mb-1">
@@ -619,28 +557,23 @@
                       >Vehicle Year Range</label
                     >
                     <div class="d-flex input_div w-180 justify-content-start mr-auto">
-                      <input class="form-control small-height" />
-                      <input class="form-control small-height ml-3" />
+                      <div class="flex-1">2007</div>
+                      <div class="flex-1 ml-3">2007</div>
                     </div>
                   </div>
                   <div class="d-flex form-group mb-1">
                     <label class="control-label w-200">Amount Range</label>
                     <div class="d-flex input_div w-180 justify-content-start mr-auto">
-                      <input class="form-control small-height" />
-                      <input class="form-control small-height ml-3" />
+                      <div class="flex-1">5,000</div>
+                      <div class="flex-1 ml-3">150,000</div>
                     </div>
                   </div>
                   <div class="d-flex form-group mb-1">
                     <label class="control-label w-200">Max. Option Date</label>
                     <div
-                      class="d-flex input_div w-180 justify-content-start mr-auto datepicker-control"
+                      class="d-flex input_div w-180 justify-content-start mr-auto"
                     >
-                      <input
-                        type="text"
-                        placeholder="MM/DD/YYYY"
-                        readonly
-                        class="form-control datepicker small-height"
-                      />
+                    Apr-08-2020
                     </div>
                   </div>
                   <div class="fee_rates_section m-t-3">
@@ -657,318 +590,270 @@
                       <div class="states__box__body">
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $400
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                         <div class="states__box__body__row">
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div>
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              5.49
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                           <div class="bg-faded-red">
-                            <input
-                              type="text"
-                              class="form-control w-50 m-auto"
-                            />
+                            <div class="p-0 small-text">
+                              $0
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="states__box__actions">
+                      <!-- <div class="states__box__actions">
                         <button type="button" class="btn btn-icon remove-row">
                           <img src="../assets/images/minus-circle.svg" alt="" />
                         </button>
@@ -978,7 +863,7 @@
                         >
                           <img src="../assets/images/plus-circle.svg" alt="" />
                         </button>
-                      </div>
+                      </div> -->
                     </div>
                     <div
                       class="states-pagination mt-1 d-flex justify-content-end"
