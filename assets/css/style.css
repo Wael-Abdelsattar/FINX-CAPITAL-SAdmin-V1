@@ -2451,7 +2451,6 @@ dl.no-border > div {
   float: right;
   position: relative;
   top: 2px;
-  left: 10px;
 }
 
 .dropup .dropdown-toggle::after {
