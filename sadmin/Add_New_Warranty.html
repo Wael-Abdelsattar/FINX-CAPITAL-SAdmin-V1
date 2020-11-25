@@ -475,7 +475,7 @@
                   <a
                     href="#"
                     data-toggle="modal"
-                    data-target="#undercoating-modal"
+                    data-target="#create-grid-modal"
                   >
                     <img src="../assets/images/grid-red-selected.svg" alt="" />
                   </a>
@@ -500,7 +500,10 @@
                         </span>
                       </label>
                     </div>
-                    <input type="text" class="form-control medium-height mt-1">
+                    <input
+                      type="text"
+                      class="form-control medium-height mt-1"
+                    />
                   </div>
                   <div class="field w-113 ml-3">
                     <label class="bold medium-text">Brochure</label>
@@ -521,7 +524,10 @@
                         </span>
                       </label>
                     </div>
-                    <input type="text" class="form-control medium-height mt-1">
+                    <input
+                      type="text"
+                      class="form-control medium-height mt-1"
+                    />
                   </div>
                 </div>
               </div>
@@ -538,65 +544,557 @@
     <!-- KeyFob Popup -->
     <div
       class="modal fade"
-      id="undercoating-modal"
+      id="create-grid-modal"
       tabindex="-1"
       role="dialog"
       aria-hidden="true"
     >
       <div
-        class="modal-dialog colored-modal table-modal blue-modal modal-lg"
+        class="modal-dialog colored-modal blue-modal modal-xxl"
         role="document"
       >
-        <div class="modal-header small-header">
-          <h3 class="modal-title">Undercoating</h3>
-          <button
+        <div class="modal-header small-header pl-3 justify-content-start">
+          <h3 class="modal-title">Create Grid</h3>
+          <!-- <button
             type="button"
             data-dismiss="modal"
             class="close-modal"
-          ></button>
+          ></button> -->
         </div>
-        <div class="modal-content">
-          <table class="table table-bordered rounded-bottom m-0 no-fixed">
-            <tbody>
-              <tr>
-                <td class="py-1 grey-cell tiny-text">Term</td>
-                <td class="py-1 grey-cell tiny-text regular">12</td>
-                <td class="py-1 grey-cell tiny-text regular">24</td>
-                <td class="py-1 grey-cell tiny-text regular">36</td>
-                <td class="py-1 grey-cell tiny-text regular">48</td>
-                <td class="py-1 grey-cell tiny-text regular">60</td>
-                <td class="py-1 grey-cell tiny-text regular">72</td>
-                <td class="py-1 grey-cell tiny-text regular">84</td>
-                <td class="py-1 grey-cell tiny-text regular">96</td>
-              </tr>
-              <tr>
-                <td class="py-1 bg-faded-blue tiny-text blue bold">
-                  Suggested Retail Price
-                </td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$300</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$200</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$400</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$600</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$700</td>
-                <td class="py-1 bg-faded-blue tiny-text regular">$800</td>
-              </tr>
-              <tr>
-                <td class="py-1 bg-faded-red tiny-text light-red bold">
-                  True Dealer Cost
-                </td>
-                <td class="py-1 bg-faded-red tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$300</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$200</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$500</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$400</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$600</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$700</td>
-                <td class="py-1 bg-faded-red tiny-text regular">$800</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="modal-content bg-dark-grey border-0 py-4 px-3">
+          <div class="warranty-grid">
+            <div class="d-flex">
+              <div class="border custom-table">
+                <div class="d-flex custom-table__header border-b">
+                  <div class="crossed bg-darker-grey w-100px border-r">
+                    <span class="small-text bold">Term</span>
+                    <span class="small-text bold">KM</span>
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2 border-r">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2 border-r">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2 border-r">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2 border-r">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2 border-r">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2 border-r">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2 border-r">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                  <div class="bg-darker-grey flex-1 p-2">
+                    <input
+                      type="text"
+                      class="form-control small-height no-radius"
+                    />
+                  </div>
+                </div>
+                <div class="custom-table__body">
+                  <div class="custom-table__row border-b d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-table__row border-b d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-table__row border-b d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-table__row border-b d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-table__row border-b d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-table__row border-b d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-table__row border-b d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-table__row d-flex">
+                    <div class="bg-grey w-100px p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2 border-r">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                    <div class="bg-faded-red flex-1 p-2">
+                      <input
+                        type="text"
+                        class="form-control small-height no-radius"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="states__box__actions vertical p-2">
+                <button type="button" class="btn btn-icon remove-vertical">
+                  <img src="../assets/images/minus-circle.svg" alt="" />
+                </button>
+                <button type="button" class="btn btn-icon add-vertical ml-auto">
+                  <img src="../assets/images/plus-circle.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <div
+              class="states__box__actions p-2 height-auto"
+              style="width: calc(100% - 32px)"
+            >
+              <button type="button" class="btn btn-icon remove-horizontal">
+                <img src="../assets/images/minus-circle.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-icon add-horizontal ml-auto">
+                <img src="../assets/images/plus-circle.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="mt-4 d-flex justify-content-end">
+            <button class="btn btn-danger">Cancel</button>
+            <button class="btn btn-primary ml-2">Save</button>
+          </div>
         </div>
       </div>
     </div>
@@ -623,29 +1121,59 @@
     <script src="../assets/scripts/custom-functions.js"></script>
 
     <script>
-      //  Add Row in States Box
-      $('.states__box .add-row').each(function () {
-        $(this).on('click', function () {
-          const parent = $(this).closest('.states__box');
-          const cloneDiv = parent
-            .find('.states__box__body .states__box__body__row:last-child')
+      //  Add Horizontal Row in Warranty Grid
+      $('.warranty-grid .add-horizontal').on('click', function () {
+        const parent = $(this).closest('.warranty-grid');
+        const cloneDiv = parent
+          .find('.custom-table__body .custom-table__row:last-child')
+          .clone(true);
+        cloneDiv.find('.form-control').val('');
+        parent.find('.custom-table__body').append(cloneDiv);
+      });
+
+      // Remove Horizontal Row in Warranty Grid
+      $('.warranty-grid .remove-horizontal').on('click', function () {
+        const parent = $(this).closest('.warranty-grid');
+        const target = parent
+          .find('.custom-table__body .custom-table__row:last-child');
+          if(parent.find('.custom-table__body .custom-table__row').length === 1) return;
+          target.remove();
+      });
+      
+
+      // Add Vertical Row in Warranty Grid
+      $('.warranty-grid .add-vertical').on('click', function () {
+        const parent = $(this).closest('.warranty-grid');
+
+        $('.warranty-grid .custom-table__header').each(function(){
+          const cloneDiv = $(this)
+            .find('>div:last-child')
             .clone(true);
           cloneDiv.find('.form-control').val('');
-          parent.find('.states__box__body').append(cloneDiv);
+          $(this).append(cloneDiv);
+        });
+        $('.warranty-grid .custom-table__body .custom-table__row').each(function(){
+          const cloneDiv = $(this)
+            .find('>div:last-child')
+            .clone(true);
+          cloneDiv.find('.form-control').val('');
+          $(this).append(cloneDiv);
         });
       });
-      $('.states__box .remove-row').each(function () {
-        $(this).on('click', function () {
-          const parent = $(this).closest('.states__box');
-          const target = parent.find(
-            '.states__box__body .states__box__body__row:last-child'
-          );
-          if (
-            parent.find('.states__box__body .states__box__body__row').length ===
-            1
-          )
-            return;
-          target.remove();
+
+      // Remove Vertical Row in Warranty Grid
+      $('.warranty-grid .remove-vertical').on('click', function () {
+        $('.warranty-grid .custom-table__header').each(function(){
+          const target = $(this)
+            .find('>div:last-child');
+            if($(this).find('>div').length === 2) return;
+            target.remove();
+        });
+        $('.warranty-grid .custom-table__body .custom-table__row').each(function(){
+          const target = $(this)
+            .find('>div:last-child');
+            if($(this).find('>div').length === 2) return;
+            target.remove();
         });
       });
     </script>

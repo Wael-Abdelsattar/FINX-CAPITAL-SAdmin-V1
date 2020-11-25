@@ -1596,6 +1596,12 @@ dl {
   grid-row-gap: 50px;
 }
 
+.states__box {
+  &.horizontal {
+    display: flex;
+  }
+}
+
 .states__box__header {
   display: flex;
   h4 {
@@ -1666,6 +1672,9 @@ dl {
       border-bottom: 1px solid $lightGreyColor;
       border-radius: 0 0 4px 4px;
     }
+    .horizontal & {
+      border-bottom: 1px solid $lightGreyColor;
+    }
   }
 }
 
@@ -1686,6 +1695,20 @@ dl {
     img {
       max-width: 100%;
     }
+  }
+
+  .horizontal & {
+    flex-direction: column-reverse;
+    height: auto;
+    border-radius: 0 4px 4px 0;
+    justify-content: space-between;
+  }
+
+  &.vertical {
+    flex-direction: column-reverse;
+    height: auto;
+    border-radius: 0 4px 4px 0;
+    justify-content: space-between;
   }
 }
 

@@ -2239,6 +2239,12 @@ dl.no-border > div {
   grid-row-gap: 50px;
 }
 
+.states__box.horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .states__box__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2329,6 +2335,10 @@ dl.no-border > div {
   border-radius: 0 0 4px 4px;
 }
 
+.horizontal .states__box__body__row:last-child {
+  border-bottom: 1px solid #979797;
+}
+
 .states__box__actions {
   background: #2b50ed;
   border-radius: 0 0 4px 4px;
@@ -2351,6 +2361,30 @@ dl.no-border > div {
 
 .states__box__actions .btn img {
   max-width: 100%;
+}
+
+.horizontal .states__box__actions {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  height: auto;
+  border-radius: 0 4px 4px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.states__box__actions.vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  height: auto;
+  border-radius: 0 4px 4px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .wrapper-title {
@@ -2845,6 +2879,7 @@ select.form-control.blue-arrow {
 .custom-checkbox .custom-control-label {
   font-size: 14px;
   padding-left: 34px;
+  line-height: 22px;
 }
 
 .custom-checkbox .custom-control-label::before, .custom-checkbox .custom-control-label::after {
@@ -3476,24 +3511,6 @@ select.form-control.blue-arrow {
   font-size: 14px;
 }
 
-.table .crossed {
-  position: relative;
-  min-width: 40px;
-  background-image: linear-gradient(to bottom left, transparent calc(50% - 1px), #979797, transparent calc(50% + 1px));
-}
-
-.table .crossed span:first-child {
-  position: absolute;
-  right: 10px;
-  top: 3px;
-}
-
-.table .crossed span:last-child {
-  position: absolute;
-  left: 10px;
-  bottom: 3px;
-}
-
 .table .grey-cell {
   background-color: #c7c7c7 !important;
   font-weight: 700;
@@ -3872,6 +3889,24 @@ select.form-control.blue-arrow {
   right: -6px;
 }
 
+.crossed {
+  position: relative;
+  min-width: 40px;
+  background-image: linear-gradient(to bottom left, transparent calc(50% - 1px), #979797, transparent calc(50% + 1px));
+}
+
+.crossed span:first-child {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+
+.crossed span:last-child {
+  position: absolute;
+  left: 10px;
+  bottom: 3px;
+}
+
 .giant-text {
   font-size: 48px !important;
 }
@@ -4100,8 +4135,12 @@ select.form-control.blue-arrow {
           justify-content: space-evenly;
 }
 
+.no-decoration {
+  text-decoration: none !important;
+}
+
 .underline {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .w-5 {
@@ -4137,6 +4176,10 @@ select.form-control.blue-arrow {
   max-width: 100px !important;
 }
 
+.w-70 {
+  width: 70px !important;
+}
+
 .w-150 {
   width: 150px !important;
 }
@@ -4159,6 +4202,10 @@ select.form-control.blue-arrow {
 
 .w-200 {
   width: 200px !important;
+}
+
+.w-250 {
+  width: 250px !important;
 }
 
 .w-350 {
@@ -4196,6 +4243,10 @@ select.form-control.blue-arrow {
 
 .width-auto {
   width: auto !important;
+}
+
+.height-auto {
+  height: auto !important;
 }
 
 .no-radius {
@@ -4267,27 +4318,39 @@ select.form-control.blue-arrow {
 }
 
 .bg-purple {
-  background: #7C1299 !important;
+  background-color: #7C1299 !important;
+}
+
+.bg-grey {
+  background-color: #F1EFEE !important;
 }
 
 .bg-blue {
-  background: #2b50ed !important;
+  background-color: #2b50ed !important;
 }
 
 .bg-faded-blue {
-  background: #d6dcf6 !important;
+  background-color: #d6dcf6 !important;
 }
 
 .bg-faded-red {
-  background: #FEEEDF !important;
+  background-color: #FEEEDF !important;
 }
 
 .bg-white {
-  background: white !important;
+  background-color: white !important;
 }
 
 .bg-light-red {
-  background: #f04e31 !important;
+  background-color: #f04e31 !important;
+}
+
+.bg-dark-grey {
+  background-color: #D8D8D8 !important;
+}
+
+.bg-darker-grey {
+  background-color: #C7C7C7 !important;
 }
 
 .stick-left {
@@ -4296,6 +4359,12 @@ select.form-control.blue-arrow {
 
 .stick-top {
   top: 0 !important;
+}
+
+.flex-inherit {
+  -webkit-box-flex: inherit !important;
+      -ms-flex: inherit !important;
+          flex: inherit !important;
 }
 
 .flex-1 {
@@ -5077,6 +5146,9 @@ header .buttons {
 @media (min-width: 992px) {
   .modal-dialog.modal-lg, .modal-dialog.modal-xl {
     max-width: 800px;
+  }
+  .modal-dialog.modal-xxl {
+    max-width: 1024px;
   }
 }
 

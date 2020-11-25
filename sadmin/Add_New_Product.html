@@ -472,13 +472,17 @@
               <div class="d-flex mt-3">
                 <div class="grid d-flex flex-column align-items-start">
                   <span class="mb-2">Grid</span>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#add-new-product-modal"
-                  >
-                    <img src="../assets/images/grid-red-selected.svg" alt="" />
-                  </a>
+                  <div>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#add-new-product-modal"
+                      class="no-decoration"
+                    >
+                      <img src="../assets/images/grid-red-selected.svg" alt="" />
+                      <img class="ml-1" src="../assets/images/arrow-red-down.svg" alt="">
+                    </a>
+                  </div>
                 </div>
                 <div class="files d-flex ml-auto">
                   <div class="field w-113">
@@ -500,7 +504,10 @@
                         </span>
                       </label>
                     </div>
-                    <input type="text" class="form-control medium-height mt-1">
+                    <input
+                      type="text"
+                      class="form-control medium-height mt-1"
+                    />
                   </div>
                   <div class="field w-113 ml-3">
                     <label class="bold medium-text">Brochure</label>
@@ -521,7 +528,10 @@
                         </span>
                       </label>
                     </div>
-                    <input type="text" class="form-control medium-height mt-1">
+                    <input
+                      type="text"
+                      class="form-control medium-height mt-1"
+                    />
                   </div>
                 </div>
               </div>
@@ -535,7 +545,7 @@
       </div>
     </div>
 
-    <!-- KeyFob Popup -->
+    <!-- select Grid Popup -->
     <div
       class="modal fade"
       id="add-new-product-modal"
@@ -558,29 +568,192 @@
         <div class="modal-content bg-white border-0 p-0">
           <div class="select-grid d-flex">
             <div class="custom-control custom-radio flex-grow-1 p-3">
-                <input type="radio" class="custom-control-input" id="grid-1" name="select-grid">
-                <label class="custom-control-label d-flex flex-column centered align-items-center" for="grid-1">
-                </label>
-                <label for="grid-1" class="m-0 d-block">
-                  <div class="grid mt-3">
-                    <div class="small-text bold">No Term</div>
-                    <div class="bg-faded-blue blue small-text bold">Retail Price</div>
-                    <div class="bg-faded-red red small-text bold">Dealer Cost</div>
+              <input
+                type="radio"
+                class="custom-control-input"
+                id="grid-1"
+                value="no-term"
+                name="select-grid"
+              />
+              <label
+                class="custom-control-label d-flex flex-column centered align-items-center"
+                for="grid-1"
+              >
+              </label>
+              <label for="grid-1" class="m-0 d-block">
+                <div class="grid mt-3">
+                  <div class="small-text bold">No Term</div>
+                  <div class="bg-faded-blue blue small-text bold">
+                    Retail Price
                   </div>
-                </label>
+                  <div class="bg-faded-red red small-text bold">
+                    Dealer Cost
+                  </div>
+                </div>
+              </label>
             </div>
-            <div class="custom-control custom-radio flex-grow-1 p-3 bg-faded-blue">
-                <input type="radio" class="custom-control-input" id="grid-2" name="select-grid">
-                <label class="custom-control-label d-flex flex-column centered align-items-center" for="grid-2">
-                </label>
-                <label for="grid-2" class="m-0 d-block">
-                    <div class="grid mt-3">
-                      <div class="small-text bold">No Term</div>
-                      <div class="bg-faded-blue blue small-text bold">Retail Price</div>
-                      <div class="bg-faded-red red small-text bold">Dealer Cost</div>
-                    </div>
-                </label>
+            <div
+              class="custom-control custom-radio flex-grow-1 p-3 bg-faded-blue"
+            >
+              <input
+                type="radio"
+                class="custom-control-input"
+                id="grid-2"
+                value="term"
+                name="select-grid"
+              />
+              <label
+                class="custom-control-label d-flex flex-column centered align-items-center"
+                for="grid-2"
+              >
+              </label>
+              <label for="grid-2" class="m-0 d-block">
+                <div class="grid mt-3">
+                  <div class="small-text bold">Term</div>
+                  <div class="bg-faded-blue blue small-text bold">
+                    Retail Price
+                  </div>
+                  <div class="bg-faded-red red small-text bold">
+                    Dealer Cost
+                  </div>
+                </div>
+              </label>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- select  2 Popup -->
+    <div
+      class="modal fade"
+      id="configure-grid-term-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog colored-modal blue-modal modal-lg"
+        role="document"
+      >
+        <div class="modal-header medium-header pl-3 justify-content-start">
+          <h3 class="modal-title">Create Grid</h3>
+        </div>
+        <div class="modal-content bg-dark-grey border-0 py-4 px-3">
+          <div class="d-flex mb-4">
+            <span class="medium-text bold">Grid:</span>
+            <div class="custom-control custom-radio ml-5">
+              <input
+                type="radio"
+                class="custom-control-input"
+                id="grid-3"
+                value="no-term"
+                name="select-grid2"
+                />
+                <label class="custom-control-label" for="grid-3"> No Term </label>
+              </div>
+              <div class="custom-control custom-radio ml-4">
+                <input
+                type="radio"
+                class="custom-control-input"
+                id="grid-4"
+                value="term"
+                name="select-grid2"
+                checked
+              />
+              <label class="custom-control-label" for="grid-4"> Term </label>
+            </div>
+          </div>
+          <div class="states__box horizontal">
+            <div class="states__box__body">
+              <div class="states__box__body__row">
+                <div class="bg-grey w-180 flex-inherit tiny-text bold">Term</div>
+                <div class="bg-grey w-70"><input type="text" class="form-control" /></div>
+                <div class="bg-grey w-70"><input type="text" class="form-control" /></div>
+                <div class="bg-grey w-70"><input type="text" class="form-control" /></div>
+              </div>
+              <div class="states__box__body__row">
+                <div class="bg-faded-blue w-180 flex-inherit tiny-text blue bold">Suggested Retail Price</div>
+                <div class="bg-faded-blue w-70"><input type="text" class="form-control" /></div>
+                <div class="bg-faded-blue w-70"><input type="text" class="form-control" /></div>
+                <div class="bg-faded-blue w-70"><input type="text" class="form-control" /></div>
+              </div>
+              <div class="states__box__body__row">
+                <div class="bg-faded-red w-180 flex-inherit tiny-text light-red bold">True Dealer Cost</div>
+                <div class="bg-faded-red w-70"><input type="text" class="form-control" /></div>
+                <div class="bg-faded-red w-70"><input type="text" class="form-control" /></div>
+                <div class="bg-faded-red w-70"><input type="text" class="form-control" /></div>
+              </div>
+            </div>
+            <div class="states__box__actions px-2">
+              <button type="button" class="btn btn-icon remove-row">
+                <img src="../assets/images/minus-circle.svg" alt="" />
+              </button>
+              <button type="button" class="btn btn-icon add-row ml-auto">
+                <img src="../assets/images/plus-circle.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="mt-4 d-flex justify-content-end">
+            <button class="btn btn-danger">Cancel</button>
+            <button class="btn btn-primary ml-2">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="configure-grid-no-term-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog colored-modal blue-modal modal-lg"
+        role="document"
+      >
+        <div class="modal-header medium-header pl-3 justify-content-start">
+          <h3 class="modal-title">Create Grid</h3>
+        </div>
+        <div class="modal-content bg-dark-grey border-0 py-4 px-3">
+          <div class="d-flex mb-4">
+            <span class="medium-text bold">Grid:</span>
+            <div class="custom-control custom-radio ml-5">
+              <input
+                type="radio"
+                class="custom-control-input"
+                id="grid-6"
+                value="no-term"
+                name="select-grid3"
+                checked
+                />
+                <label class="custom-control-label" for="grid-6"> No Term </label>
+              </div>
+              <div class="custom-control custom-radio ml-4">
+                <input
+                type="radio"
+                class="custom-control-input"
+                id="grid-7"
+                value="term"
+                name="select-grid3"
+              />
+              <label class="custom-control-label" for="grid-7"> Term </label>
+            </div>
+          </div>
+          <div class="border br-4 w-250">
+            <div class="d-flex border-b">
+              <div class="w-180 bg-faded-blue blue border-r tiny-text bold p-1 text-center br-tl-4">Suggested Retail Price</div>
+              <div class="w-70 bg-faded-blue blue p-1 br-tr-4"><input type="text" class="form-control tiny-height" /></div>
+            </div>
+            <div class="d-flex">
+              <div class="w-180 bg-faded-red light-red border-r tiny-text bold p-1 text-center br-bl-4">True Dealer Cost</div>
+              <div class="w-70 bg-faded-red light-red p-1 br-br-4"><input type="text" class="form-control tiny-height" /></div>
+            </div>
+          </div>
+          <div class="mt-4 d-flex justify-content-end">
+            <button class="btn btn-danger">Cancel</button>
+            <button class="btn btn-primary ml-2">Save</button>
           </div>
         </div>
       </div>
@@ -609,28 +782,23 @@
 
     <script>
       //  Add Row in States Box
-      $('.states__box .add-row').each(function () {
+      $('.states__box.horizontal .add-row').each(function () {
         $(this).on('click', function () {
-          const parent = $(this).closest('.states__box');
-          const cloneDiv = parent
-            .find('.states__box__body .states__box__body__row:last-child')
-            .clone(true);
-          cloneDiv.find('.form-control').val('');
-          parent.find('.states__box__body').append(cloneDiv);
+          $('.states__box__body .states__box__body__row').each(function(){
+            const cloneDiv = $(this).find('>div:last-child')
+              .clone(true);
+            cloneDiv.find('.form-control').val('');
+            $(this).append(cloneDiv);
+          });
         });
       });
-      $('.states__box .remove-row').each(function () {
+      $('.states__box.horizontal .remove-row').each(function () {
         $(this).on('click', function () {
-          const parent = $(this).closest('.states__box');
-          const target = parent.find(
-            '.states__box__body .states__box__body__row:last-child'
-          );
-          if (
-            parent.find('.states__box__body .states__box__body__row').length ===
-            1
-          )
-            return;
-          target.remove();
+          $('.states__box__body .states__box__body__row').each(function(){
+            const target = $(this).find('>div:last-child');
+              if ( $(this).find('>div').length === 2) return;
+              target.remove();
+          });
         });
       });
     </script>
@@ -645,6 +813,19 @@
           parent.addClass('inactive-section');
         } else {
           parent.removeClass('inactive-section');
+        }
+      });
+    </script>
+
+    <script>
+      $('[name="select-grid"], [name="select-grid2"], [name="select-grid3"]').on('change', function () {
+        const el = $(this);
+        if (el.val() === 'term') {
+          $('.modal').modal('hide');
+          $('#configure-grid-term-modal').modal('show');
+        } else {
+          $('.modal').modal('hide');
+          $('#configure-grid-no-term-modal').modal('show');
         }
       });
     </script>
