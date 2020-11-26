@@ -422,6 +422,43 @@ $(document).ready(function() {
                         { sWidth: '5%' },
                     ],
                 });
+            } else if ($(this).hasClass('program-datatable')) {
+                $(this).DataTable({
+                    paging: true,
+                    searching: true,
+                    info: false,
+                    fixedHeader: true,
+                    pageLength: 12,
+                    scrollCollapse: true,
+                    order: [
+                        [0, 'desc'],
+                        [1, 'desc'],
+                        [2, 'desc'],
+                        [3, 'desc'],                        
+                        [4, 'desc'],
+                        [5, 'desc'],
+                        [6, 'desc'],
+                    ],
+                    columnDefs: [
+                        { orderable: true, targets: 0 },
+                        { orderable: true, targets: 1 },
+                        { orderable: true, targets: [2], className: 'text-center'},
+                        { orderable: true, targets: 3 },
+                        { orderable: true, targets: 4 },
+                        { orderable: true, targets: 5 },
+                        { orderable: true, targets: 6 },
+                    ],
+                    // bAutoWidth: false,
+                    aoColumns: [
+                        { sWidth: '8%' },
+                        { sWidth: '16%' },
+                        { sWidth: '16%' },
+                        { sWidth: '18%' },
+                        { sWidth: '17%' },
+                        { sWidth: '17%' },
+                        { sWidth: '8%' },
+                    ],
+                });
             } else if ($(this).hasClass('dealership-staff')) {
                 $(this).DataTable({
                     paging: false,

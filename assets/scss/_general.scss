@@ -1838,3 +1838,22 @@ dl {
   outline: 0px auto -webkit-focus-ring-color !important;
   outline-offset: -2px;
 }
+
+.alert-icon {
+  position: relative;
+  &:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    /* background-color: #f04e31; */
+    background-image: url(../images/alert.svg) !important;
+    background-repeat: no-repeat;
+    // background-position: 1px 1px;
+    position: relative;
+    display: inline-block;
+    // line-height: 20px;
+    position: absolute;
+    right: -24px;
+    top: 0px;
+  }
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1366, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0" />
+    <title>Program</title>
+<meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-title" content="FINX">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="167x167" href="../assets/favicons/apple-icon-167x167.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link data-react-helmet="true" rel="shortcut icon" href="../assets/favicons/favicon.ico">
+    <link rel="manifest" href="../assets/favicons/manifest.json">
+  </head>
+
+  <body>
+    <div class="global-wrapper">
+      <header>
+        <div class="container-fluid">
+          <a href="#" class="logo open-sidemenu">
+        <img src="../assets/images/logo.svg" alt="FINX" />
+      </a>
+        </div>
+      </header>
+  <div class="sidemenu">
+    <img src="../assets/images/logo.svg" alt="">
+    <button type="button" class="btn btn-icon close-menu">
+      <img src="../assets/images/close-red.svg" alt="">
+    </button>
+    <nav>
+      <ul class="nav navbar-nav" id="">
+        <li>
+          <a href="#" class="active">Home</a>
+        </li>
+        <li>
+          <a href="#">Deal Status</a>
+        </li>
+        <li class="dropdown-submenu dropright">
+          <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dealership</a></li>
+            <li><a href="#">Credit Specialist</a></li>
+            <li><a href="#">Risk MAnagement</a></li>
+            <li><a href="#">Insurance Provider</a></li>
+            <li><a href="#">Lender</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Agreements</a>
+        </li>
+        <li>
+          <a href="#">Remittances</a>
+        </li>
+        <li>
+          <a href="#">Bank List</a>
+        </li>
+        <li>
+          <a href="#">Online Status</a>
+        </li>
+        <li class="dropdown-submenu dropright">
+          <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Report</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profit Report</a></li>
+            <li><a href="#">Dealership Report</a></li>
+            <li><a href="#">CS Report</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu dropright">
+          <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Tax</a></li>
+            <li><a href="#">Commission</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Finx Free</a></li>
+            <li><a href="#">White Labling</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onClick="toggleFullScreen();">Full Screen</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+      <div class="container-fluid">
+        <div class="section-title d-flex align-items-center mb-3 mt-2">
+          <h2 class="title">  
+            Program
+          </h2>
+          <!-- <div class="spacer flex-fill"></div>
+          <div class="actions d-flex align-items-center">
+            <div class="datepicker-control ">
+              <input type="text" placeholder="Select Month" readonly class="form-control datepicker medium-height" />
+            </div>
+          </div> -->
+        </div>
+
+        <div class="d-flex align-items-end">
+          <ul class="nav nav-tabs dark-grey" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="providers-tab" href="Program.html" role="tab" aria-controls="providers" aria-selected="false">Program</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="finxCapital-tab" href="#" role="tab" aria-controls="finxCapital" aria-selected="false">Documents</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ppsa-tab" href="Remittance_PPSA.html" role="tab" aria-controls="ppsa" aria-selected="false">PPSA</a>
+            </li>
+          </ul>
+          <div class="spacer flex-fill"></div>
+          <div class="actions ml-auto mb-1">
+            <button type="button" class="btn btn-danger w-170">
+              Add New Program
+            </button>
+          </div>
+        </div>
+
+        <div class="wrapper fill-window-height mb-3 custom-scroll fixed-scroll rounded-0">
+          
+          <table
+            class="datatable program-datatable table-dark table table-striped table-medium-text" style="width: 100%;">
+            <thead class="black-thead">
+              <tr>
+                <th class="medium-text">No.</th>
+                <th class="medium-text">Program Name</th>
+                <th class="medium-text">Subvented</th>
+                <th class="medium-text">Starting Date</th>
+                <th class="medium-text">Expiring Date</th>
+                <th class="medium-text">Last Modification</th>
+                <th class="medium-text">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="window.location.href='#'">
+                <td>#1</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive1">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#2</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td><span class="red alert-icon">08-Dec-2019 / 12:00:00</span></td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive3">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#3</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive4">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#4</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive5">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#5</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive6">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#6</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive7">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#7</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive8">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#8</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive9">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#9</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive10">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#10</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive11">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#11</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive12">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#12</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive13" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive13">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#13</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive14" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive14">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#14</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive15" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive15">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#15</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive16" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive16">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#16</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive17" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive17">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#17</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive18" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive18">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr onclick="window.location.href='#'">
+                <td>#18</td>
+                <td>GBC Vintage Program 20</td>
+                <td>No</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>08-Oct-2019 / 12:00:00</td>
+                <td>08-May-2019 / 12:00:00</td>
+                <td>
+                  <div class="dropdown select-dropdown dealership-sup-a">
+                    <button class="btn btn-secondary dropdown-toggle dark-green dropdownActiveInactive" type="button" id="dropdownActiveInactive19" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Active
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownActiveInactive19">
+                      <a class="dropdown-item dark-green" href="#">Active</a>
+                      <a class="dropdown-item red" href="#">Inactive</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/scripts/custom-functions.js?v=1.2"></script>
+    <!-- For Datepicker position -->
+    <script type="text/javascript">
+      var previousWindowWidth=$( window ).width();
+         $(function() {
+      $( window ).resize(function() {
+      if($.isNumeric( $( "#ui-datepicker-div" ).css("left").replace('px','') ))
+      {
+      var diff = previousWindowWidth-$( window ).width();
+      var newLeft = parseFloat($( "#ui-datepicker-div" ).css("left").replace('px',''))-diff ;
+        //alert($( window ).width());
+      //alert ($( "#ui-datepicker-div" ).css("left").replace('px',''));
+      //alert (newLeft);
+      $( "#ui-datepicker-div" ).css("left", newLeft+'px');
+      }
+       previousWindowWidth=$( window ).width();
+      });
+         });
+      
+    </script>
+  </body>
+</html>
