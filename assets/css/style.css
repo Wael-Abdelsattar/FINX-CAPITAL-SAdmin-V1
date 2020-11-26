@@ -2235,7 +2235,7 @@ dl.no-border > div {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 80px;
+  grid-column-gap: 50px;
   grid-row-gap: 50px;
 }
 
@@ -4150,6 +4150,10 @@ select.form-control.blue-arrow {
   width: 7% !important;
 }
 
+.w-8 {
+  width: 8% !important;
+}
+
 .w-10 {
   width: 10% !important;
 }
@@ -4168,6 +4172,10 @@ select.form-control.blue-arrow {
 
 .w-20 {
   width: 20% !important;
+}
+
+.w-36px {
+  width: 36px !important;
 }
 
 .w-100px {

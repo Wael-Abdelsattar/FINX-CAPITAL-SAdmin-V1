@@ -385,6 +385,43 @@ $(document).ready(function() {
                         { sWidth: '8%' },
                     ],
                 });
+            } else if ($(this).hasClass('agreement-list')) {
+                $(this).DataTable({
+                    paging: true,
+                    searching: true,
+                    info: false,
+                    fixedHeader: true,
+                    pageLength: 14,
+                    scrollCollapse: true,
+                    order: [
+                        [0, 'desc'],
+                        [1, 'desc'],
+                        [2, 'desc'],
+                        [3, 'desc'],                        
+                        [4, 'desc'],
+                        [5, 'desc'],
+                        [6, 'desc'],
+                    ],
+                    columnDefs: [
+                        { orderable: false, targets: 0 },
+                        { orderable: false, targets: 1 },
+                        { orderable: false, targets: 2 },
+                        { orderable: false, targets: 3 },
+                        { orderable: false, targets: 4 },
+                        { orderable: false, targets: 5 },
+                        { orderable: false, targets: 6 },
+                    ],
+                    // bAutoWidth: false,
+                    aoColumns: [
+                        { sWidth: '15%' },
+                        { sWidth: '15%' },
+                        { sWidth: '15%' },
+                        { sWidth: '20%' },
+                        { sWidth: '15%' },
+                        { sWidth: '15%' },
+                        { sWidth: '5%' },
+                    ],
+                });
             } else if ($(this).hasClass('dealership-staff')) {
                 $(this).DataTable({
                     paging: false,
@@ -530,12 +567,12 @@ $(document).ready(function() {
                     ],
                     // bAutoWidth: false,
                     aoColumns: [
+                        { sWidth: '20%' },
                         { sWidth: '15%' },
                         { sWidth: '15%' },
+                        { sWidth: '20%' },
                         { sWidth: '15%' },
-                        { sWidth: '30%' },
-                        { sWidth: '25%' },
-                        { sWidth: '' },
+                        { sWidth: '15%' },
                     ],
                 });
             } else if ($(this).hasClass('rem-dealership')) {
@@ -707,6 +744,52 @@ $(document).ready(function() {
                         { sWidth: '10%' },
                     ],
                 });
+            }else if ($(this).hasClass('profit-report')) {
+                $(this).DataTable({
+                    paging: false,
+                    searching: false,
+                    info: false,
+                    fixedHeader: true,
+                    // scrollY: '288px',
+                    scrollCollapse: true,
+                    order: [
+                        [0, 'desc'],
+                        [1, 'desc'],
+                        [2, 'desc'],
+                        [3, 'desc'],
+                        [4, 'desc'],
+                        [5, 'desc'],                      
+                        [6, 'desc'],                      
+                        [7, 'desc'],                      
+                        [8, 'desc'],                      
+                        [9, 'desc'],
+                    ],
+                    columnDefs: [
+                        { orderable: true, targets: 0 },
+                        { orderable: true, targets: 1 },
+                        { orderable: true, targets: 2 },
+                        { orderable: false, targets: [3], className: 'text-right' },
+                        { orderable: false, targets: [4], className: 'text-right' },
+                        { orderable: false, targets: [5], className: 'text-right' },
+                        { orderable: false, targets: [6], className: 'text-right' },
+                        { orderable: false, targets: [7], className: 'text-right' },
+                        { orderable: false, targets: [8], className: 'text-right' },
+                        { orderable: false, targets: [9], className: 'text-right' },
+                    ],
+                    // bAutoWidth: false,
+                    aoColumns: [
+                        { sWidth: '10%' },
+                        { sWidth: '10%' },
+                        { sWidth: '10%' },
+                        { sWidth: '10%' },
+                        { sWidth: '8%' },
+                        { sWidth: '8%' },
+                        { sWidth: '12%' },
+                        { sWidth: '8%' },
+                        { sWidth: '12%' },
+                        { sWidth: '12%' },
+                    ],
+                });
             } else if ($(this).hasClass('bank-list')) {
                 $(this).DataTable({
                     searching: true,
@@ -753,9 +836,9 @@ $(document).ready(function() {
                     ],
 
                     columnDefs: [
-                        { orderable: false, targets: 0 },
-                        { orderable: false, targets: 1 },
-                        { orderable: false, targets: 2 },
+                        { orderable: true, targets: 0 },
+                        { orderable: true, targets: 1 },
+                        { orderable: true, targets: 2 },
                         { orderable: true, targets: 3 },
                     ],
                     // bAutoWidth: false,
@@ -1356,6 +1439,34 @@ $(document).ready(function (){
              }
           }
        });
+    });
+
+
+    $('.datatable #dropdownActiveInactive').parent().find('.dropdown-menu a').click(function () {
+        if ($(this).text().toLowerCase() == 'inactive') {
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+
+            $(this).parent().parent().find('#dropdownActiveInactive').addClass('red');
+        }
+        else if ($(this).text().toLowerCase() == 'active') {
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+
+            $(this).parent().parent().find('#dropdownActiveInactive').addClass('dark-green');
+        }
+        else if ($(this).text().toLowerCase() == 'not paid') {
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+
+            $(this).parent().parent().find('#dropdownActiveInactive').addClass('red');
+        }
+        else if ($(this).text().toLowerCase() == 'paid') {
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+
+            $(this).parent().parent().find('#dropdownActiveInactive').addClass('dark-green');
+        }
     });
  
  });
