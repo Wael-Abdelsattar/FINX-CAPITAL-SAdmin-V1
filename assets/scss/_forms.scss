@@ -633,3 +633,56 @@ select.form-control {
     border-radius: 8px;
   }
 }
+
+.input-dollar-sign {
+  position: relative;
+  
+  input.form-control {
+  padding-left: 16px;
+  }
+  &:before {
+    position: absolute;
+    top: 3px;
+    content: '$';
+    left: 7px;
+    color: #c7c7c7;
+  }
+
+}
+
+.input-percentage-sign {
+  position: relative;
+  
+  input.form-control {
+  padding-left: 16px;
+  }
+  &:before {
+    position: absolute;
+    top: 3px;
+    content: '%';
+    right: 7px;
+    color: #c7c7c7;
+  }
+
+}
+
+.states__box .input-dollar-sign {
+  input.form-control {
+    padding-left: 1.5em;
+    font-size: 15px;
+  }
+  &:before {
+    left: 1em;
+    font-size: 15px;
+  }
+}
+.states__box .input-percentage-sign {
+  input.form-control {
+    padding-right: 1.7em;
+    font-size: 15px;
+  }
+  &:before {
+    right: 1em;
+    font-size: 15px;
+  }
+}

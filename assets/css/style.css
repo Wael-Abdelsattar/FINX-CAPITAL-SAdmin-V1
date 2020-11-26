@@ -3166,6 +3166,58 @@ select.form-control.blue-arrow {
   border-radius: 8px;
 }
 
+.input-dollar-sign {
+  position: relative;
+}
+
+.input-dollar-sign input.form-control {
+  padding-left: 16px;
+}
+
+.input-dollar-sign:before {
+  position: absolute;
+  top: 3px;
+  content: '$';
+  left: 7px;
+  color: #c7c7c7;
+}
+
+.input-percentage-sign {
+  position: relative;
+}
+
+.input-percentage-sign input.form-control {
+  padding-left: 16px;
+}
+
+.input-percentage-sign:before {
+  position: absolute;
+  top: 3px;
+  content: '%';
+  right: 7px;
+  color: #c7c7c7;
+}
+
+.states__box .input-dollar-sign input.form-control {
+  padding-left: 1.5em;
+  font-size: 15px;
+}
+
+.states__box .input-dollar-sign:before {
+  left: 1em;
+  font-size: 15px;
+}
+
+.states__box .input-percentage-sign input.form-control {
+  padding-right: 1.7em;
+  font-size: 15px;
+}
+
+.states__box .input-percentage-sign:before {
+  right: 1em;
+  font-size: 15px;
+}
+
 .btn {
   background: white;
   border-color: #ddd;

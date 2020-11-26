@@ -257,9 +257,9 @@
               <div class="dropdown btn-white ml-auto w-200">
                 <select
                   id="ddlChangeTo"
-                  class="selectpicker w-100 small-height"
+                  class="selectpicker w-100 small-height text-black"
                 >
-                  <!-- <option disabled selected>Please Select</option> -->
+                  <option selected>Please Select</option>
                   <option>GST</option>
                   <option>PST</option>
                   <option>RST</option>
@@ -298,31 +298,55 @@
               </div>
               <div class="states__box__body">
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
               </div>
               <div class="states__box__actions">
-                <button type="button" class="btn btn-icon remove-row">
+                <button type="button" class="btn btn-icon remove-row ml-4">
                   <img src="../assets/images/minus-circle.svg" alt="" />
                 </button>
-                <button type="button" class="btn btn-icon add-row ml-auto">
+                <button type="button" class="btn btn-icon add-row ml-auto  mr-4">
                   <img src="../assets/images/plus-circle.svg" alt="" />
                 </button>
               </div>
@@ -338,31 +362,55 @@
               </div>
               <div class="states__box__body">
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
                 <div class="states__box__body__row">
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div><input type="text" class="form-control" placeholder="$"/></div>
-                  <div class="w-100px"><input type="text" class="form-control" placeholder="%"/></div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-dollar-sign">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
+                  <div class="input-percentage-sign w-100px">
+                    <input type="text" placeholder="" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                  </div>
                 </div>
               </div>
               <div class="states__box__actions">
-                <button type="button" class="btn btn-icon remove-row">
+                <button type="button" class="btn btn-icon remove-row ml-4">
                   <img src="../assets/images/minus-circle.svg" alt="" />
                 </button>
-                <button type="button" class="btn btn-icon add-row ml-auto">
+                <button type="button" class="btn btn-icon add-row ml-auto  mr-4">
                   <img src="../assets/images/plus-circle.svg" alt="" />
                 </button>
               </div>

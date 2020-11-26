@@ -1442,31 +1442,31 @@ $(document).ready(function (){
     });
 
 
-    $('#dropdownActiveInactive').parent().find('.dropdown-menu a').click(function () {
+    $('.dropdownActiveInactive').parent().find('.dropdown-menu a').click(function () {
         if ($(this).text().toLowerCase() == 'inactive') {
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('red');
 
-            $(this).parent().parent().find('#dropdownActiveInactive').addClass('red');
+            $(this).parent().parent().find('.dropdownActiveInactive').addClass('red');
         }
         else if ($(this).text().toLowerCase() == 'active') {
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('red');
 
-            $(this).parent().parent().find('#dropdownActiveInactive').addClass('dark-green');
+            $(this).parent().parent().find('.dropdownActiveInactive').addClass('dark-green');
         }
         else if ($(this).text().toLowerCase() == 'not paid') {
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('red');
 
-            $(this).parent().parent().find('#dropdownActiveInactive').addClass('red');
+            $(this).parent().parent().find('.dropdownActiveInactive').addClass('red');
         }
         else if ($(this).text().toLowerCase() == 'paid') {
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
-            $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('dark-green');
+            $(this).parent().parent().find('.dropdownActiveInactive').removeClass('red');
 
-            $(this).parent().parent().find('#dropdownActiveInactive').addClass('dark-green');
+            $(this).parent().parent().find('.dropdownActiveInactive').addClass('dark-green');
         }
     });
- 
+
  });
