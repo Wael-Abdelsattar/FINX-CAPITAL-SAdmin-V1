@@ -1442,7 +1442,7 @@ $(document).ready(function (){
     });
 
 
-    $('.datatable #dropdownActiveInactive').parent().find('.dropdown-menu a').click(function () {
+    $('#dropdownActiveInactive').parent().find('.dropdown-menu a').click(function () {
         if ($(this).text().toLowerCase() == 'inactive') {
             $(this).parent().parent().find('#dropdownActiveInactive').removeClass('dark-green');
             $(this).parent().parent().find('#dropdownActiveInactive').removeClass('red');
