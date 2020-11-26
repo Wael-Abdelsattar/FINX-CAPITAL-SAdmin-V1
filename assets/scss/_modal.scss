@@ -333,6 +333,10 @@
     }
     .modal-content {
       border-color: #000000;
+      color: white;
+      &.table-row-light-grey {
+        background-color: $tableCellDarkBg;
+      }
     }
   }
 
@@ -342,7 +346,7 @@
       color: white;
     }
     .modal-content {
-      border-color: $primaryBlue;
+      border-color: $primaryBlue;      
     }
   }
 

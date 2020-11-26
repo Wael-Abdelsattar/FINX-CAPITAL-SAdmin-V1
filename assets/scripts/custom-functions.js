@@ -646,6 +646,40 @@ $(document).ready(function() {
                         { sWidth: '' },
                     ],
                 });
+            } else if ($(this).hasClass('commission-datatable')) {
+                $(this).DataTable({
+                    paging: false,
+                    searching: false,
+                    info: false,
+                    fixedHeader: true,
+                    // scrollY: '288px',
+                    scrollCollapse: true,
+                    order: [
+                        [0, 'desc'],
+                        [1, 'desc'],
+                        [2, 'desc'],
+                        [3, 'desc'],
+                        [4, 'desc'],
+                        [5, 'desc'],
+                    ],
+                    columnDefs: [
+                        { orderable: false, targets: 0 },
+                        { orderable: false, targets: [1], className: 'text-center' },
+                        { orderable: false, targets: [2], className: 'text-center' },
+                        { orderable: false, targets: [3], className: 'text-center' },
+                        { orderable: false, targets: [4], className: 'text-right' },
+                        { orderable: false, targets: [5], className: 'text-center' },
+                    ],
+                    // bAutoWidth: false,
+                    aoColumns: [
+                        { sWidth: '20%' },
+                        { sWidth: '15%' },
+                        { sWidth: '15%' },
+                        { sWidth: '15%' },
+                        { sWidth: '20%' },
+                        { sWidth: '15%' },
+                    ],
+                });
             } else if ($(this).hasClass('indiv-provider')) {
                 $(this).DataTable({
                     paging: false,

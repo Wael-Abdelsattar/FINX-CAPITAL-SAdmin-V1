@@ -676,6 +676,17 @@ select.form-control {
     font-size: 15px;
   }
 }
+.modal-content .input-dollar-sign {
+  input.form-control {
+    padding-left: 1.5em;
+    font-size: 16px;
+  }
+  &:before {
+    left: 0.8em;
+    font-size: 16px;
+    top: 8px;
+  }
+}
 .states__box .input-percentage-sign {
   input.form-control {
     padding-right: 1.7em;
@@ -686,3 +697,5 @@ select.form-control {
     font-size: 15px;
   }
 }
+
+
