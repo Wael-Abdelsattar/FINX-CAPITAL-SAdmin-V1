@@ -4,6 +4,9 @@
 .massive-text {
   font-size: 36px !important;
 }
+.semigiant-text {
+  font-size: 34px !important;
+}
 .huge-text {
   font-size: 24px !important;
 }
@@ -249,6 +252,9 @@
   width: 120px !important;
   min-width: 120px !important;
 }
+.w-130 {
+  width: 130px !important;
+}
 .w-160 {
   width: 160px !important;
   min-width: 160px !important;
@@ -281,6 +287,11 @@
   width: 113px !important;
   min-width: 113px !important;
 }
+
+.h-120 {
+  height: 120px !important;
+}
+
 .no-border-left {
   border-left: 0 !important;
 }
@@ -298,7 +309,7 @@
 }
 
 .vertical-middle {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 
 .not-clickable {

@@ -967,46 +967,33 @@ $(document).ready(function() {
                     ],
                 });
 
-            } 
-            // else if ($(this).hasClass('online-status')) {
-            //     $("#onlineStatus").DataTable({
-            //         paging: false,
-            //         searching: false,
-            //         info: false,
-            //         fixedHeader: true,
-            //         // scrollY: '288px',
-            //         scrollCollapse: true,
-            //         order: [
-            //             [0, ''],
-            //             [1, 'desc'],
-            //             [2, 'desc'],
-            //             [3, 'desc'],
-            //             [4, 'desc'],
-            //             [5, 'desc'],
-            //         ],
-            //         columnDefs: [
-            //             { 
-            //                 orderable: false, 
-            //                 targets: 0,
-            //                 className: "select-checkbox",
-            //             },
-            //         ],
-            //         select: {
-            //             style: "os",
-            //             selector: "td:first-child",
-            //           },
-            //         // bAutoWidth: false,
-            //         aoColumns: [
-            //             { sWidth: '5%' },
-            //             { sWidth: '20%' },
-            //             { sWidth: '20%' },
-            //             { sWidth: '20%' },
-            //             { sWidth: '20%' },
-            //             { sWidth: '15%' },
-            //         ],
-            //     });
-            // } 
-            else if($(this).hasClass('dynamic-height')) {
+            } else if ($(this).hasClass('remm-dealership')) {
+                $(this).DataTable({
+                    paging: false,
+                    searching: false,
+                    info: false,
+                    fixedHeader: true,
+                    scrollY: '550px',
+                    scrollCollapse: true,
+                    order: [
+                        [0, 'desc'],
+                        [1, 'asc'],
+                        [2, 'desc'],
+                        [3, 'desc'],
+                    ],
+                    // bAutoWidth: false,
+                    columnDefs: [
+                        { orderable: true, targets: [1], className: 'text-left' },
+                    ],
+                    aoColumns: [
+                        { sWidth: '28%' },
+                        { sWidth: '28%' },
+                        { sWidth: '28%' },
+                        { sWidth: '' },
+                    ],
+                });
+            } else if ($(this).hasClass('dynamic-height')) {
+                
                 let dynamicHeight;
                 const sectionTitle = $(this).hasClass('has-section-title');
                 function setTableBodyHeight() {
@@ -1048,7 +1035,29 @@ $(document).ready(function() {
                         info: false,
                         fixedHeader: true,
                         scrollY: dynamicHeight + 'px',
-                        scrollCollapse: true
+                        scrollCollapse: true,
+                        order: [
+                            [0, 'desc'],
+                            [1, 'desc'],
+                            [2, 'desc'],
+                            [3, 'desc'],
+                            [4, 'desc'],
+                            [5, 'desc'],
+                            [6, 'desc'],
+                        ],
+                        // bAutoWidth: false,
+                        // columnDefs: [
+                        //     { orderable: true, targets: [1], className: 'text-left' },
+                        // ],
+                        aoColumns: [
+                            { sWidth: '15%' },
+                            { sWidth: '15%' },
+                            { sWidth: '20%' },
+                            { sWidth: '15%' },
+                            { sWidth: '15%' },
+                            { sWidth: '15%' },
+                            { sWidth: '5%' },
+                        ],
                     });
                 }
                 initDatatable();
@@ -1056,8 +1065,8 @@ $(document).ready(function() {
                 $(window).resize(function(){
                     setTableBodyHeight();
                 });
-            }
-            else {
+
+            } else {
                 $(this).DataTable({
                     paging: false,
                     searching: false,
@@ -1439,6 +1448,10 @@ $(document).ready(function() {
         // For SA_Tab1_None_Copy_4
         $('.global-wrapper .grid-blocks.two.full-height-max').css({
             minHeight: windowHeight - (header + metaBar + verify + 83),
+        });
+        // For 
+        $('.remmitance_dealership.full-height-max').css({
+            maxHeight: windowHeight - (header + 166 + 34 + 100),
         });
     }
     setContentHeight();

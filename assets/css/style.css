@@ -4122,12 +4122,20 @@ select.form-control.blue-arrow {
   bottom: 3px;
 }
 
+table.tax-dealership td {
+  vertical-align: top;
+}
+
 .giant-text {
   font-size: 48px !important;
 }
 
 .massive-text {
   font-size: 36px !important;
+}
+
+.semigiant-text {
+  font-size: 34px !important;
 }
 
 .huge-text {
@@ -4427,6 +4435,10 @@ select.form-control.blue-arrow {
   min-width: 120px !important;
 }
 
+.w-130 {
+  width: 130px !important;
+}
+
 .w-160 {
   width: 160px !important;
   min-width: 160px !important;
@@ -4467,6 +4479,10 @@ select.form-control.blue-arrow {
   min-width: 113px !important;
 }
 
+.h-120 {
+  height: 120px !important;
+}
+
 .no-border-left {
   border-left: 0 !important;
 }
@@ -4484,7 +4500,7 @@ select.form-control.blue-arrow {
 }
 
 .vertical-middle {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 
 .not-clickable {
@@ -6372,3 +6388,4 @@ header .buttons {
 .program_container .wrapper table .text-black {
   color: #000000;
 }
+/*# sourceMappingURL=style.css.map */

@@ -523,7 +523,6 @@
   }
 }
 
-
 .crossed {
   position: relative;
   min-width: 40px;
@@ -542,5 +541,11 @@
     position: absolute;
     left: 10px;
     bottom: 3px;
+  }
+}
+
+table.tax-dealership {
+  td {
+    vertical-align: top;
   }
 }
