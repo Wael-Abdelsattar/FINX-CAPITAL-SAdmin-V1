@@ -992,6 +992,56 @@ $(document).ready(function() {
                         { sWidth: '' },
                     ],
                 });
+            } else if($(this).hasClass('dynamic-height')) {
+                let dynamicHeight;
+                const sectionTitle = $(this).hasClass('has-section-title');
+                function setTableBodyHeight() {
+                    const wrapperHeight = $('.dynamic-height').closest('.wrapper').outerHeight();
+                    dynamicHeight = wrapperHeight - 70;
+                    if(sectionTitle) {
+                        const sectionTitleHeight = $('.dynamic-height').closest('.wrapper').find('.section-title').outerHeight();
+                        dynamicHeight -= sectionTitleHeight;
+                    }
+                    initDatatable(dynamicHeight);
+                }
+                $(this).find('tbody tr').each(function(){
+                    let isExpanded = false;
+                    $(this).on('click', function(){
+                        const target = $(this).find('.expandable-div');
+                        const arrow = $(this).find('.arrow');
+                        if(target.length) {
+                            const innerHeight = target.find('.div-body').outerHeight();
+                            arrow.toggleClass('active');
+                            if(!isExpanded) {
+                                target.animate({
+                                    height: innerHeight
+                                });
+                                isExpanded = true;
+                            } else {
+                                target.animate({
+                                    height: 20
+                                });
+                                isExpanded = false;
+                            }
+                        }
+                    });
+                })
+                function initDatatable(dynamicHeight) {
+                    $('.datatable.dynamic-height').DataTable().destroy();
+                    $('.datatable.dynamic-height').DataTable({
+                        paging: false,
+                        searching: false,
+                        info: false,
+                        fixedHeader: true,
+                        scrollY: dynamicHeight + 'px',
+                        scrollCollapse: true
+                    });
+                }
+                initDatatable();
+                setTableBodyHeight();
+                $(window).resize(function(){
+                    setTableBodyHeight();
+                });
             } else {
                 $(this).DataTable({
                     paging: false,
