@@ -1006,6 +1006,60 @@ $(document).ready(function() {
             //         ],
             //     });
             // } 
+            else if($(this).hasClass('dynamic-height')) {
+                let dynamicHeight;
+                function setTableBodyHeight() {
+                    const wrapperHeight = $('.dynamic-height').closest('.wrapper').outerHeight();
+                    dynamicHeight = wrapperHeight - 70;
+                    initDatatable(dynamicHeight);
+                }
+                $(this).find('tbody tr').each(function(){
+                    let isExpanded = false;
+                    $(this).on('click', function(){
+                        const target = $(this).find('.expandable-div');
+                        const arrow = $(this).find('.arrow');
+                        if(target.length) {
+                            const innerHeight = target.find('.div-body').outerHeight();
+                            arrow.toggleClass('active');
+                            if(!isExpanded) {
+                                target.animate({
+                                    height: innerHeight
+                                });
+                                isExpanded = true;
+                            } else {
+                                target.animate({
+                                    height: 20
+                                });
+                                isExpanded = false;
+                            }
+                        }
+                    });
+                })
+                function initDatatable(dynamicHeight) {
+                    $('.datatable.dynamic-height').DataTable().destroy();
+                    $('.datatable.dynamic-height').DataTable({
+                        paging: false,
+                        searching: false,
+                        info: false,
+                        fixedHeader: true,
+                        scrollY: dynamicHeight + 'px',
+                        scrollCollapse: true,
+                        order: [
+                            [0, 'desc'],
+                            [1, 'desc'],
+                            [2, 'desc'],
+                            [3, 'desc'],
+                            [4, 'desc'],
+                            [5, 'desc'],
+                        ],
+                    });
+                }
+                initDatatable();
+                setTableBodyHeight();
+                $(window).resize(function(){
+                    setTableBodyHeight();
+                });
+            }
             else {
                 $(this).DataTable({
                     paging: false,

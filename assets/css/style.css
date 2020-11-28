@@ -3592,6 +3592,34 @@ select.form-control.blue-arrow {
   background-color: #f04e31;
 }
 
+.dataTables_wrapper th.empty::after,
+.dataTables_wrapper th.empty::before {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+.dataTables_wrapper .expandable-div {
+  height: 20px;
+  overflow: hidden;
+}
+
+.dataTables_wrapper .arrow {
+  background: url(../images/table-arrow.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: .2;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.dataTables_wrapper .arrow.active {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
 .table td {
   font-size: 12px;
   padding: 13px 8px;
@@ -6213,4 +6241,3 @@ header .buttons {
 .program_container .wrapper table .text-black {
   color: #000000;
 }
-/*# sourceMappingURL=style.css.map */

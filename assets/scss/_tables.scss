@@ -132,6 +132,31 @@
   .dataTables_filter {
     // display: none;
   }
+
+  th.empty::after,
+  th.empty::before {
+    display: none !important;
+    pointer-events: none !important;
+  }
+
+  .expandable-div {
+    height: 20px;
+    overflow: hidden;
+  }
+
+  .arrow {
+    background: url(../images/table-arrow.svg) no-repeat center;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+    opacity: .2;
+    transition: .3s;
+
+    &.active {
+      transform: none;
+      opacity: 1;
+    }
+  }
 }
 
 .table {
@@ -497,6 +522,7 @@
     right: -6px;
   }
 }
+
 
 .crossed {
   position: relative;
