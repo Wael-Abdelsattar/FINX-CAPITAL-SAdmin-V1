@@ -34,6 +34,7 @@ Highcharts.chart('pie-chart-dealership', {
         squareSymbol: false,
         useHTML: false,
         symbolWidth: 0,
+        itemMarginBottom: 10,
         labelFormatter: function () {
             return (
                 '<div style="padding-bottom:20px; color:' +
@@ -42,12 +43,12 @@ Highcharts.chart('pie-chart-dealership', {
                 this.name +
                 // ' <span class=""></span> ' +
                 ' ' +
-                // '< style="flot:right">' +
+                '<div style="float:right">' +
                 this.y +
-                ' %</div>'
+                ' %</div></div>'
             );
         },
-        itemStyle: { color: 'white', 'font-size': '12px', 'margin': '20px' },
+        itemStyle: { color: 'white', 'font-size': '12px', 'margin': '20px', 'font-weight': 'normal' },
     },
     plotOptions: {
         pie: {
