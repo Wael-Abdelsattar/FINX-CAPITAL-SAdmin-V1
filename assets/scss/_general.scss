@@ -752,6 +752,15 @@ dl {
       }
     }
   }
+  &.darkgreen-card {
+    background: $darkGreen;
+  }
+  &.lightgrey-card {
+    background: $bodyBg;
+  }
+  &.red2-card {
+    background: $red;
+  }
 }
 
 // .products-full-height {

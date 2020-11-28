@@ -1283,6 +1283,18 @@ dl.no-border > div {
   background-color: #2b50ed;
 }
 
+.card.darkgreen-card {
+  background: #6dd400;
+}
+
+.card.lightgrey-card {
+  background: #404046;
+}
+
+.card.red2-card {
+  background: #e02020;
+}
+
 .pointer-icon {
   color: rgba(240, 78, 49, 0.5) !important;
 }
@@ -2999,7 +3011,7 @@ select.form-control.blue-arrow {
 }
 
 .multiselect-native-select .multiselect-container li {
-  margin: 10px 0;
+  margin: 14px 0;
 }
 
 .multiselect-native-select .multiselect-container li a:focus {
@@ -3015,9 +3027,10 @@ select.form-control.blue-arrow {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  display: block;
 }
 
-.multiselect-native-select .multiselect-container li label.checkbox::before, .multiselect-native-select .multiselect-container li label.checkbox::after {
+.multiselect-native-select .multiselect-container li label.checkbox::before {
   content: '';
   top: 0;
   left: 0;
@@ -3029,6 +3042,7 @@ select.form-control.blue-arrow {
   border-radius: 2px;
   background-color: transparent;
   margin-right: 10px;
+  float: left;
 }
 
 .multiselect-native-select .multiselect-container li label.checkbox::after {
@@ -4045,6 +4059,10 @@ select.form-control.blue-arrow {
 
 .blue {
   color: #0091ff !important;
+}
+
+.light-blue {
+  color: #d6dcf6 !important;
 }
 
 .cyan {
@@ -5740,6 +5758,44 @@ header .buttons {
   margin-top: auto;
   margin-bottom: 0;
   font-size: 12px;
+}
+
+.title .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #505050;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.numbers span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.numbers span i {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.numbers span i.up {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
 }
 
 #pie-chart .highcharts-series {

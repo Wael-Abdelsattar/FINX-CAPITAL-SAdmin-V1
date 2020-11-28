@@ -435,7 +435,7 @@ select.form-control {
     @extend .custom-scroll;
 
     li {
-      margin: 10px 0;
+      margin: 14px 0;
 
       a:focus {
         outline: none;
@@ -448,9 +448,9 @@ select.form-control {
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 100%;
+        display: block;
 
-        &::before,
-        &::after {
+        &::before {
           content: '';
           top: 0;
           left: 0;
@@ -462,6 +462,7 @@ select.form-control {
           border-radius: 2px;
           background-color: transparent;
           margin-right: 10px;
+          float: left;
         }
         &::after {
           background-size: 13px;
