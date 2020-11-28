@@ -1839,6 +1839,14 @@ dl.no-border > div {
   height: calc(100vh - 150px);
 }
 
+.fill-window-height.minus-310 {
+  height: calc(100vh - 310px);
+}
+
+.fill-window-height.no-overflow {
+  overflow: visible;
+}
+
 .editable[readonly] {
   cursor: default !important;
 }
@@ -4033,6 +4041,10 @@ select.form-control.blue-arrow {
   font-size: 48px !important;
 }
 
+.massive-text {
+  font-size: 36px !important;
+}
+
 .huge-text {
   font-size: 24px !important;
 }
@@ -4509,6 +4521,12 @@ select.form-control.blue-arrow {
   -webkit-box-flex: 1 !important;
       -ms-flex: 1 !important;
           flex: 1 !important;
+}
+
+.flex-2 {
+  -webkit-box-flex: 2 !important;
+      -ms-flex: 2 !important;
+          flex: 2 !important;
 }
 
 .max-height-100 {

@@ -1222,6 +1222,12 @@ dl {
   &.just-header {
     height: calc(100vh - 150px);
   }
+  &.minus-310 {
+    height: calc(100vh - 310px);
+  }
+  &.no-overflow {
+    overflow: visible;
+  }
 }
 
 .editable {

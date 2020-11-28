@@ -1008,9 +1008,14 @@ $(document).ready(function() {
             // } 
             else if($(this).hasClass('dynamic-height')) {
                 let dynamicHeight;
+                const sectionTitle = $(this).hasClass('has-section-title');
                 function setTableBodyHeight() {
                     const wrapperHeight = $('.dynamic-height').closest('.wrapper').outerHeight();
                     dynamicHeight = wrapperHeight - 70;
+                    if(sectionTitle) {
+                        const sectionTitleHeight = $('.dynamic-height').closest('.wrapper').find('.section-title').outerHeight();
+                        dynamicHeight -= sectionTitleHeight;
+                    }
                     initDatatable(dynamicHeight);
                 }
                 $(this).find('tbody tr').each(function(){
@@ -1043,15 +1048,7 @@ $(document).ready(function() {
                         info: false,
                         fixedHeader: true,
                         scrollY: dynamicHeight + 'px',
-                        scrollCollapse: true,
-                        order: [
-                            [0, 'desc'],
-                            [1, 'desc'],
-                            [2, 'desc'],
-                            [3, 'desc'],
-                            [4, 'desc'],
-                            [5, 'desc'],
-                        ],
+                        scrollCollapse: true
                     });
                 }
                 initDatatable();
