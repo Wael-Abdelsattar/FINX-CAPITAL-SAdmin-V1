@@ -460,6 +460,11 @@ input[type='checkbox']:checked .checkmark {
   border-radius: 18px;
 }
 
+.wrapper.semi-dark-grey {
+  background: #363636;
+  border-radius: 18px;
+}
+
 .wrapper.auto-height {
   height: auto;
 }
@@ -963,6 +968,10 @@ dl.no-border > div {
 
 .slick-slider.documents-carousel .slick-track {
   margin-left: 0;
+}
+
+.slick-slider.documents-carousel.calc-w-n-200 {
+  width: calc(100% - 200px);
 }
 
 .slick-slider.carousel-red .products__product-item > div:after {

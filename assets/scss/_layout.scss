@@ -22,6 +22,10 @@
     background: $darkGreyColor;
     border-radius: 18px;
   }
+  &.semi-dark-grey {
+    background: $tableCellDarkBg;
+    border-radius: 18px;
+  }
   &.auto-height {
     height: auto;
   }

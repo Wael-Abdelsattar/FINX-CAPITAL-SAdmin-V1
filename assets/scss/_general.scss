@@ -432,6 +432,9 @@ dl {
     .slick-track {
       margin-left: 0;
     }
+    &.calc-w-n-200 {
+      width: calc(100% - 200px);
+    }
   }
   &.carousel-red {
     .products__product-item {
