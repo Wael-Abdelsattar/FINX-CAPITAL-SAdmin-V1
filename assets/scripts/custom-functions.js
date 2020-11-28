@@ -1123,6 +1123,18 @@ $(document).ready(function() {
             slidesToScroll: 7,
         });
     }
+
+    if ($('.documents-carousel').length) {
+        $('.documents-carousel').slick({
+            nextArrow: `<button class="slick-next slick-arrow"><i class="icon-arrowLeft"></i></button>`,
+            prevArrow: `<button class="slick-prev slick-arrow"><i class="icon-arrowLeft"></i></button>`,
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 6,
+            slidesToScroll: 6,
+        });
+    }
     if ($('.one-slide').length) {
         $('.one-slide').slick({
             dots: true,

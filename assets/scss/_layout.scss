@@ -18,6 +18,10 @@
     background: $bodyBg;
     border-radius: 18px;
   }
+  &.dark-grey {
+    background: $darkGreyColor;
+    border-radius: 18px;
+  }
   &.auto-height {
     height: auto;
   }
