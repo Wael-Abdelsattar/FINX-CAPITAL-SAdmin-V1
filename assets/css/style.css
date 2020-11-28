@@ -4037,6 +4037,10 @@ select.form-control.blue-arrow {
   bottom: 3px;
 }
 
+table.tax-dealership td {
+  vertical-align: top;
+}
+
 .giant-text {
   font-size: 48px !important;
 }
@@ -4338,6 +4342,10 @@ select.form-control.blue-arrow {
   width: 120px !important;
 }
 
+.w-130 {
+  width: 130px !important;
+}
+
 .w-160 {
   width: 160px !important;
 }
@@ -4391,7 +4399,7 @@ select.form-control.blue-arrow {
 }
 
 .vertical-middle {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 
 .not-clickable {

@@ -245,6 +245,9 @@
 .w-120 {
   width: 120px !important;
 }
+.w-130 {
+  width: 130px !important;
+}
 .w-160 {
   width: 160px !important;
 }
@@ -291,7 +294,7 @@
 }
 
 .vertical-middle {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 
 .not-clickable {

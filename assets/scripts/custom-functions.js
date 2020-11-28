@@ -992,7 +992,8 @@ $(document).ready(function() {
                         { sWidth: '' },
                     ],
                 });
-            } else if($(this).hasClass('dynamic-height')) {
+            } else if ($(this).hasClass('dynamic-height')) {
+                
                 let dynamicHeight;
                 const sectionTitle = $(this).hasClass('has-section-title');
                 function setTableBodyHeight() {
@@ -1034,7 +1035,29 @@ $(document).ready(function() {
                         info: false,
                         fixedHeader: true,
                         scrollY: dynamicHeight + 'px',
-                        scrollCollapse: true
+                        scrollCollapse: true,
+                        order: [
+                            [0, 'desc'],
+                            [1, 'desc'],
+                            [2, 'desc'],
+                            [3, 'desc'],
+                            [4, 'desc'],
+                            [5, 'desc'],
+                            [6, 'desc'],
+                        ],
+                        // bAutoWidth: false,
+                        // columnDefs: [
+                        //     { orderable: true, targets: [1], className: 'text-left' },
+                        // ],
+                        aoColumns: [
+                            { sWidth: '15%' },
+                            { sWidth: '15%' },
+                            { sWidth: '20%' },
+                            { sWidth: '15%' },
+                            { sWidth: '15%' },
+                            { sWidth: '15%' },
+                            { sWidth: '5%' },
+                        ],
                     });
                 }
                 initDatatable();
@@ -1042,6 +1065,7 @@ $(document).ready(function() {
                 $(window).resize(function(){
                     setTableBodyHeight();
                 });
+
             } else {
                 $(this).DataTable({
                     paging: false,
