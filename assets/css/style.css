@@ -4005,6 +4005,10 @@ select.form-control.blue-arrow {
   font-size: 48px !important;
 }
 
+.semigiant-text {
+  font-size: 34px !important;
+}
+
 .huge-text {
   font-size: 24px !important;
 }
@@ -4324,6 +4328,10 @@ select.form-control.blue-arrow {
 
 .w-113 {
   width: 113px !important;
+}
+
+.h-120 {
+  height: 120px !important;
 }
 
 .no-border-left {
