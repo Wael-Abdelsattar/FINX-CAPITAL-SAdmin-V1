@@ -1621,12 +1621,12 @@ dl.no-border > div {
   background-color: #f04e31;
 }
 
-.custom-scroll.height-275, .tab-content > .height-275.full-height, .height-275.fill-window-height, .multiselect-native-select .height-275.multiselect-container {
-  max-height: 275px;
-}
-
 .custom-scroll.height-265, .tab-content > .height-265.full-height, .height-265.fill-window-height, .multiselect-native-select .height-265.multiselect-container {
   max-height: 265px;
+}
+
+.custom-scroll.height-275, .tab-content > .height-275.full-height, .height-275.fill-window-height, .multiselect-native-select .height-275.multiselect-container {
+  max-height: 275px;
 }
 
 .custom-scroll.height-305, .tab-content > .height-305.full-height, .height-305.fill-window-height, .multiselect-native-select .height-305.multiselect-container {
@@ -4490,6 +4490,10 @@ table.tax-dealership td {
 
 .h-120 {
   height: 120px !important;
+}
+
+.h-180 {
+  height: 180px;
 }
 
 .no-border-left {

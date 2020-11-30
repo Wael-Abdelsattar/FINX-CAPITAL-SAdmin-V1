@@ -6,7 +6,7 @@ Highcharts.chart('pie-chart-dealership', {
         type: 'pie',
         backgroundColor: '#1B1B1B',
         useHTML: false,
-        height: 250,
+        height: 260,
     },
     title: {
         text: '',
