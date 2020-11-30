@@ -1,109 +1,134 @@
+
+
 // default pie-chart
 if ($('#pie-chart').length) {
-Highcharts.chart('pie-chart', {
-  chart: {
-    plotBackgroundColor: null,
-    plotBorderWidth: null,
-    plotShadow: false,
-    type: 'pie',
-    backgroundColor: '#1B1B1B',
-    useHTML: false,
-    height: '290px',
-  },
-  title: {
-    text: '',
-  },
-  tooltip: {
-    pointFormat: '<b>{point.percentage:.1f}%</b>',
-  },
+  Highcharts.chart('pie-chart', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie',
+      backgroundColor: '',
+      useHTML: false,
+      height: '340px',
+    },
+    title: {
+      text: '',
+    },
+    tooltip: {
+      pointFormat: '<b>{point.percentage:.1f}%</b>',
+    },
 
-  colors: ['#58FF35', '#9B66FF', '#FF0000'],
-  accessibility: {
-    point: {
-      valueSuffix: '%',
-    },
-  },
-  credits: {
-    enabled: false,
-  },
-  exporting: {
-    enabled: false,
-  },
-  legend: {
-    align: 'left',
-    verticalAlign: 'middle',
-    layout: 'vertical',
-    squareSymbol: false,
-    useHTML: true,
-    symbolWidth: 0,
-    labelFormatter: function () {
-      return (
-        '<span style="color:' +
-        this.color +
-        '"> ' +
-        this.name +
-        ' <span class="space ml-4"></span> ' +
-        this.y +
-        ' %</span>'
-      );
-    },
-    itemStyle: { color: 'white', 'font-size': '16px' },
-  },
-  plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: 'pointer',
-      dataLabels: {
-        enabled: false,
-      },
-      borderWidth: 0,
-      states: {
-        hover: false,
-      },
-      showInLegend: true,
+    colors: ['#50F52E', '#F55631' , '#7D4DFF' , '#FF0000', ],
+    accessibility: {
       point: {
-        events: {
-          legendItemClick: function (e) {
-            const chart = $("#lines-chart").highcharts();
-            if(e.target.visible === true) {
-              chart.series[e.target.index].hide()
-            } else {
-              chart.series[e.target.index].show()
-            }
+        valueSuffix: '%',
+      },
+    },
+    credits: {
+      enabled: false,
+    },
+    exporting: {
+      enabled: false,
+    },
+    legend: {
+      align: 'left',
+      verticalAlign: 'middle',
+      layout: 'vertical',
+      squareSymbol: false,
+      useHTML: false,
+      itemMarginTop: 10,
+      itemMarginBottom: 10,
+      squareSymbol: true,
+      symbolWidth: 10,
+      symbolHeight:10,
+      symbolRadius: 10,
+      itemHoverStyle : '#fff',
+      fontWeight : '100',
+      margin : 30,
+      labelFormatter: function () {
+        return (
+          `
+          <span style="color : ${this.color}"> ${this.name} ${this.y}%</span>
+          
+          `
+        );
+      },
+      itemStyle: { color: '#fff', fontSize: '15px', fontWeight : '100' },
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: false,
+        },
+        borderWidth: 0,
+        states: {
+          hover: false,
+        },
+        showInLegend: true,
+        point: {
+          events: {
+            legendItemClick: function (e) {
+              const chart = $("#lines-chart").highcharts();
+              if (e.target.visible === true) {
+                chart.series[e.target.index].hide()
+              } else {
+                chart.series[e.target.index].show()
+              }
+            },
           },
         },
       },
-    },
-    series: {
-      marker: {
-        enabled: false,
+      series: {
+        marker: {
+          enabled: false,
+        },
       },
     },
-  },
-  series: [
-    {
-      name: '',
-      colorByPoint: true,
-      innerSize: '60%',
-      data: [
-        {
-          name: 'Finance',
-          y: 50,
-          sliced: false,
-        },
-        {
-          name: 'Subprime',
-          y: 40,
-        },
-        {
-          name: 'Lease BuyBack',
-          y: 10,
-        },
-      ],
-    },
-  ],
-});
+    series: [
+      {
+        name: '',
+        colorByPoint: true,
+        innerSize: '60%',
+        data: [
+          {
+            name: 'Finance',
+            y: 50,
+            sliced: false,
+          },
+          {
+            name: 'Subprime',
+            y: 25,
+          },
+          {
+            name: 'Lease BuyBack',
+            y: 15,
+          },
+          {
+            name: 'Fleet',
+            y: 10,
+          },
+          {
+            name: 'Cash Conv',
+            y: 0,
+          },
+          {
+            name: 'Lease BuyBack',
+            y: 0,
+          },
+          {
+            name: 'Older Units',
+            y: 0,
+          }
+        ],
+      },
+    ],
+  });
 }
+
+
 // paymentBreakdownProducts pie-chart
 if ($('#paymentBreakdownProducts-pie-chart').length) {
   Highcharts.chart('paymentBreakdownProducts-pie-chart', {
@@ -141,7 +166,7 @@ if ($('#paymentBreakdownProducts-pie-chart').length) {
       layout: 'vertical',
       useHTML: false,
       itemMarginTop: 7,
-      itemMarginBottom: 10,
+      itemMarginBottom: 7,
       squareSymbol: true,
       symbolWidth: 20,
       symbolHeight: 15,
@@ -151,7 +176,7 @@ if ($('#paymentBreakdownProducts-pie-chart').length) {
           '<span class="text-right">' + this.name + ' ' + this.y + '%</span>'
         );
       },
-      itemStyle: { 'font-size': '14px', 'font-weight': 'normal' },
+      itemStyle: { 'font-size': '18px', },
     },
 
     plotOptions: {
@@ -251,7 +276,7 @@ if ($('#combined-pie-chart').length) {
       layout: 'vertical',
       useHTML: false,
       itemMarginTop: 7,
-      itemMarginBottom: 10,
+      itemMarginBottom: 7,
       squareSymbol: true,
       symbolWidth: 20,
       symbolHeight: 15,
@@ -261,7 +286,7 @@ if ($('#combined-pie-chart').length) {
           '<span class="text-right">' + this.name + ' ' + this.y + '%</span>'
         );
       },
-      itemStyle: { 'font-size': '14px', 'font-weight': 'normal' },
+      itemStyle: { 'font-size': '18px', },
     },
 
     plotOptions: {
@@ -315,7 +340,7 @@ if ($('#combined-pie-chart').length) {
             y: 25,
           },
           {
-            name: 'Interest Paid <br> Up front',
+            name: 'Paid Up',
             y: 25,
           },
         ],
@@ -323,3 +348,4 @@ if ($('#combined-pie-chart').length) {
     ],
   });
 }
+

@@ -1,3 +1,68 @@
+// lendingAmortization-line-chart
+if ($('#lendingAmortization-line-chart').length) {
+  let ctx = document.getElementById('lendingAmortization-line-chart').getContext('2d');
+  let myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['0m', '1m', '2m', '3m', '4m', '6m', '7m', '8m', '9m', '10m'],
+      datasets: [
+        {
+          label: 'data label 1',
+          data: [0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000,],
+          backgroundColor: 'transparent',
+          borderColor: [
+            '#6DD400',
+          ],
+          borderWidth: 3
+        },
+        {
+          label: 'data label 2',
+          data: [200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000,],
+          backgroundColor: 'transparent',
+          borderColor: [
+            '#EC654D',
+          ],
+          borderWidth: 3
+        },
+        {
+          label: 'data label 3',
+          data: [500000, 450000, 400000, 350000, 300000, 250000, 200000, 150000, 100000, 50000],
+          backgroundColor: 'transparent',
+          borderColor: [
+            '#4867E9',
+          ],
+          borderWidth: 3
+        },
+        {
+          label: 'data label 3',
+          data: [0, 60000, 120000, 180000, 240000, 300000, 360000, 420000, 480000, 540000],
+          backgroundColor: 'transparent',
+          borderColor: [
+            '#000000',
+          ],
+          borderWidth: 3
+        },
+      ]
+    },
+    options: {
+      responsive: true,
+      legend: {
+        display: false,
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            min: 0,
+            max: 1000000,
+            stepSize: 200000,
+          }
+        }]
+      }
+    }
+  });
+}
+// lines-chart with Highcharts
+if ($('#lines-chart').length) {
 Highcharts.chart('lines-chart', {
   title: {
     text: '',
@@ -148,3 +213,4 @@ Highcharts.chart('lines-chart', {
     ],
   },
 });
+}

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1366, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../assets/css/bootstrap-multiselect.css" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Monthly_Total Schedule & Annual_Total Schedule</title>
+<meta data-react-helmet="true" name="apple-mobile-web-app-capable" content="yes">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-status-bar-style" content="#68CDF0">
+    <meta data-react-helmet="true" name="apple-mobile-web-app-title" content="FINX">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="167x167" href="../assets/favicons/apple-icon-167x167.png">
+    <link data-react-helmet="true" rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link data-react-helmet="true" rel="shortcut icon" href="../assets/favicons/favicon.ico">
+    <link rel="manifest" href="../assets/favicons/manifest.json">
+  </head>
+
+
+<body>
+    <!-- Main Coding Start Here -->
+
+
+
+    <!-- main-wrpper -->
+    <div class="global-wrapper">
+        <!-- header -->
+        <header>
+        <div class="container-fluid">
+          <a href="#" class="logo open-sidemenu">
+            <img src="../assets/images/logo.svg" />
+          </a>
+        </div>  
+	  </header>
+  <div class="sidemenu">
+    <img src="../assets/images/logo.svg" alt="">
+    <button type="button" class="btn btn-icon close-menu">
+      <img src="../assets/images/close-red.svg" alt="">
+    </button>
+    <nav>
+      <ul class="nav navbar-nav" id="">
+        <li>
+          <a href="#" class="active">Home</a>
+        </li>
+        <li>
+          <a href="#">Deal Status</a>
+        </li>
+        <li class="dropdown-submenu dropright">
+          <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dealership</a></li>
+            <li><a href="#">Credit Specialist</a></li>
+            <li><a href="#">Risk MAnagement</a></li>
+            <li><a href="#">Insurance Provider</a></li>
+            <li><a href="#">Lender</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Agreements</a>
+        </li>
+        <li>
+          <a href="#">Remittances</a>
+        </li>
+        <li>
+          <a href="#">Bank List</a>
+        </li>
+        <li>
+          <a href="#">Online Status</a>
+        </li>
+        <li class="dropdown-submenu dropright">
+          <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Report</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profit Report</a></li>
+            <li><a href="#">Dealership Report</a></li>
+            <li><a href="#">CS Report</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu dropright">
+          <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Tax</a></li>
+            <li><a href="#">Commission</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Finx Free</a></li>
+            <li><a href="#">White Labling</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" onClick="toggleFullScreen();">Full Screen</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+        <!--/ header -->
+
+
+        <!-- meta-bar -->
+        <div class="meta-bar">
+            <div>Date: August - 17 -2020</div>
+            <div>Deal Number: 123456AA</div>
+            <div>Customer: Matthew Romero</div>
+            <div>Credit Specialist: Ray Rieger</div>
+        </div>
+        <!--/ meta-bar -->
+
+
+        <!-- main panel -->
+        <main id="main">
+            <div class="container-fluid">
+                <!-- navTabsHeader -->
+                <div class="d-flex align-items-end">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="application-tab" data-toggle="tab" href="#application" role="tab" aria-controls="application" aria-selected="true">Application</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="vehicle-info-tab" data-toggle="tab" href="#vehicle-info" role="tab" aria-controls="vehicle-info" aria-selected="false">Vehicle Info</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="false">Products</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="worksheet-tab" data-toggle="tab" href="#worksheet" role="tab" aria-controls="worksheet" aria-selected="false">Worksheet</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="disclosure-tab" data-toggle="tab" href="#disclosure" role="tab" aria-controls="disclosure" aria-selected="false">Disclosure</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="decision-tab" data-toggle="tab" href="#decision" role="tab" aria-controls="decision" aria-selected="false">Decision</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="lenders-note-tab" data-toggle="tab" href="#lenders-note" role="tab" aria-controls="lenders-note" aria-selected="false">Lenders Note</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="documents-tab" data-toggle="tab" href="#documents" role="tab" aria-controls="documents" aria-selected="false">Documents</a>
+                        </li>
+                    </ul>
+                    <div class="spacer"></div>
+<button type="button" class="btn btn-danger mb-1">Cancel</button><button type="button" class="btn btn-primary ml-1 mb-1">Save</button>
+                </div>
+                <!-- navTabsHeader - END -->
+
+
+                <!-- tab-content -->
+                <div class="tab-content pb-0" id="myTabContent">
+                    <div class="tab-pane " id="application" role="tabpanel" aria-labelledby="application-tab">
+                        <h3>application</h3>
+                    </div>
+                    <div class="tab-pane fade" id="vehicle-info" role="tabpanel" aria-labelledby="vehicle-info-tab">
+                        <h3>vehicle-info</h3>
+                    </div>
+                    <div class="tab-pane fade" id="products" role="tabpanel" aria-labelledby="products-tab">
+                        <h3>products</h3>
+                    </div>
+                    <div class="tab-pane fade" id="worksheet" role="tabpanel" aria-labelledby="worksheet-tab">
+                        <h3>worksheet</h3>
+                    </div>
+                    <div class="tab-pane fade show active" id="disclosure" role="tabpanel"
+                        aria-labelledby="disclosure-tab">
+                        <div class="tabPaneTop">
+                            <div class="container-fluid px-0">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <p class="mb-0 d-flex align-items-center annualSchedule ">Annual Schedule <a
+                                                href="#" class="ml-3 monthlySchedule">Monthly
+                                                Schedule</a> </p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="nav nav-tabs justify-content-center" id="disclosure-subTab"
+                                            role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="option1-tab" data-toggle="tab"
+                                                    href="#option1" role="tab" aria-controls="Option1"
+                                                    aria-selected="true">Option 1 </a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="Quote-tab" data-toggle="tab" href="#quote"
+                                                    role="tab" aria-controls="quote" aria-selected="false">Quote</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="option2-tab" data-toggle="tab" href="#option2"
+                                                    role="tab" aria-controls="contact" aria-selected="false">Option
+                                                    2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button"
+                                            class="btn btn-danger px-5 py-3 float-right">Disclosure</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="disclosureSubTabWhole-content">
+                            <div class="tab-content px-0 pb-0" id="disclosureSubTab-content">
+                                <div class="tab-pane fade show active" id="option1" role="tabpanel"
+                                    aria-labelledby="option1-tab">
+                                    <div class="container-custom">
+                                        <div class="option1Whole-content d-flex">
+                                            <div class="lendingDetails commonPattern">
+                                                <h6 class="mb-2 option1Whole-title">Lending Details</h6>
+                                                <div class="option1Card maxHeightBox commonRoundBox rounded"
+                                                    style="width: 330px;">
+                                                    <table class="table border-0 option1CardTable" cellpadding='0'>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-left">Loan Anount:</td>
+                                                                <td class="text-right">$1,000,8454</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">Interest Rate:</td>
+                                                                <td class="text-right">.23%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">Team:</td>
+                                                                <td class="text-right">60 Months</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">Amortization:</td>
+                                                                <td class="text-right">84 Months</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">Ballon:</td>
+                                                                <td class="text-right">$1, 897, 46554</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">Payment:</td>
+                                                                <td class="text-right">$1, 897, 46554</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">Total Amount of finance:</td>
+                                                                <td class="text-right">$1, 897, 46554</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">By Down Cost:</td>
+                                                                <td class="text-right">$1, 897, 46554</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="paymentBreakdown commonPattern">
+                                                <h6 class="mb-2 option1Whole-title">Payment Breakdown</h6>
+                                                <div class="option1Card maxHeightBox commonRoundBox rounded"
+                                                    style="width: 500px;">
+                                                    <ul class="nav nav-tabs justify-content-center mt-3"
+                                                        id="paymentBreakdown-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link " id="combined-tab" data-toggle="tab"
+                                                                href="#combined" role="tab" aria-controls="combined"
+                                                                aria-selected="true">Combined</a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link active" id="paymentBreakdownProducts-tab"
+                                                                data-toggle="tab" href="#paymentBreakdownProducts"
+                                                                role="tab" aria-controls="paymentBreakdownProducts"
+                                                                aria-selected="false">Products</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="paymentBreakdownContent">
+                                                        <div class="tab-pane fade" id="combined" role="tabpanel"
+                                                            aria-labelledby="combined-tab">
+                                                            <div id="combined-pie-chart" class="w-100"></div>
+                                                        </div>
+                                                        <div class="tab-pane fade show active"
+                                                            id="paymentBreakdownProducts" role="tabpanel"
+                                                            aria-labelledby="paymentBreakdownProducts-tab">
+                                                            <div id="paymentBreakdownProducts-pie-chart" class="w-100">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dealershipProfits commonPattern">
+                                                <h6 class="mb-2 option1Whole-title">Dealership Profits</h6>
+                                                <div class="maxHeightBox">
+                                                    <div class="option1Card commonRoundBox rounded">
+                                                        <ul class="exceptionList gridAdjustByHeight list-unstyled my-0">
+                                                            <li
+                                                                class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">For Vehicle</h6>
+                                                                <h4 class="mb-0">$20,000.00</h4>
+                                                            </li>
+                                                            <li
+                                                                class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">For Vehicle</h6>
+                                                                <h4 class="mb-0">$20,000.00</h4>
+                                                            </li>
+                                                            <li
+                                                                class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">For Vehicle</h6>
+                                                                <h4 class="mb-0">$20,000.00</h4>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="option1Card commonRoundBox  rounded mt-1">
+                                                        <ul class="exceptionList list-unstyled my-0">
+                                                            <li class="bg-lime text-dark rounded px-4 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">For Vehicle</h6>
+                                                                <h4 class="mb-0">$20,000.00</h4>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bankProfits commonPattern">
+                                                <h6 class="mb-2 option1Whole-title">Bank Profits</h6>
+                                                <div class="maxHeightBox">
+                                                    <div class="option1Card commonRoundBox  rounded">
+                                                        <ul class="exceptionList gridAdjustByHeight list-unstyled my-0">
+                                                            <li
+                                                                class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">Interest Profits
+                                                                </h6>
+                                                                <h4 class="mb-0">$3,491,76</h4>
+                                                            </li>
+                                                            <li
+                                                                class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">Interest Paid Up
+                                                                    Front
+                                                                </h6>
+                                                                <h4 class="mb-0">$20,43.43</h4>
+                                                            </li>
+                                                            <li
+                                                                class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">Total Interest Paid
+                                                                </h6>
+                                                                <h4 class="mb-0">35.05%</h4>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="option1Card commonRoundBox  rounded mt-1">
+                                                        <ul class="exceptionList list-unstyled my-0">
+                                                            <li class="bg-lime text-dark rounded px-4 py-1 text-center">
+                                                                <h6 class="exceptionList-title mb-0">Total Bank Profits
+                                                                </h6>
+                                                                <h4 class="mb-0">$5535.10</h4>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="insuranceProvider commonPattern">
+                                                <h6 class="mb-2 option1Whole-title">Insurance Provider Profits</h6>
+                                                <div class="maxHeightBox">
+                                                    <div class="option1Card commonRoundBox rounded">
+                                                        <ul class="gridAdjustByHeight list-unstyled my-0">
+                                                            <li>
+                                                                <ul
+                                                                    class="exceptionList gridAdjustBy2 list-unstyled my-0">
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">Warranty
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$3,491,76</h4>
+                                                                    </li>
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">KeyFob
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$150,76</h4>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <ul
+                                                                    class="exceptionList gridAdjustBy2 list-unstyled my-0">
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">Prepaid M.
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$1,000,76</h4>
+                                                                    </li>
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">Product 4
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$3,491,76</h4>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <ul
+                                                                    class="exceptionList gridAdjustBy2 list-unstyled my-0">
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">Tier Rim
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$3,491,76</h4>
+                                                                    </li>
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">Product 6
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$3,491,76</h4>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <ul
+                                                                    class="exceptionList gridAdjustBy2 list-unstyled my-0">
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">BDPs
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$3,491,76</h4>
+                                                                    </li>
+                                                                    <li
+                                                                        class="bg-blue text-light rounded px-1 py-1 text-center">
+                                                                        <h6 class="exceptionList-title mb-0">Product 8
+                                                                            Profits
+                                                                        </h6>
+                                                                        <h4 class="mb-0">$0.00</h4>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="option1Card commonRoundBox rounded mt-1">
+                                                        <ul class="exceptionList list-unstyled my-0 d-block">
+                                                            <li
+                                                                class="bg-lime text-dark rounded px-4 py-1 text-center w-100">
+                                                                <h6 class="exceptionList-title mb-0">Total Insurance
+                                                                    Profits
+                                                                </h6>
+                                                                <h4 class="mb-0">$5535.10</h4>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="lendingAmortizationGraph commonPattern">
+                                                <h6 class="mb-2 option1Whole-title">Lending Amortization Graph</h6>
+                                                <div class="option1Card maxHeightBox commonRoundBox rounded pt-4"
+                                                    style="width: 915px;">
+                                                    <canvas id="lendingAmortization-line-chart" width="800"
+                                                        height="320"></canvas>
+                                                </div>
+                                            </div>
+                                            <!-- lamCham-BogaBagi -->
+                                            <div class="lamCham-BogaBagi commonPattern"> &nbsp; &nbsp; </div>
+                                        </div>
+
+                                        <div class="amortization-wrpper">
+                                            <h3>Amortization Table</h3>
+                                            <div id="amortization" class="amortization-tablePanel fixedHeight">
+                                                <button type="button" id="btnPrint" class="btn btn-danger px-4 py-3">
+                                                    <i class="icon-print mr-2"></i>  Print
+                                                </button>
+                                                <table class="amortization-table table table-borderless"
+                                                    style="width:100%;  ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th colspan="2">
+                                                                Starting Balance
+                                                            </th>
+                                                            <th colspan="2">
+                                                                Vehicle Payment
+                                                            </th>
+                                                            <th colspan="2">
+                                                                Interest Payment
+                                                            </th>
+                                                            <th colspan="2">
+                                                                Interest Paid Up <br> Front
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center table-borderless">
+                                                                    <tr>
+                                                                        <td colspan="2">Warranty</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center">
+                                                                    <tr>
+                                                                        <td colspan="2">End Pre-Paid Mainte..</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center">
+                                                                    <tr>
+                                                                        <td colspan="2">ETire & Rim</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center">
+                                                                    <tr>
+                                                                        <td colspan="2">KeyFob</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center">
+                                                                    <tr>
+                                                                        <td colspan="2">Buydown Points</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center">
+                                                                    <tr>
+                                                                        <td colspan="2">Product</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center">
+                                                                    <tr>
+                                                                        <td colspan="2">Product</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2" class="has-nested">
+                                                                <table class="w-100 text-center">
+                                                                    <tr>
+                                                                        <td colspan="2">Product</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="primaryBg">
+                                                                            <p>Retail</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                        <td class="infoBg">
+                                                                            <p>Cost</p>
+                                                                            <p>$3.500.00</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th colspan="2">
+                                                                End Balance
+                                                            </th>
+                                                            <th colspan="2" class="bgLime">
+                                                                Interest Profits
+                                                            </th>
+                                                            <th colspan="4" class="bgLime text-left pl-3">
+                                                                Combined Profits <br /> Interest and Products
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="tableMainBody text-left">
+                                                        <tr>
+                                                            <td>0</td>
+                                                            <td colspan="2">
+                                                                <p> $28,000.00</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">$2,043,00</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2">$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td colspan="2">
+                                                                <p> $28,000.00</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">$2,043,00</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2">$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td colspan="2">
+                                                                <p> $28,000.00</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">$2,043,00</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2">$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td colspan="2">
+                                                                <p> $28,000.00</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">
+                                                                <p> $0</p>
+                                                            </td>
+                                                            <td colspan="2">$2,043,00</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td>$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2" data-toggle="tooltip" data-placement="top" title="Total : $320,800">$320,800</td>
+                                                            <td colspan="2">$320,800</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <!-- lamCham-BogaBagi -->
+                                                <div class="lamCham-BogaBagi commonPattern"> &nbsp; &nbsp; &nbsp; &nbsp;
+                                                    &nbsp; &nbsp; &nbsp; &nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="quote" role="tabpanel" aria-labelledby="quote-tab">
+                                    <h2>Quote</h2>
+                                </div>
+                                <div class="tab-pane fade" id="option2" role="tabpanel" aria-labelledby="option2-tab">
+                                    <h2>Option 2</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="decision" role="tabpanel" aria-labelledby="decision-tab">
+                        <h3>decision</h3>
+                    </div>
+                    <div class="tab-pane fade" id="lenders-note" role="tabpanel" aria-labelledby="lenders-note-tab">
+                        <h3>lenders</h3>
+                    </div>
+                    <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+                        <h3>documents</h3>
+                    </div>
+                </div>
+                <!--/ tab-content - END -->
+            </div>
+        </main>
+        <!--/ main panel -->
+    </div>
+
+
+
+
+
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/scripts/bootstrap-multiselect.js"></script>
+    <script src="../assets/scripts/custom-functions.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../assets/scripts/Chart.bundle.min.js"></script>
+    <script src="../assets/scripts/lines-chart.js"></script>
+    <script src="../assets/scripts/pie-chart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+
+.option1Whole-content {
+  display: flex;
+  grid-column-gap: 20px;
+  box-sizing: border-box;
+}
+
+
+/* myTabContent */
+#myTabContent {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100vh - 170px);
+  scrollbar-width: thin;
+  scrollbar-color: $lightRed #979797;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+      border-radius: 10px;
+      padding: 3px;
+      background-color: #979797;
+  }
+
+  &::-webkit-scrollbar-track {
+      background-color: #979797;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: $lightRed;
+  }
+}
+
+/* myTabContent - END */
+
+
+/* css for disclosure tab modules  */
+#disclosure {
+
+  .annualSchedule {
+      color: $lightGreyColor;
+
+      .monthlySchedule {
+          color: $lightRed;
+          font-size: 20px;
+          text-decoration: underline;
+      }
+  }
+
+  #disclosure-subTab {
+      display: inline-flex;
+      background-color: $bodyBg;
+      border-radius: 6px;
+
+      .nav-item {
+          .nav-link {
+              padding: 7px 15px;
+              color: #ffffff;
+              border-radius: 0;
+              border: 0;
+              margin: 0;
+
+              &:hover {
+                  background-color: $lightRed;
+                  border-radius: 6px;
+              }
+
+              &.active {
+                  background-color: $lightRed;
+                  border-radius: 6px;
+              }
+          }
+      }
+  }
+}
+
+#disclosureSubTabWhole-content {
+  .commonPattern {
+
+      .maxHeightBox {
+          height: 385px;
+      }
+
+      .commonRoundBox {
+          padding: 5px 15px;
+          background-color: #D8D8D8 !important;
+          border-radius: 4px;
+          margin-bottom: 20px;
+      }
+
+
+      &.insuranceProvider {
+          .gridAdjustBy2 {
+              padding: 0 !important;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-column-gap: 10px;
+              align-items: space-between;
+          }
+      }
+  }
+
+  .option1Card {
+      .option1CardTable {
+          background-color: transparent;
+
+          tr td {
+              font-size: 15px;
+              color: #000000;
+              font-weight: 500;
+              border: 0;
+              padding: 12px 8px;
+
+              &:first-child {
+                  width: 60%;
+              }
+
+              &:last-child {
+                  width: 40%;
+              }
+          }
+      }
+
+      .gridAdjustByHeight {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          height: 275px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+
+      .exceptionList {
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          li {
+              width: 160px;
+              height: 50px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              &.bg-blue {
+                  background-color: #2B50ED !important;
+              }
+
+              &.bg-lime {
+                  background-color: #83FF00 !important;
+              }
+
+              border-radius: 10px !important;
+
+              h6 {
+                  font-size: 14px;
+              }
+
+              h4 {
+                  font-size: 18px;
+              }
+          }
+      }
+  }
+}
+
+
+#paymentBreakdown-tab {
+  .nav-item {
+      .nav-link {
+          padding: 5px 10px;
+          margin: 0;
+          color: #979797;
+          border: 2px solid #979797;
+          border-radius: 0;
+
+          &.active {
+              border-color: $lightRed !important;
+              color: $lightRed !important;
+          }
+      }
+
+      &:first-child {
+          .nav-link {
+              border-top-left-radius: 6px;
+              border-bottom-left-radius: 6px;
+
+              &.active {
+                  margin-right: -2px;
+              }
+          }
+      }
+
+      &:last-child {
+          .nav-link {
+              border-top-right-radius: 6px;
+              border-bottom-right-radius: 6px;
+
+              &.active {
+                  margin-left: -2px;
+              }
+          }
+      }
+
+  }
+}
+
+#paymentBreakdownContent,
+#homePieChartContent {
+  background-color: transparent;
+}
+
+
+#homePieChartTab {
+  .nav-item {
+      .nav-link {
+          border: 0;
+          background-color: transparent;
+          color: #D8D8D8;
+          margin: 0 10px;
+          width: auto !important;
+          padding: 0 5px;
+          border-bottom: 2px solid transparent;
+
+          &.active {
+              border-color: $orange;
+              color: $orange;
+          }
+      }
+  }
+}
+
+.amortization-wrpper {
+  width: fit-content;
+
+  #amortization.amortization-tablePanel {
+      position: relative;
+      background-color: #D8D8D8;
+      padding: 20px;
+      padding-top: 50px;
+      padding-bottom: 0;
+      border-radius: 4px;
+  
+      #btnPrint {
+          position: absolute;
+          top: 8px;
+          left: calc(100% - 115px);
+      }
+
+      &.fixedHeight {
+          height: 228px;
+          // overflow-x: hidden;
+          overflow-y: scroll;
+          width: calc(100% + 15px);
+          scrollbar-width: thin;
+          scrollbar-color: $lightRed #979797;
+
+          &::-webkit-scrollbar {
+              height: 8px;
+              width: 8px;
+              border-radius: 10px;
+              padding: 3px;
+              background-color: #979797;
+          }
+
+          &::-webkit-scrollbar-track {
+              background-color: #979797;
+          }
+
+          &::-webkit-scrollbar-thumb {
+              border-radius: 3px;
+              background-color: $lightRed;
+          }
+      }
+
+      thead {
+          tr {
+              th {
+                  white-space: nowrap;
+
+                  &.has-nested {
+                      tr {
+                          td {
+                              padding: .2rem 0;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+      tbody.tableMainBody {
+          tr {
+              &:nth-child(odd) {
+                  td {
+                      background-color: #C7C7C7;
+                  }
+              }
+
+              &:nth-child(even) {
+                  td {
+                      background-color: #ffffff;
+                  }
+              }
+          }
+      }
+
+      tr {
+          td,
+          th {
+              min-width: 90px;
+              font-size: 14px !important;
+              padding: .60rem 10px;
+
+              &.has-nested {
+                  padding: 0;
+              }
+          }
+
+
+          th {
+              vertical-align: middle;
+              margin: 0;
+              background-color: #d6dcf6;
+              border: 1px solid #2a00ff;
+              border-bottom: none;
+
+              .primaryBg {
+                  background-color: #2b50ed !important;
+                  color: #ffffff;
+              }
+
+              .infoBg {
+                  background-color: #f04e31 !important;
+                  color: #ffffff;
+              }
+
+              &.bgLime {
+                  background-color: #83FF00 !important;
+              }
+          }
+
+          tr {
+              th {
+                  padding: 0 !important;
+              }
+
+              td {
+                  border: none;
+                  vertical-align: middle;
+
+                  p {
+                      margin: 0;
+                  }
+              }
+
+          }
+
+          td {
+              border: 1px solid #000000;
+              vertical-align: middle;
+
+              
+              &:first-child {
+                  text-align: center;
+              }
+
+              p {
+                  margin-bottom: 0;
+              }
+          }
+
+      }
+  }
+}
+
+/* css for disclosure tab modules - END */
