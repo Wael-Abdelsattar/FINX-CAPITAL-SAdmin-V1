@@ -1835,7 +1835,6 @@ dl.no-border > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 0 auto;
 }
 
 .files .file .remove-file {
@@ -1909,6 +1908,10 @@ dl.no-border > div {
           flex-direction: column;
   height: 100%;
   text-align: center;
+}
+
+.files__file .files .file {
+  margin: 0 auto;
 }
 
 .files__file h4 {

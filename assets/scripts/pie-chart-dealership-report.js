@@ -34,7 +34,7 @@ Highcharts.chart('pie-chart-dealership', {
         squareSymbol: false,
         useHTML: false,
         symbolWidth: 0,
-        itemMarginBottom: 10,
+        itemMarginBottom: 12,
         labelFormatter: function () {
             return (
                 '<div style="padding-bottom:20px; color:' +

@@ -1203,7 +1203,7 @@ dl {
     align-items: center;
     border-radius: 8px;
     flex: 1;
-    margin: 0 auto;
+    // margin: 0 auto;
     .remove-file {
       position: absolute;
       top: 4px;
@@ -1265,6 +1265,11 @@ dl {
   flex-direction: column;
   height: 100%;
   text-align: center;
+  .files {
+    .file {
+      margin: 0 auto;
+    }
+  }
   h4 {
     font-size: 16px;
     font-weight: 700;
