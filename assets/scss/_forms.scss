@@ -655,7 +655,7 @@ select.form-control {
   position: relative;
   
   input.form-control {
-  padding-left: 16px;
+  padding-left: 10px;
   }
   &:before {
     position: absolute;
@@ -663,6 +663,7 @@ select.form-control {
     content: '%';
     right: 7px;
     color: #c7c7c7;
+    width: 14px;
   }
 
 }
@@ -690,11 +691,11 @@ select.form-control {
 }
 .states__box .input-percentage-sign {
   input.form-control {
-    padding-right: 1.7em;
+    padding-right: 1em;
     font-size: 15px;
   }
   &:before {
-    right: 1em;
+    left: 2.8em;
     font-size: 15px;
   }
 }

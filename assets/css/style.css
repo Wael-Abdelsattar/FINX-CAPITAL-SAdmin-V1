@@ -1862,6 +1862,10 @@ dl.no-border > div {
   margin-right: 10px;
 }
 
+.files .file .icon img {
+  width: 30px;
+}
+
 .files .file h5 {
   font-size: 14px;
   font-weight: 700;
@@ -3324,7 +3328,7 @@ select.form-control.blue-arrow {
 }
 
 .input-percentage-sign input.form-control {
-  padding-left: 16px;
+  padding-left: 10px;
 }
 
 .input-percentage-sign:before {
@@ -3333,6 +3337,7 @@ select.form-control.blue-arrow {
   content: '%';
   right: 7px;
   color: #c7c7c7;
+  width: 14px;
 }
 
 .states__box .input-dollar-sign input.form-control {
@@ -3357,12 +3362,12 @@ select.form-control.blue-arrow {
 }
 
 .states__box .input-percentage-sign input.form-control {
-  padding-right: 1.7em;
+  padding-right: 1em;
   font-size: 15px;
 }
 
 .states__box .input-percentage-sign:before {
-  right: 1em;
+  left: 2.8em;
   font-size: 15px;
 }
 
@@ -3938,7 +3943,8 @@ select.form-control.blue-arrow {
 .table-dark thead th .select-dropdown {
   display: inline-block;
   height: 22px;
-  padding-right: 20px;
+  padding-right: 10px;
+  padding-left: 5px;
 }
 
 .table-dark thead th .select-dropdown > .btn {

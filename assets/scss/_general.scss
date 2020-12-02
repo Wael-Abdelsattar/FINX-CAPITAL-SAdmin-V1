@@ -1220,6 +1220,10 @@ dl {
       border: 1px solid $lightRed;
       background-color: white;
       margin-right: 10px;
+
+      img {
+        width: 30px;
+      }
     }
     h5 {
       font-size: 14px;
