@@ -390,7 +390,7 @@ $(document).ready(function() {
                         { orderable: true, targets: 4 },
                         { orderable: true, targets: 5 },
                         { orderable: true, targets: 6 },
-                        { orderable: false, targets: 7 },
+                        { orderable: false, targets: [7], className: 'text-center pr-4' },
                     ],
                     // bAutoWidth: false,
                     aoColumns: [
@@ -499,7 +499,7 @@ $(document).ready(function() {
                         { orderable: true, targets: 2 },
                         { orderable: true, targets: 3 },
                         { orderable: true, targets: 4 },
-                        { orderable: false, targets: 5 },
+                        { orderable: false, targets: [5], className: 'text-center pr-4' },
                     ],
                     // bAutoWidth: false,
                     aoColumns: [
@@ -593,7 +593,7 @@ $(document).ready(function() {
                         { orderable: true, targets: 2 },
                         { orderable: true, targets: 3 },
                         { orderable: true, targets: 4 },
-                        { orderable: false, targets: 5 },
+                        { orderable: false, targets: [5], className: 'text-center pr-4' },
                     ],
                     // bAutoWidth: false,
                     aoColumns: [
