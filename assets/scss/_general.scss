@@ -1508,6 +1508,17 @@ dl {
   }
 }
 
+.program_container {
+  &.inactive *:not(.panel-toggle) {
+    form.form-horizontal,
+    .actions .btn {
+      pointer-events: none !important;
+      filter: grayscale(100%);
+      opacity: 0.7;
+    }
+  }
+}
+
 .custom-rate {
   opacity: 0;
   visibility: hidden;

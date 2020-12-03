@@ -1625,12 +1625,15 @@ $(document).ready(function (){
             $(this).parent().parent().find('.dropdownActiveInactive').removeClass('red');
 
             $(this).parent().parent().find('.dropdownActiveInactive').addClass('red');
+
+            $('.program_container').addClass('inactive');
         }
         else if ($(this).text().toLowerCase() == 'active') {
             $(this).parent().parent().find('.dropdownActiveInactive').removeClass('dark-green');
             $(this).parent().parent().find('.dropdownActiveInactive').removeClass('red');
 
             $(this).parent().parent().find('.dropdownActiveInactive').addClass('dark-green');
+            $('.program_container').removeClass('inactive');
         }
         else if ($(this).text().toLowerCase() == 'not paid') {
             $(this).parent().parent().find('.dropdownActiveInactive').removeClass('dark-green');
