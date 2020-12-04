@@ -388,7 +388,7 @@
 }
 
 .bg-grey {
-  background-color: #F1EFEE !important;
+  background-color: #f1efee !important;
 }
 
 .bg-blue {
@@ -396,6 +396,10 @@
 }
 
 .bg-faded-blue {
+  background-color: $fadedBlue !important;
+}
+
+.hover-bg-faded-blue:hover {
   background-color: $fadedBlue !important;
 }
 
@@ -412,11 +416,11 @@
 }
 
 .bg-dark-grey {
-  background-color: #D8D8D8 !important;
+  background-color: #d8d8d8 !important;
 }
 
 .bg-darker-grey {
-  background-color: #C7C7C7 !important;
+  background-color: #c7c7c7 !important;
 }
 
 .stick-left {
