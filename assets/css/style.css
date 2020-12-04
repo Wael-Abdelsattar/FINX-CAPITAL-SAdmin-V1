@@ -4589,7 +4589,7 @@ table.tax-dealership td {
 }
 
 .bg-grey {
-  background-color: #F1EFEE !important;
+  background-color: #f1efee !important;
 }
 
 .bg-blue {
@@ -4597,6 +4597,10 @@ table.tax-dealership td {
 }
 
 .bg-faded-blue {
+  background-color: #d6dcf6 !important;
+}
+
+.hover-bg-faded-blue:hover {
   background-color: #d6dcf6 !important;
 }
 
@@ -4613,11 +4617,11 @@ table.tax-dealership td {
 }
 
 .bg-dark-grey {
-  background-color: #D8D8D8 !important;
+  background-color: #d8d8d8 !important;
 }
 
 .bg-darker-grey {
-  background-color: #C7C7C7 !important;
+  background-color: #c7c7c7 !important;
 }
 
 .stick-left {
@@ -6388,4 +6392,3 @@ header .buttons {
 .program_container .wrapper table .text-black {
   color: #000000;
 }
-/*# sourceMappingURL=style.css.map */

@@ -567,7 +567,7 @@
         </div>
         <div class="modal-content bg-white border-0 p-0">
           <div class="select-grid d-flex">
-            <div class="custom-control custom-radio flex-grow-1 p-3">
+            <div class="custom-control custom-radio flex-grow-1 p-3 hover-bg-faded-blue">
               <input
                 type="radio"
                 class="custom-control-input"
@@ -593,7 +593,7 @@
               </label>
             </div>
             <div
-              class="custom-control custom-radio flex-grow-1 p-3 bg-faded-blue"
+              class="custom-control custom-radio flex-grow-1 p-3 hover-bg-faded-blue"
             >
               <input
                 type="radio"
@@ -695,7 +695,7 @@
             </div>
           </div>
           <div class="mt-4 d-flex justify-content-end">
-            <button class="btn btn-danger">Cancel</button>
+            <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
             <button class="btn btn-primary ml-2">Save</button>
           </div>
         </div>
@@ -744,15 +744,15 @@
           <div class="border br-4 w-250">
             <div class="d-flex border-b">
               <div class="w-180 bg-faded-blue blue border-r tiny-text bold p-1 text-center br-tl-4">Suggested Retail Price</div>
-              <div class="w-70 bg-faded-blue blue p-1 br-tr-4"><input type="text" class="form-control tiny-height" /></div>
+              <div class="w-70 bg-faded-blue blue p-1 br-tr-4"><input type="text" class="form-control tiny-height no-radius" /></div>
             </div>
             <div class="d-flex">
               <div class="w-180 bg-faded-red light-red border-r tiny-text bold p-1 text-center br-bl-4">True Dealer Cost</div>
-              <div class="w-70 bg-faded-red light-red p-1 br-br-4"><input type="text" class="form-control tiny-height" /></div>
+              <div class="w-70 bg-faded-red light-red p-1 br-br-4"><input type="text" class="form-control tiny-height no-radius" /></div>
             </div>
           </div>
           <div class="mt-4 d-flex justify-content-end">
-            <button class="btn btn-danger">Cancel</button>
+            <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
             <button class="btn btn-primary ml-2">Save</button>
           </div>
         </div>
@@ -822,10 +822,14 @@
         const el = $(this);
         if (el.val() === 'term') {
           $('.modal').modal('hide');
+          $('.modal [type="radio"]').prop('checked', false);
           $('#configure-grid-term-modal').modal('show');
+          $('#configure-grid-term-modal').find('[value="term"]').prop('checked', true);
         } else {
           $('.modal').modal('hide');
+          $('.modal [type="radio"]').prop('checked', false);
           $('#configure-grid-no-term-modal').modal('show');
+          $('#configure-grid-no-term-modal').find('[value="no-term"]').prop('checked', true);
         }
       });
     </script>
