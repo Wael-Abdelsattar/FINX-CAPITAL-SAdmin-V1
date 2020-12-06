@@ -460,6 +460,11 @@ input[type='checkbox']:checked .checkmark {
   border-radius: 18px;
 }
 
+.wrapper.semi-dark-grey {
+  background: #363636;
+  border-radius: 18px;
+}
+
 .wrapper.auto-height {
   height: auto;
 }
@@ -963,6 +968,10 @@ dl.no-border > div {
 
 .slick-slider.documents-carousel .slick-track {
   margin-left: 0;
+}
+
+.slick-slider.documents-carousel.calc-w-n-200 {
+  width: calc(100% - 200px);
 }
 
 .slick-slider.carousel-red .products__product-item > div:after {
@@ -1612,12 +1621,12 @@ dl.no-border > div {
   background-color: #f04e31;
 }
 
-.custom-scroll.height-275, .tab-content > .height-275.full-height, .height-275.fill-window-height, .multiselect-native-select .height-275.multiselect-container {
-  max-height: 275px;
-}
-
 .custom-scroll.height-265, .tab-content > .height-265.full-height, .height-265.fill-window-height, .multiselect-native-select .height-265.multiselect-container {
   max-height: 265px;
+}
+
+.custom-scroll.height-275, .tab-content > .height-275.full-height, .height-275.fill-window-height, .multiselect-native-select .height-275.multiselect-container {
+  max-height: 275px;
 }
 
 .custom-scroll.height-305, .tab-content > .height-305.full-height, .height-305.fill-window-height, .multiselect-native-select .height-305.multiselect-container {
@@ -1826,7 +1835,6 @@ dl.no-border > div {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 0 auto;
 }
 
 .files .file .remove-file {
@@ -1852,6 +1860,10 @@ dl.no-border > div {
   border: 1px solid #f04e31;
   background-color: white;
   margin-right: 10px;
+}
+
+.files .file .icon img {
+  width: 30px;
 }
 
 .files .file h5 {
@@ -1900,6 +1912,10 @@ dl.no-border > div {
           flex-direction: column;
   height: 100%;
   text-align: center;
+}
+
+.files__file .files .file {
+  margin: 0 auto;
 }
 
 .files__file h4 {
@@ -2158,6 +2174,14 @@ dl.no-border > div {
 
 .worksheet-slide-panel.inactive *:not(.panel-toggle) .datepicker-control:before {
   color: #c7c7c7;
+}
+
+.program_container.inactive *:not(.panel-toggle) form.form-horizontal,
+.program_container.inactive *:not(.panel-toggle) .actions .btn {
+  pointer-events: none !important;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.7;
 }
 
 .custom-rate {
@@ -3312,7 +3336,7 @@ select.form-control.blue-arrow {
 }
 
 .input-percentage-sign input.form-control {
-  padding-left: 16px;
+  padding-left: 10px;
 }
 
 .input-percentage-sign:before {
@@ -3321,6 +3345,7 @@ select.form-control.blue-arrow {
   content: '%';
   right: 7px;
   color: #c7c7c7;
+  width: 14px;
 }
 
 .states__box .input-dollar-sign input.form-control {
@@ -3345,12 +3370,12 @@ select.form-control.blue-arrow {
 }
 
 .states__box .input-percentage-sign input.form-control {
-  padding-right: 1.7em;
+  padding-right: 1em;
   font-size: 15px;
 }
 
 .states__box .input-percentage-sign:before {
-  right: 1em;
+  left: 2.8em;
   font-size: 15px;
 }
 
@@ -3710,6 +3735,9 @@ select.form-control.blue-arrow {
 .dataTables_wrapper .arrow.active {
   -webkit-transform: none;
           transform: none;
+}
+
+.dataTables_wrapper .arrow.hasdata {
   opacity: 1;
 }
 
@@ -3926,7 +3954,8 @@ select.form-control.blue-arrow {
 .table-dark thead th .select-dropdown {
   display: inline-block;
   height: 22px;
-  padding-right: 20px;
+  padding-right: 10px;
+  padding-left: 5px;
 }
 
 .table-dark thead th .select-dropdown > .btn {
@@ -4481,6 +4510,10 @@ table.tax-dealership td {
 
 .h-120 {
   height: 120px !important;
+}
+
+.h-180 {
+  height: 180px;
 }
 
 .no-border-left {
@@ -5668,6 +5701,10 @@ header .buttons {
   border: 0;
 }
 
+.colored-modal .modal-content .w-250 {
+  width: 253px !important;
+}
+
 .colored-modal.red-modal .modal-header {
   background: #f04e31;
   color: white;
@@ -6392,3 +6429,353 @@ header .buttons {
 .program_container .wrapper table .text-black {
   color: #000000;
 }
+
+.option1Whole-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column-gap: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* myTabContent */
+#myTabContent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: calc(100vh - 170px);
+  scrollbar-width: thin;
+  scrollbar-color: #f04e31 #979797;
+  overflow-x: auto;
+}
+
+#myTabContent::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  padding: 3px;
+  background-color: #979797;
+}
+
+#myTabContent::-webkit-scrollbar-track {
+  background-color: #979797;
+}
+
+#myTabContent::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #f04e31;
+}
+
+/* myTabContent - END */
+/* css for disclosure tab modules  */
+#disclosure .annualSchedule {
+  color: #979797;
+}
+
+#disclosure .annualSchedule .monthlySchedule {
+  color: #f04e31;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#disclosure #disclosure-subTab {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #404046;
+  border-radius: 6px;
+}
+
+#disclosure #disclosure-subTab .nav-item .nav-link {
+  padding: 7px 15px;
+  color: #ffffff;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+}
+
+#disclosure #disclosure-subTab .nav-item .nav-link:hover {
+  background-color: #f04e31;
+  border-radius: 6px;
+}
+
+#disclosure #disclosure-subTab .nav-item .nav-link.active {
+  background-color: #f04e31;
+  border-radius: 6px;
+}
+
+#disclosureSubTabWhole-content .commonPattern .maxHeightBox {
+  height: 385px;
+}
+
+#disclosureSubTabWhole-content .commonPattern .commonRoundBox {
+  padding: 5px 15px;
+  background-color: #D8D8D8 !important;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+#disclosureSubTabWhole-content .commonPattern.insuranceProvider .gridAdjustBy2 {
+  padding: 0 !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+#disclosureSubTabWhole-content .option1Card .option1CardTable {
+  background-color: transparent;
+}
+
+#disclosureSubTabWhole-content .option1Card .option1CardTable tr td {
+  font-size: 15px;
+  color: #000000;
+  font-weight: 500;
+  border: 0;
+  padding: 12px 8px;
+}
+
+#disclosureSubTabWhole-content .option1Card .option1CardTable tr td:first-child {
+  width: 60%;
+}
+
+#disclosureSubTabWhole-content .option1Card .option1CardTable tr td:last-child {
+  width: 40%;
+}
+
+#disclosureSubTabWhole-content .option1Card .gridAdjustByHeight {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 275px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#disclosureSubTabWhole-content .option1Card .exceptionList {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#disclosureSubTabWhole-content .option1Card .exceptionList li {
+  width: 160px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px !important;
+}
+
+#disclosureSubTabWhole-content .option1Card .exceptionList li.bg-blue {
+  background-color: #2B50ED !important;
+}
+
+#disclosureSubTabWhole-content .option1Card .exceptionList li.bg-lime {
+  background-color: #83FF00 !important;
+}
+
+#disclosureSubTabWhole-content .option1Card .exceptionList li h6 {
+  font-size: 14px;
+}
+
+#disclosureSubTabWhole-content .option1Card .exceptionList li h4 {
+  font-size: 18px;
+}
+
+#paymentBreakdown-tab .nav-item .nav-link {
+  padding: 5px 10px;
+  margin: 0;
+  color: #979797;
+  border: 2px solid #979797;
+  border-radius: 0;
+}
+
+#paymentBreakdown-tab .nav-item .nav-link.active {
+  border-color: #f04e31 !important;
+  color: #f04e31 !important;
+}
+
+#paymentBreakdown-tab .nav-item:first-child .nav-link {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+#paymentBreakdown-tab .nav-item:first-child .nav-link.active {
+  margin-right: -2px;
+}
+
+#paymentBreakdown-tab .nav-item:last-child .nav-link {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+#paymentBreakdown-tab .nav-item:last-child .nav-link.active {
+  margin-left: -2px;
+}
+
+#paymentBreakdownContent,
+#homePieChartContent {
+  background-color: transparent;
+}
+
+#homePieChartTab .nav-item .nav-link {
+  border: 0;
+  background-color: transparent;
+  color: #D8D8D8;
+  margin: 0 10px;
+  width: auto !important;
+  padding: 0 5px;
+  border-bottom: 2px solid transparent;
+}
+
+#homePieChartTab .nav-item .nav-link.active {
+  border-color: #ff5c3f;
+  color: #ff5c3f;
+}
+
+.amortization-wrpper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel {
+  position: relative;
+  background-color: #D8D8D8;
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 0;
+  border-radius: 4px;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel #btnPrint {
+  position: absolute;
+  top: 8px;
+  left: calc(100% - 115px);
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel.fixedHeight {
+  height: 228px;
+  overflow-y: scroll;
+  width: calc(100% + 15px);
+  scrollbar-width: thin;
+  scrollbar-color: #f04e31 #979797;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel.fixedHeight::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  padding: 3px;
+  background-color: #979797;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel.fixedHeight::-webkit-scrollbar-track {
+  background-color: #979797;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel.fixedHeight::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #f04e31;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel thead tr th {
+  white-space: nowrap;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel thead tr th.has-nested tr td {
+  padding: .2rem 0;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tbody.tableMainBody tr:nth-child(odd) td {
+  background-color: #C7C7C7;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tbody.tableMainBody tr:nth-child(even) td {
+  background-color: #ffffff;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr td,
+.amortization-wrpper #amortization.amortization-tablePanel tr th {
+  min-width: 90px;
+  font-size: 14px !important;
+  padding: .60rem 10px;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr td.has-nested,
+.amortization-wrpper #amortization.amortization-tablePanel tr th.has-nested {
+  padding: 0;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr th {
+  vertical-align: middle;
+  margin: 0;
+  background-color: #d6dcf6;
+  border: 1px solid #2a00ff;
+  border-bottom: none;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr th .primaryBg {
+  background-color: #2b50ed !important;
+  color: #ffffff;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr th .infoBg {
+  background-color: #f04e31 !important;
+  color: #ffffff;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr th.bgLime {
+  background-color: #83FF00 !important;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr tr th {
+  padding: 0 !important;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr tr td {
+  border: none;
+  vertical-align: middle;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr tr td p {
+  margin: 0;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr td {
+  border: 1px solid #000000;
+  vertical-align: middle;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr td:first-child {
+  text-align: center;
+}
+
+.amortization-wrpper #amortization.amortization-tablePanel tr td p {
+  margin-bottom: 0;
+}
+
+/* css for disclosure tab modules - END */
+/*# sourceMappingURL=style.css.map */
